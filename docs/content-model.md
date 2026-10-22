@@ -27,6 +27,26 @@ Sursa: Erich Sauer, „…”, p. 12 (optional; shown under the article)
 
 Missing title or author: the post writer asks. A video that is not a YouTube link: it asks.
 
+### From a Google Doc link
+
+The owner may give a Google Doc link instead; the doc holds the same text and metadata
+block. The doc must be shared as "Anyone with the link: Viewer".
+
+1. Take the document ID from the link (`/document/d/<ID>/`).
+2. Download with `curl -sSL`, **never with WebFetch**: WebFetch passes the page through a
+   model that summarises and rewrites, which breaks the text rule. The post writer does not
+   have WebFetch for this reason.
+   - Text for `source.txt`: `https://docs.google.com/document/d/<ID>/export?format=txt`.
+     Strip only a leading byte-order mark (U+FEFF); nothing else is touched.
+   - Formatting for the body (italic, bold, quotes): the same URL with `format=md`.
+   - Images embedded in the doc: `format=zip` (HTML plus an `images/` folder).
+3. If the response is HTML or lands on `accounts.google.com`, the doc is not shared: stop and
+   ask the owner to share it. Never guess the text from anything else.
+4. Record the link as `sourceDoc` in the front matter, so a later update reads the same doc.
+
+The `format=md` export and how images come out are confirmed on the first real doc
+(`state.md`).
+
 ## Layout on disk
 
 ```
@@ -52,6 +72,7 @@ content/
 | `coverAlt` | yes | post writer | describes the image, in Romanian |
 | `video` | no | input | YouTube URL |
 | `source` | no | input | citation shown under the article |
+| `sourceDoc` | no | post writer | the Google Doc link, when the input came from one |
 | `related` | yes | post writer | 2–4 slugs: same author first, then same topic (no categories, `decisions.md`) |
 | `legacyUrl` | imported posts | importer | the WordPress URL; generates its 301 |
 | `draft` | no | post writer | `true` keeps it out of the build |

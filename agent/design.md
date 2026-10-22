@@ -63,8 +63,9 @@ others must not: the post writer may never change text, the SEO agent's natural 
 roles keep each instruction set short and testable in isolation.
 
 - **Pattern:** handoff, human-routed. The owner calls an agent; the developer may delegate a
-  post to `post-writer` or an audit to `seo`. No agent calls another on its own initiative
-  beyond that.
+  post to `post-writer` or an audit to `seo`, and **must** run `seo` before every deploy
+  (`../docs/workflow.md`). Subagents cannot launch subagents, so every handoff goes through
+  the main session.
 - **Communication:** through files only. SEO rules in `docs/seo.md`, buildable work in
   `docs/specs/`, open items in `docs/state.md`. Nothing passes through private memory.
 - **Writes:** the guide's default is that subagents never write. Here each writes only its own

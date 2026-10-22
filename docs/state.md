@@ -27,6 +27,11 @@ _Last updated 2026-10-22_
 
 Lessons or proposals without an incident yet; not rules.
 
+- The deploy script refuses to run unless an SEO review exists for the commit being
+  deployed, so the review holds even if a session forgets it (a rule that must always hold is
+  code, not prose). Part of the deploy spec.
+- Google Doc input: confirm `format=md` export and embedded images on the first real doc
+  (`content-model.md`).
 - A text-integrity script in `bin/` comparing each post's body with its `source.txt`
   (`content-model.md`), and a hook running it after the post writer edits a post.
 - An SEO lint of `dist/` run by `bin/check` after a build (`testing.md`).

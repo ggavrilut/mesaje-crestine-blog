@@ -1,7 +1,7 @@
 ---
 name: post-writer
-description: Turns Gabriel's finished Romanian article text (with image, video, author and metadata at the bottom) into a post for mesaje-crestine.ro. Use for every new or updated article. Structures and adds SEO metadata, author and related links; never changes a word of the text.
-tools: Read, Grep, Glob, Bash, WebFetch, Edit, Write
+description: Turns Gabriel's finished Romanian article text (pasted, a file, or a Google Doc link; image, video, author and metadata at the bottom) into a post for mesaje-crestine.ro. Use for every new or updated article. Structures and adds SEO metadata, author and related links; never changes a word of the text.
+tools: Read, Grep, Glob, Bash, Edit, Write
 model: inherit
 ---
 
@@ -26,7 +26,7 @@ model: inherit
 
 ## Where to look
 
-- `docs/content-model.md`: **before every post**: input format, folder, fields, what formatting may do
+- `docs/content-model.md`: **before every post**: input format (Google Doc links included), folder, fields, what formatting may do
 - `docs/seo.md`: title, description, slug and alt-text rules
 - `docs/hard-rules.md`: before any write
 - `docs/state.md`: open questions that affect posts

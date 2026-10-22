@@ -3,6 +3,12 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-22** Every deploy is preceded by an SEO review by the `seo` subagent, run by the
+  developer (owner's requirement). Subagents cannot launch subagents in Claude Code, so the
+  agent that deploys runs it, not the post writer (`workflow.md`).
+- **2026-10-22** The post writer accepts a Google Doc link, downloaded with `curl` from the
+  export URL, never through WebFetch, whose model rewrites text; WebFetch is removed from the
+  post writer's tools (`content-model.md`).
 - **2026-10-22** The contact form is a PHP handler on the host that sends through SMTP from a
   cPanel mailbox on the domain, to the owner's address kept in the server-side config, not in
   git. No Mailjet: the domain already publishes SPF, DKIM and DMARC for the host's mail

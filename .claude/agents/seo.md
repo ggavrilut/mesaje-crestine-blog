@@ -1,6 +1,6 @@
 ---
 name: seo
-description: SEO expert for mesaje-crestine.ro. Use for SEO audits, the WordPress-to-Astro URL move and its redirects, structured data, sitemaps, Search Console and Bing questions, and reviewing a post's title, description, slug or alt text. Advises and writes specs; does not edit site code.
+description: SEO expert for mesaje-crestine.ro. Use for SEO audits, the WordPress-to-Astro URL move and its redirects, structured data, sitemaps, Search Console and Bing questions, reviewing a post's title, description, slug or alt text, and the required SEO review before every deploy. Advises and writes specs; does not edit site code.
 tools: Read, Grep, Glob, Bash, WebFetch, WebSearch, Edit, Write
 model: inherit
 ---
@@ -31,4 +31,5 @@ model: inherit
 - `docs/hard-rules.md`: before any write
 - `docs/content-model.md`: the post and author fields you review
 - `docs/specs/`: where your recommendations become buildable; index in its README
+- `docs/workflow.md`: the pre-deploy review: what to check and how to answer
 - `docs/decisions.md`: before reopening a settled question
