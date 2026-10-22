@@ -23,7 +23,7 @@ cut-over procedure.
   plan ID. It changes nothing on the server.
 - [x] `npm run deploy -- preview --yes <plan ID>` uploads only if the commit and the build
   still give that plan ID, so a yes covers exactly the plan that was shown (`hard-rules.md`).
-- [ ] The script deletes only files that its own previous deploy uploaded (listed in
+- [x] The script deletes only files that its own previous deploy uploaded (listed in
   `.deploy-manifest.json` on the target); anything else in the folder is never touched.
 - [ ] The preview refuses to upload unless the subdomain answers 401 (password-protected).
   Its `.htaccess` keeps cPanel's Directory Privacy lines, adds
@@ -47,8 +47,9 @@ cut-over procedure.
 2026-10-23, first preview deploy: the dry run gave plan `6e6f11617ea5` (commit `3ed51db`,
 1,046 files, 118.5 MB, nothing to delete); a wrong plan ID was refused before any upload; the
 approved plan uploaded, the manifest on the server names `3ed51db`, and every preview path,
-the manifest included, answers 401. Not yet exercised on the server: a delete (needs a
-second deploy) and the refusal of an unprotected preview.
+the manifest included, answers 401. Second deploy (`8c5a330`, plan `b51731d79720`): 120
+files uploaded, the replaced stylesheet deleted and confirmed gone over FTP. Not yet exercised
+on the server: the refusal of an unprotected preview.
 
 Through the main domain, `mesaje-crestine.ro/nou/` answers WordPress's 404 page with the
 password challenge: WordPress catches the 401. No preview file is served that way. It ends

@@ -17,8 +17,8 @@ _Last updated 2026-10-22_
   `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
   contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
   password-protected `nou.mesaje-crestine.ro`; first upload done (commit `3ed51db`): Gabriel reviews it. Contact form
-  (`specs/contact-form.md`) built and tested locally; next: the owner's config file on the
-  server, a preview deploy, one real message.
+  (`specs/contact-form.md`) built and working on the preview (a real message sent and
+  answered, 2026-10-23).
 
 ## Open questions
 

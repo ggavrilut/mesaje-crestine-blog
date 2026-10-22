@@ -10,4 +10,4 @@ in the same commit. Every spec has exactly one row here.
 | `publish-pipeline.md` | draft | Gabriel Gavrilut |
 | `visual-design.md` | building | Gabriel Gavrilut |
 | `deploy.md` | building | Gabriel Gavrilut |
-| `contact-form.md` | building | Gabriel Gavrilut |
+| `contact-form.md` | built | Gabriel Gavrilut |

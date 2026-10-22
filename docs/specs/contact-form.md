@@ -1,6 +1,6 @@
 # Contact form
 
-Status: building · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
+Status: built · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
 
 ## Goal
 
@@ -17,23 +17,23 @@ side is the one piece of PHP on the host (`architecture.md`, contact form).
 
 ## Behaviour
 
-- [ ] The footer of every page has the handoff's form: label CONTACT, Nume, Email, Mesaj,
+- [x] The footer of every page has the handoff's form: label CONTACT, Nume, Email, Mesaj,
   Trimite. `/contact/` has a heading, the same form, and a 200 (it is an old URL,
   `seo.md`; today it fails `check-redirects`).
-- [ ] No third-party script loads with the page: Turnstile's script loads when the reader
+- [x] No third-party script loads with the page: Turnstile's script loads when the reader
   first focuses a field of the form (`seo.md`, performance).
-- [ ] Trimite sends the form with `fetch` to `/contact.php`. Success: the button reads
+- [x] Trimite sends the form with `fetch` to `/contact.php`. Success: the button reads
   "Mulțumim!" and the fields empty. Failure: a Romanian message under the button, the fields
   kept. Without JavaScript the form shows a note instead of failing silently.
-- [ ] `contact.php` accepts only POST; checks the Turnstile token with Cloudflare's
+- [x] `contact.php` accepts only POST; checks the Turnstile token with Cloudflare's
   siteverify; rejects a filled hidden honeypot field; requires a name of 1–100 characters,
   a valid email, a message of 1–5,000 characters; removes line breaks from name and email.
-- [ ] It sends one plain-text UTF-8 email through SMTP (`titan.solutiiweb.com`, 465, SSL) from
+- [x] It sends one plain-text UTF-8 email through SMTP (`titan.solutiiweb.com`, 465, SSL) from
   `contact@mesaje-crestine.ro` to the owner's address, `Reply-To` the reader, subject
   "Mesaj de pe mesaje-crestine.ro: <name>", with the page it was sent from.
-- [ ] It answers JSON (`{ "ok": true }` or `{ "error": "…" }`) and never shows a secret, a
+- [x] It answers JSON (`{ "ok": true }` or `{ "error": "…" }`) and never shows a secret, a
   path or a library error to the reader; details go to the server's error log.
-- [ ] A short note under the form says what the data is used for (reply only, not stored).
+- [x] A short note under the form says what the data is used for (reply only, not stored).
 
 ## Data and interfaces
 
@@ -56,17 +56,20 @@ line passed (`testing.md`, contact form). Found and fixed on the way: PHP 8.5 de
 `curl_close()`, and its notice broke the JSON and the status code; the handler now turns
 `display_errors` off itself, so no notice or path reaches a reader on any host.
 
+On the preview (commit `8c5a330`): the owner's config in the cPanel home folder, one real
+message sent from the footer, received in Gmail, answered with Reply; no `error_log` on the
+server afterwards. `_lib/` answers 403 even before the password prompt. An `error_log`
+file is denied site-wide by the generated `.htaccess`.
+
 ## Open questions
 
-- Does the widget accept `nou.mesaje-crestine.ro`? Turnstile hostnames normally cover
-  subdomains; if not, the owner adds it in the Cloudflare dashboard. Checked on the preview.
-- The PHP version on the host: `contact.php` is written for PHP 7.4 or later (PHPMailer
-  itself needs 5.5); the host runs WordPress, so it is likely newer. Checked on the preview.
+- None. Answered on the preview, 2026-10-23: the Turnstile widget accepts
+  `nou.mesaje-crestine.ro` without a hostname change, and the host's PHP runs `contact.php`.
 
 ## Done when
 
-- [ ] every Behaviour line passes locally (test keys, nothing sent) and on the preview, where
+- [x] every Behaviour line passes locally (test keys, nothing sent) and on the preview, where
   the owner sends one real message and replies to it from Gmail
-- [ ] `check-redirects` no longer fails on `/contact/`
-- [ ] `docs/` updated (`architecture.md`, `dev-environment.md` config template, `state.md`
-  open question closed); status set to built
+- [x] `check-redirects` no longer fails on `/contact/`
+- [x] `docs/` updated (`architecture.md`, `dev-environment.md` config template, `state.md`
+  open question closed); status set to built (2026-10-23)
