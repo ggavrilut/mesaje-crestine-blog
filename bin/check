@@ -1,0 +1,97 @@
+#!/bin/sh
+# Deterministic checks for this repo: the first layer of evals/scenarios.md.
+# Guide Part 1, step 7 ("Verify the setup"), as code. Exits non-zero if anything fails.
+cd "$(dirname "$0")/.." || exit 2
+fail=0
+ok()   { printf 'ok    %s\n' "$*"; }
+bad()  { printf 'FAIL  %s\n' "$*"; fail=1; }
+
+# 1. CLAUDE.md is a symlink to AGENTS.md (one canonical file, no drift)
+if [ -L CLAUDE.md ] && [ "$(readlink CLAUDE.md)" = "AGENTS.md" ] && [ -f AGENTS.md ]; then
+  ok "CLAUDE.md -> AGENTS.md"
+else
+  bad "CLAUDE.md must be a symlink to an existing AGENTS.md (ln -s AGENTS.md CLAUDE.md)"
+fi
+
+# 2. AGENTS.md budget: ~450 tokens, roughly 340 words (Part 1, step 1)
+if [ -f AGENTS.md ]; then words=$(wc -w < AGENTS.md); else words=0; fi
+if [ "$words" -gt 0 ] && [ "$words" -le 340 ]; then
+  ok "AGENTS.md is $words words (~$((words * 13 / 10)) tokens)"
+else
+  bad "AGENTS.md is $words words; the budget is 340 (~450 tokens)"
+fi
+
+# 3. Every docs/ file has exactly one pointer line in AGENTS.md (Part 1, step 4)
+for f in docs/*.md; do
+  n=$(grep -cF "$f" AGENTS.md)
+  if [ "$n" -eq 1 ]; then ok "AGENTS.md points at $f once"; else bad "AGENTS.md points at $f $n times (must be 1)"; fi
+done
+
+# 4. Every spec has exactly one row in docs/specs/README.md
+for f in docs/specs/*.md; do
+  [ -e "$f" ] || continue
+  case "$f" in docs/specs/README.md|docs/specs/_template.md) continue ;; esac
+  n=$(grep -cF "$(basename "$f")" docs/specs/README.md)
+  if [ "$n" -eq 1 ]; then ok "specs index lists $f once"; else bad "specs index lists $f $n times (must be 1)"; fi
+done
+
+# 5. Every relative markdown link resolves, in every docs/ subfolder too: the split files of
+#    check 7 live in docs/<topic>/ (Part 1, step 4)
+broken=$(grep -oE '\]\([^)#]+' README.md AGENTS.md $(find docs -name '*.md' | sort) $(find agent -name '*.md' | sort) .claude/agents/*.md evals/*.md 2>/dev/null \
+  | sed -E 's/^([^:]+):\]\(/\1 /' \
+  | grep -Ev ' [a-z]+:' \
+  | while read -r src link; do
+      case "$link" in /*) target=$link ;; *) target=$(dirname "$src")/$link ;; esac
+      [ -e "$target" ] || printf '%s links to %s, which does not exist\n' "$src" "$link"
+    done)
+if [ -n "$broken" ]; then
+  printf '%s\n' "$broken" | while read -r line; do bad "$line"; done; fail=1
+else
+  ok "all relative links resolve"
+fi
+
+# 6. No placeholder left: a leftover {{...}} is a fact the agent will invent
+left=$(grep -rn '{{' --include='*.md' --include='*.json' --exclude-dir=node_modules --exclude-dir=dist --exclude-dir=.astro --exclude-dir=.git . 2>/dev/null | grep -v '^./docs/specs/_template.md:')
+if [ -n "$left" ]; then
+  printf '%s\n' "$left" | while read -r line; do bad "placeholder left: $line"; done; fail=1
+else
+  ok "no placeholders left"
+fi
+
+# 7. A docs/ file stays under 2,000 words; past that it is split, the summary staying and the
+#    growing detail moving to linked files (Part 1, step 4)
+big=0
+for f in $(find docs -name '*.md' | sort); do
+  n=$(wc -w < "$f")
+  if [ "$n" -gt 2000 ]; then bad "$f: $n words (max 2000): split it, the summary stays, the detail moves to linked files"; big=1; fi
+done
+[ "$big" -eq 0 ] && ok "docs/ files are under 2000 words"
+
+# 8. Each subagent's front-matter name matches its file and has its sources in agent/<name>/
+for f in .claude/agents/*.md; do
+  [ -e "$f" ] || continue
+  name=$(basename "$f" .md)
+  if sed -n '2,6p' "$f" | grep -qx "name: $name" && [ -f "agent/$name/basic-description.md" ]; then
+    ok "subagent $name: name matches, sources in agent/$name/"
+  else
+    bad "subagent $f: front matter must say 'name: $name' and agent/$name/basic-description.md must exist"
+  fi
+done
+
+# 9. Every Role block is 130-170 words (agent/meta-prompt.md), from the marker to the first ## heading
+for f in AGENTS.md .claude/agents/*.md; do
+  [ -e "$f" ] || continue
+  n=$(awk '/<!-- Generated from/{on=1;next} on&&/^## /{exit} on' "$f" | wc -w)
+  if [ "$n" -ge 130 ] && [ "$n" -le 170 ]; then ok "$f Role block is $n words"; else bad "$f Role block is $n words (130-170)"; fi
+done
+
+# 10. Every repo path an agent is pointed at in backticks exists (pointer lines are not links)
+missing=$(grep -ohE '`(docs|agent|evals|bin|\.claude)/[^`<*]*`' AGENTS.md .claude/agents/*.md | tr -d '`' | sort -u \
+  | while read -r path; do [ -e "$path" ] || printf '%s\n' "$path"; done)
+if [ -n "$missing" ]; then
+  printf '%s\n' "$missing" | while read -r m; do bad "an agent file points at $m, which does not exist"; done; fail=1
+else
+  ok "every path the agent files point at exists"
+fi
+
+exit $fail

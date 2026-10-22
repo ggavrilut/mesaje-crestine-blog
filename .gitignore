@@ -1,0 +1,6 @@
+CLAUDE.local.md
+.claude/settings.local.json
+.env
+node_modules/
+dist/
+.astro/
