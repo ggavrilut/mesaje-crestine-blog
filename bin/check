@@ -105,4 +105,26 @@ else
   ok "every path the agent files point at exists"
 fi
 
+# 11. Article text (docs/hard-rules.md, the text rule): every published post has the source.txt
+#     the build checks it against, and a committed source.txt changes only when
+#     bin/verify-text.ts matched the new file to the post's origin (its Google Doc or, until
+#     cut-over, the live WordPress page) and stamped it.
+text_fail=0
+for f in content/posts/*/index.md; do
+  [ -e "$f" ] || continue
+  grep -qx 'draft: true' "$f" && continue
+  [ -f "$(dirname "$f")/source.txt" ] || { bad "$(dirname "$f"): no source.txt, so the build cannot check its text"; text_fail=1; }
+done
+for f in $(git diff HEAD --name-only --diff-filter=DMR -- 'content/posts/*/source.txt' 2>/dev/null); do
+  slug=$(basename "$(dirname "$f")")
+  stamp=node_modules/.cache/verify-text/$slug
+  if [ -f "$f" ] && [ -f "$stamp" ] && [ "$(cat "$stamp")" = "$(sha256sum < "$f" | cut -d' ' -f1)" ]; then
+    ok "$f changed and matches its origin (verify-text)"
+  else
+    bad "$f changed since the last commit: if it is an update from its origin, run 'npm run verify-text -- $slug'; if not, restore it with 'git checkout HEAD -- $f'"
+    text_fail=1
+  fi
+done
+[ "$text_fail" -eq 0 ] && ok "article texts: every post has its source.txt, none changed unverified"
+
 exit $fail

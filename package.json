@@ -11,7 +11,8 @@
     "preview": "astro preview",
     "check": "astro check",
     "import": "node bin/import-wp.ts",
-    "check-redirects": "node bin/check-redirects.ts"
+    "check-redirects": "node bin/check-redirects.ts",
+    "verify-text": "node bin/verify-text.ts"
   },
   "dependencies": {
     "@astrojs/markdown-satteri": "0.4.5",

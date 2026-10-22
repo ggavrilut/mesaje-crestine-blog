@@ -5,12 +5,20 @@ How to test, the fast check, and the known-broken tests. Read before claiming an
 
 | Level | Command | When |
 |---|---|---|
-| Fast check | `bin/check` | before every commit |
-| Fetch script | `bin/fetch-doc` with no arguments, a non-Google link, a bad slug, an unshared doc: each exits 1 with a clear message, writes nothing; then a real shared doc into a test slug (byte-exact `source.txt`, identical on a second run), deleted afterwards | after changing it |
+| Fast check | `bin/check`; includes the article-text rule: every published post has its `source.txt`, and a committed one changes only after `verify-text` matched it to its origin | before every commit |
+| Fetch script | `bin/fetch-doc` with no arguments, a non-Google link, a bad slug, an unshared doc: each exits 1 with a clear message, writes nothing; then a real shared doc into a test slug (byte-exact `source.txt`, identical on a second run), deleted afterwards; with a third argument it writes there instead | after changing it |
+| Article text against its origin | `npm run verify-text` (all posts) or `npm run verify-text -- <slug>`: each `source.txt` against its Google Doc (byte for byte) or, until cut-over, its live WordPress page (word for word); `0 differ, 0 could not be checked` | before every deploy; after an import or a post update from its doc |
 | Types | `npm run check` | before every commit touching `src/` or `bin/*.ts` |
 | Build and text integrity | `npm run build`: fails when a post's rendered text differs from its `source.txt` (`content-model.md`, the check) | before every commit and deploy |
 | Redirects | `npm run check-redirects` after a build: every old URL is one 301 to a 200, a 200, or a deliberate 410 | after touching redirects, slugs or the import; before cut-over |
 | Importer | `npm run import` twice, hashing `content/` and `import/` after each run: identical; the report says `problems 0, text differences 0` | after changing `bin/import-wp.ts` or `bin/lib/wp-markdown.ts` |
+
+The article-text checks were tested 2026-10-23 on `acum-alege-deuteronom-3019`: one word
+changed identically in `index.md` and `source.txt` passed the build but failed `bin/check`
+and `verify-text` (naming the word); a line-break-only change failed `bin/check` until
+`verify-text` matched it to the live page; a deleted `source.txt` failed `bin/check` and the
+build. `verify-text` on all 73 imported posts: 73 ok, 13 s. Not yet run against a real Google
+Doc (none in the repo); its error path was (unreachable doc: reported, exit 1).
 
 The text check was tested by changing one diacritic in a `source.txt`: the build failed,
 naming the post and the word (2026-10-22). Rows for a link check and an SEO lint of the built

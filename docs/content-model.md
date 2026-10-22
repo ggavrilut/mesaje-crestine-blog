@@ -106,3 +106,10 @@ the built page, so it also catches the Markdown renderer changing text: Astro's 
 turns on smart punctuation (`"` to `“”`, `--` to `–`) and bare-URL links by default, and
 both are off in `astro.config.ts`. Known conflict: a Markdown list drops the `-` or `1.` the
 input had, so the check fails on a list the table above allows (`state.md`).
+
+The build trusts `source.txt`, so two more checks guard `source.txt` itself: an edit to both
+files would pass the build. `bin/check` fails when a published post has no `source.txt`, or
+when a committed one changed, until `npm run verify-text` has matched the new file to the
+post's origin: its `sourceDoc` (byte for byte, through `bin/fetch-doc`) or, until cut-over,
+its `legacyUrl` on WordPress (word for word). `verify-text` with no slug audits every post.
+After cut-over, an imported post's record is the git history of its `source.txt`.

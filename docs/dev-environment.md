@@ -14,6 +14,7 @@ Runtime: Node 24 (it runs the `bin/*.ts` scripts directly, no build step), npm 1
 | Build | `npm run build` | `text integrity: N posts equal their source.txt`, then `Complete!`; output in `dist/` with `.htaccess` |
 | Preview the build | `npm run preview` | `dist/` served on `http://localhost:4321/` (no `.htaccess`: redirects are checked by the next row) |
 | Redirect check | `npm run check-redirects` (after a build) | one line of counts; every `FAIL` is an old URL that would be lost |
+| Text against its origin | `npm run verify-text [-- <slug>…]` | `verify-text: N ok, 0 differ, …`; reads Google Docs and, until cut-over, the live site |
 | Icons and social card | `node bin/make-brand-images.ts` | `public/favicon.*`, `apple-touch-icon.png`, `og-default.png` rewritten from `src/brand/mark.svg`; look at the card's `ș ț` |
 | WordPress import | `npm run import` | `problems 0, text differences 0`; details in `import/report.md`. Reads the live site only; overwrites imported posts' `index.md` |
 

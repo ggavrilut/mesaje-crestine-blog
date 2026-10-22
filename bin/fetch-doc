@@ -1,13 +1,13 @@
 #!/bin/sh
 # Phase 1 of /publish: download a Google Doc exactly, never through a model.
-# Usage: bin/fetch-doc <google-doc-link> <slug>
-# Writes content/posts/<slug>/: source.txt (the text, byte for byte, BOM stripped),
+# Usage: bin/fetch-doc <google-doc-link> <slug> [<dir>]
+# Writes content/posts/<slug>/ (or <dir>, which bin/verify-text.ts uses to compare): source.txt (the text, byte for byte, BOM stripped),
 # meta.txt (the block after the last '---' line), source.md (formatting reference) and
 # images/ when the doc embeds any. Spec: docs/specs/publish-pipeline.md.
 cd "$(dirname "$0")/.." || exit 2
 die() { printf 'fetch-doc: %s\n' "$*" >&2; exit 1; }
 
-[ $# -eq 2 ] || die "usage: bin/fetch-doc <google-doc-link> <slug>"
+[ $# -eq 2 ] || [ $# -eq 3 ] || die "usage: bin/fetch-doc <google-doc-link> <slug> [<dir>]"
 id=$(printf '%s' "$1" | sed -nE 's#.*docs\.google\.com/document/d/([A-Za-z0-9_-]+).*#\1#p')
 [ -n "$id" ] || die "not a Google Doc link: $1"
 slug=$2
@@ -44,7 +44,7 @@ else
   last=
 fi
 
-dir=content/posts/$slug
+dir=${3:-content/posts/$slug}
 mkdir -p "$dir"
 if [ -n "$last" ]; then
   head -n "$((last - 1))" "$tmp/clean.txt" > "$dir/source.txt"

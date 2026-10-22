@@ -24,7 +24,9 @@ export default function buildChecks(): AstroIntegration {
         for (const slug of (await readdir(content)).sort()) {
           const source = `${content}${slug}/source.txt`;
           const page = `${dist}${slug}/index.html`;
-          if (!existsSync(source) || !existsSync(page)) continue; // a draft is not built
+          if (!existsSync(page)) continue; // a draft is not built
+          // Without its source.txt a published post would go unchecked: that is a failure too.
+          if (!existsSync(source)) { failures.push(`${slug}: no source.txt to check the page against`); continue; }
           const $ = cheerio.load(await readFile(page, 'utf8'));
           const body = $('[data-article-body]');
           if (body.length !== 1) { failures.push(`${slug}: no single [data-article-body] in the page`); continue; }
