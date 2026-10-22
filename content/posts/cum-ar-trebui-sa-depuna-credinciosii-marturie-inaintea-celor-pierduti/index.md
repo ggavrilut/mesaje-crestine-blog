@@ -1,0 +1,52 @@
+---
+title: "Cum ar trebui să depună credincioșii mărturie înaintea celor pierduți?"
+slug: cum-ar-trebui-sa-depuna-credinciosii-marturie-inaintea-celor-pierduti
+description: ""
+date: "2023-03-03T23:40:37+02:00"
+author: ["paris-reidhead"]
+cover: ./cover.jpg
+coverAlt: "Gospel"
+related: []
+legacyUrl: https://mesaje-crestine.ro/2023/03/cum-ar-trebui-sa-depuna-credinciosii-marturie-inaintea-celor-pierduti/
+---
+În urmă cu ceva timp am discutat cu un chirurg care a spus că cea mai importantă persoană în sala de operație, după chirurg, este asistenta medicală. Rolul ei este să știe ce urmează să se facă și să fie pregătită cu instrumentul necesar. Asistenta pune, în mod hotărât, instrumentul în mâinile chirurgului. Într-un anumit sens, noi suntem o asistentă a lui Dumnezeu Duhul Sfânt. Atunci când întâlnești un păcătos care nu este trezit la realitate, știi tu care dintre bisturiele adevărului este necesar și eficient pentru trezirea lui? Martorul trebuie să fie eficient.
+
+Duhul Sfânt folosește o anumită categorie de pasaje. Este responsabilitatea ta să le memorezi pentru a le putea folosi.
+
+Nu folosi Ioan 3:16. De ce? Pentru că folosindu-l nu faci decât să-i spui păcătosului cum să fie mântuit înainte de a ști că are nevoie de mântuire. Ce ai făcut a fost numai să-l împietrești față de evanghelie. Ceea ce am făcut în America a fost să împietrim față de evanghelie o generație de păcătoși, spunându-le cum să fie mântuiți înainte de a avea vreo înțelegere cu privire la motivul pentru care au nevoie să fie mântuiți.
+
+Nu ni se spune ce au vorbit Pavel și Sila în temnița din Filipi, în timpul acelor ore lungi din noapte, însă știu ce NU au spus. Nu le-au spus celor din închisoare cum să fie mântuiți. Pavel și Sila au așteptat până când temnicerul, realizându-și stare de plâns, i-a invitat prin cuvintele: „Ce trebuie să fac ca să fiu mântuit?” În acel moment Pavel i-a spus cum, nu înainte.
+
+Care sunt pasajele pe care le putem cita atunci când întâlnim pe cineva care nu s-a trezit încă?
+
+*„Cu adevărat îi pui în locuri lunecoase, îi prăbușești în dărâmături.” – Psalmul 73:18*
+
+*„De aceea calea lor va fi pentru ei ca lunecușurile în întuneric. Vor fi împinși și vor cădea pe ea. Căci voi aduce rău asupra lor, anul cercetării lor, zice Domnul.” – Ieremia 23:12*
+
+*„De aceea așa zice Sfântul lui Israel: Fiindcă nesocotiți cuvântul acesta și vă încredeți în apăsare și îndărătnicie și vă rezemați pe ele, de aceea nelegiuirea aceasta va fi pentru voi ca o spărtură gata să cadă, ca o umflătură într‐un zid înalt a cărui prăbușire va veni deodată, într‐o clipă.” – Isaia 30:12-13*
+
+Credeți că păcătoșii cred că adevărat că stau în locuri alunecoase, că poziția lor este una precară? Știu; poate spuneți că veți face ceva în legătură cu Dumnezeu când veți îmbătrâni, însă este posibil să nu apucați să îmbătrâniți.
+
+O parte importantă a motivului pentru care nu vedem păcătoși trezindu-se este lipsa de preocupare a sfinților. Dacă nu-i putem determina pe sfinți să fie preocupați de starea pierdută a celor pierduți, cât de dificil este să-i facem pe cei pierduți să fie preocupați de propria lor stare?
+
+*„Dumnezeu este un judecător drept și un Dumnezeu care se mânie în fiecare zi. Dacă cel rău nu se întoarce, Dumnezeu își va ascuți sabia, își încordează arcul și l‐a pregătit.” – Psalmul 7:11-12*
+
+Nu este niciun conflict între faptul că Dumnezeu a iubit lumea și L-a dat pe Fiul Lui și faptul că El este în continuare, în fiecare zi, mânios pe cei răi. Păcatul nu este o boală congenitală. Păcatul este o înaltă trădare împotriva Dumnezeirii. Singurul destul de măreț, de înțelept, de drept, de corect ca să conducă și guverneze omul, care a fost creat după chipul lui Dumnezeu este Însuși Dumnezeu după a cărui chip a fost creat. A porni pe propria ta cale și a spune că vei trăi ca un anarhist moral într-un univers moral este trădare… nu doar un act de trădare, ci o viață de răzvrătire; nu numai o viață de răzvrătire, ci politica anarhiei.
+
+În mod straniu, am găsit puțină povară pentru cei pierduți în bisericile în care am fost privilegiat să slujesc. Mi s-a întâmplat să particip câte o săptămână întreagă la cele mai bune conferințe creștine sau întâlniri de evanghelizare în care niciun membru al bisericii să nu fi adus vreun om pierdut, sau să mă ducă pe mine să întâlnesc un astfel de om. Nu este povară în rugăciune, nu este preocupare pentru cei pierduți. Dumnezeu trebuie cumva să ne străpungă înțelegerea cu adevărat că ceea ce ni s-a înâmplat nouă trebuie să le se întâmple și altora.
+
+*„Omul mustrat des care își înțepenește grumazul, va fi sfărâmat într‐o clipă fără leac.” – Proverbe 29:1*
+
+Sunt deseori mustrați păcătoșii din jurul tău? Fiecare necrolog din ziar este o mustrare. Viața este scurtă; moartea este sigură. De fiecare dată când un păcătos trece pe lângă o biserică străjuită de o turlă de clopotniță și de o cruce este mustrat. De fiecare dată când scrie data, se referă la nașterea lui Isus Cristos… o cântare creștină auzită la radio printr-o fereastră deschisă … o emisiune creștină … toate acestea sunt mustrări. Nu e nevoie ca un înger să vină și să se audă un glas care să le spună păcătoșilor să fugă de mânia care va veni … un tractat lăsat în tramvai, o Biblie într-o cameră de hotel. „Omul mustrat des care își înțepenește grumazul …”.
+
+Le-am dat celor nemântuiți ideea că au timp nelimitat înaintea lor în care să se decidă dacă vor sau nu să vină la Cristos. Nu îl au.
+
+Îți pasă de cei pierduți? Cuiva i-a păsat de tine; cineva L-a trăit pe Cristos înaintea ta; cineva a mijlocit pentru tine; cineva a depus mărturie înaintea ta. Ești echipat cu acele versete din Scriptură pe care să le folosești ca să-i faci pe cei care nu sunt treziți să conștientizeze pericolul în care stau? Sau nu crezi că sunt în pericol? Am distorsionat dragostea lui Dumnezeu în așa măsură încât credem că Dumnezeul Bibliei a fost radical și mânios cu copiii Lui, dar este indulgent cu nepoții Lui. Dumnezeul Bibliei nu se schimbă!
+
+*„Puneți-vă la încercare pe voi înșivă, ca să vedeți dacă sunteți în credință! Testați-vă pe voi înșivă! Sau nu recunoașteți cu privire la voi înșivă că Isus Cristos este în voi? Doar dacă nu cumva sunteți respinși la test.” – 2 Corinteni 13:5*
+
+Înțelegeți? Mântuirea nu este un program, un plan, o decizie. Mântuirea este o persoană. „Cine Îl are pe Fiul, are viață” (1 Ioan 5:12).
+
+Al doilea îndemn al meu pentru voi este să-i cereți iertare lui Dumnezeu dacă nu ați fost preocupați cu cei pierduți și dacă nu sunteți echipați cu acele versete din Scriptură pe care le-ați putea folosi, versete ascuțite cu rugăciune și unse cu dragoste, ca Sabia Duhului pentru păcătosul adormit.
+
+Înainte ca „lumina evangheliei slăvite a lui Cristos” să poată străluci în inima și mintea păcătosului, este imperativ ca acesta să fie „trezit”. Trezirea este o nouă sensibilitate pe care Duhul Sfânt a lui Dumnezeu o lucrează în oameni și care-i face să-și vadă nevoia.

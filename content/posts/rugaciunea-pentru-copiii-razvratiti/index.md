@@ -1,0 +1,19 @@
+---
+title: "Rugăciunea pentru copiii răzvrătiți"
+slug: rugaciunea-pentru-copiii-razvratiti
+description: ""
+date: "2021-10-25T20:47:56+03:00"
+updated: "2022-02-28T00:05:23+02:00"
+author: ["paul-e-billheimer"]
+related: []
+legacyUrl: https://mesaje-crestine.ro/2021/10/rugaciunea-pentru-copiii-razvratiti/
+---
+Diavolul vrea să ne gândim cu toții ca nu este nicio cale de restabilire; nicio posibilitate de a câștiga victoria asupra greșelilor din trecut. El este un mincinos și tatăl minciunilor. Fiecare părinte care se căiește cu adevărat poate fi sigur de ajutorul Dumnezeului Atotputernic. Există două pasaje din Scriptură pentru părinții pe care Satan i-a înșelat cu minciuna că au „dat-o în bară” cu privire la familia lor. Unul se găsește la Isaia 54:13, „Și toți copiii tăi \[urmașii\] tăi vor fi învățați de Domnul și mare va fi pacea \[propășirea\] copiilor tăi”. Celălalt se găsește la Isaia 49:25, „Căci mă voi lupta cu cel ce se luptă cu tine și-ți voi salva copiii”. Dacă te îndoiești că ai dreptul să te bazezi pe aceste promisiuni, citește la 2 Corinteni 1:20,  „Pentru că, oricâte promisiuni ale lui Dumnezeu ar fi, în El este da-ul şi în El Amin-ul, pentru gloria lui Dumnezeu prin noi”. Aceasta este garanția că în Cristos Isus toate promisiunile ce țin de răscumpărare, care au fost spuse vreodată de gura lui Dumnezeu, sunt confirmate și la îndemâna fiecărui credincios acum. Dacă-ți însușești aceste promisiuni și nu te dai bătut niciodată, oricare ar fi starea actuală a copiilor tăi, Dumnezeu este legat de Cuvântul Lui să ți-i aducă la El.
+
+Aceasta demontează propaganda lui Satan care susține că nu mai are rost ca părinții să se roage pentru salvarea copiilor lor răzvrătiți. Prea mult am suportat argumentul lui Satan care spune că Dumnezeu nu va constrânge voința omului. Este adevărat; nu o va face. Dar Dumnezeu i-a dat bisericii autoritate asupra puterilor vrăjmașului (Luca 10:19) și dacă vei persevera, dacă nu-ți predai copilul lui Satan, Dumnezeu este legat de cuvântul lui, în mod drept, să găsească o cale, nu să constrângă ci să-ți convingă copilul să se pocăiască, să-și schimbe gândirea și să capituleze înaintea dragostei atot-benefică a Domnului Isus Cristos. Dacă copilul nu va veni fără să fie pedepsit, Dumnezeu va purta grijă și de acest lucru. Dacă nu cedezi înaintea înșelărilor și cacealmalelor lui Satan, Dumnezeu îți va convinge copilul până într-acolo încât îi va fi mai ușor să se supună decât să-și continue răzvrătirea.
+
+Satan nu are poziția supremă în univers; Dumnezeu are puterea să biruiască răzvrătirea din copilul tău. Cheia nu este în primul rând starea inspirată de Satan în care se află gândirea copilului tău, ci dedicarea și hotărârea ta. Tu ești cheia pentru că rugăciunea se învață la locul de muncă. La 1 Ioan 5:14 spune: „Și aceasta este îndrăzneala pe care o avem la El: dacă cerem ceva după voia Lui, El ne ascultă. Iar dacă știm că ne ascultă cu privire la orice Îi cerem, știm că avem lucrurile pe care le‑am cerut de la El”.
+
+Părinții copiilor răzvrătiți nu sunt neajutorați. Dacă sunt gata să nu renunțe la luptă, atunci nu e nevoie să fie învinși. Vom vedea mai târziu că Iov a găsit calea corectă și și-a salvat familia. Nu toți urmașii mei sunt încă în siguranță, în turmă, dar cred că vor fi. Cred că, răspunzând rugăciunilor, Dumnezeu va continua să-i urmărească prin Duhul lui până când, ca și părintele lor, vor descoperi că le e mai ușor să se predea decât să continue în împotrivirea lor.
+
+Fragment din cartea „Adventure in adversity”

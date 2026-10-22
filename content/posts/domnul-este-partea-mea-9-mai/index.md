@@ -1,0 +1,16 @@
+---
+title: "Domnul este partea mea – 9 Mai"
+slug: domnul-este-partea-mea-9-mai
+description: ""
+date: "2023-05-09T11:18:04+03:00"
+author: ["watchman-nee"]
+cover: ./cover.jpg
+coverAlt: "Mesaje Crestine"
+related: []
+legacyUrl: https://mesaje-crestine.ro/2023/05/domnul-este-partea-mea-9-mai/
+---
+*Și voi sunteți împliniți în El, care este Capul oricărei stăpâniri și autorități. – Coloseni 2:10*
+
+Mulți creștini sunt astăzi într-o dilemă. Pare că nu pot să moară. Astăzi sunt răi și mâine vor fi tot răi. Oricât de mult încearcă să fie buni, încearcă degeaba. Oh, îngăduiți-mi să spun că evanghelia care ți se adresează ție, *ca tu să însuți să faci lucrurile* este greșită.
+
+Cristos a realizat totul pentru noi. Este lucrarea Lui. Noi trebuie să vedem ce a fost realizat în El. Ceea ce Domnul Isus a împlinit este menit să ne facă să fim perfecți în El; iar Duhul Sfânt încorporează în noi tot ce este în Cristos. El nu numai a murit, ci a fost și înviat. Când Cristos a murit și noi am murit; când a fost înviat și noi am fost înviați; când s-a înălțat și noi ne-am înălțat. Moștenirea noastră în El este în realitate cu mult peste așteptările noastre.

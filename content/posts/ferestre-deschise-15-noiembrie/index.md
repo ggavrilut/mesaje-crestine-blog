@@ -1,0 +1,16 @@
+---
+title: "Ferestre deschise – 15 Noiembrie"
+slug: ferestre-deschise-15-noiembrie
+description: ""
+date: "2024-11-16T22:05:56+02:00"
+author: ["t-austin-sparks"]
+cover: ./cover.jpg
+coverAlt: "Revelație in situații practice"
+related: []
+legacyUrl: https://mesaje-crestine.ro/2024/11/ferestre-deschise-15-noiembrie/
+---
+*Celui ce va birui îi voi da să mănânce din mana ascunsă. – Apocalipsa 2:17*
+
+Dumnezeu leagă întotdeauna revelația Lui Însuși în Cristos de situațiile practice. Nici voi, nici eu, nu putem primi niciodată revelație decât în legătură cu o nevoie. N-o putem primi ca pe o informație. Aceasta ar fi informație, nu revelație. N-o putem obține prin studiu. Când Domnul a dat mana în pustie (o imagine a lui Cristos ca Pâinea coborâtă din cer), a specificat foarte clar că israeliții nu trebuiau să adune nici măcar cu o fărâmă mai mult decât era nevoie pentru ziua respectivă. Dacă depășeau măsura nevoii imediate, urmau să fie loviți de boală și moarte. Principiul, legea manei, este că Dumnezeu păstrează revelația Lui în Cristos legată de situații și nevoi practice. Nu vom primi revelația ca pe o simplă învățătură, doctrină, interpretare, teorie sau altceva care să fie doar un lucru în sine, ci Dumnezeu ne va pune în situații în care numai revelația lui Cristos ne poate ajuta și salva.
+
+Acesta este motivul pentru care Domnul ne ține în situații acute, reale. Domnul este împotriva abordării teoretice sau tehnice a adevărului. Să lepădăm tehnicile, ca pe un scop în sine și și să recunoaștem acest lucru: deși Noul Testament conține o anumită tehnică, noi n-o putem doar extrage și aplica. Trebuie să ajungem în situații de tipul celor din Noul Testament pentru a primi o revelație a lui Cristos care să răspundă acelor situații. Astfel, calea Duhului Sfânt cu noi este să ne aducă în condiții, situații și nevoi concrete și vii, în care numai o cunoaștere proaspătă a Domnului Isus poate fi eliberarea, mântuirea și viața noastră. Și acolo să ne dea, nu o revelație a adevărului, ci o revelație a Persoanei, o nouă cunoaștere a Persoanei, să ajungem să-L vedem pe Cristos într-un mod care va răspunde exact nevoii noastre. Noi nu ne apropiem de „ceva”, ci de „Cineva”.

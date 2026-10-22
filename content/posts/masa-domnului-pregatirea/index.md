@@ -1,0 +1,34 @@
+---
+title: "Masa Domnului – Pregătirea"
+slug: masa-domnului-pregatirea
+description: ""
+date: "2023-01-28T17:52:16+02:00"
+author: ["andrew-murray"]
+cover: ./cover.jpg
+coverAlt: ""
+related: []
+legacyUrl: https://mesaje-crestine.ro/2023/01/masa-domnului-pregatirea/
+---
+*„Unde voieşti să ne ducem să-Ţi pregătim ca să mănânci Paştele? … Şi are să vă arate o odaie mare de sus, aşternută gata; acolo să pregătiţi pentru noi.” – Marcu 14:12, 15*
+
+*„Dacă‐ți vei îndrepta inima atunci întinde-ți mâinile spre El.” – Iov 11:13 trad.*
+
+Cu cât lucrarea cuiva este mai mare, cu atât este mai importantă pregătirea. Evreii trebuiau să înceapă pregătirile cu patru zile înainte de Paște. Și Domnul Isus a căutat să poarte de grijă ca să se găsească o cameră de sus, așternută și disponibilă, unde să se poată pregăti Paștele. Când sunt chemat să-L întâlnesc pe Dumnezeul meu și să stau la masa Lui, voi fi atent să nu mă apropiu nepregătit, căci altfel Îl voi necinsti pe El, voi pierde binecuvântarea care-mi este destinată și-mi voi acoperi sufletul cu o vină grea.
+
+Două lucruri sunt necesare pentru o pregătire corespunzătoare. Primul este următorul: inima mea trebuie să fie ocupată și umplută cu Cel care m-a invitat și cu toate binecuvântările slăvite pe care el dorește să le reverse peste mine. Gânduri mărețe cu privire la Isus și așteptări mari cu privire la ce dragostea Lui va face, îmi vor aprinde inima și vor fi cea mai bună pregătire în vederea întâlnirii cu El.
+
+A doua parte a pregătirii este să văd dacă voi fi un oaspete vrednic, acceptabil și bine primit de Domnul Ospățului: adică, dacă sunt cu adevărat un oaspete invitat, doritor și pregătit să mă apropiu de masă potrivit legii Împăratului, într-un mod pe care El îl va aproba. Să nutresc gânduri cu privire la răul care este în mine și să nu mai am nicio așteptare de la mine sau de la ceva bun ce-ar veni din mine. Iar din această atitudine să decurgă o renunțare la sine, adânc înrădăcinată, astfel încât să fiu gata să trăiesc numai prin Isus. Această atitudine a sufletului duce la o participare binecuvântată la Cină.
+
+Fără a cheltui timp, omul nu poate obține nimic. Chiar și harului gratuit, care n-are nimic de-a face cu lucrarea noastră, trebuie să-i dăm timp să-și facă lucrarea în inimile noastre. Voi fi cu adevărat pregătit pentru ospăț, numai când mă hotăresc, în ascuns, să privesc la Isus până când dorințele mele devin cu adevărat lucrătoare în mine. Mă pot aștepta la o binecuvântare excepțională în părtășia publică cu El la masa Lui, numai apropiindu-mă de El, plin de încredere, în umblarea obișnuită și ascunsă a vieții de fiecare zi. Da, foamea și setea nu pot fi trezite doar în momentul în care sunt înaintea mesei. În conflictele acestei vieți, pe care am menționat-o, sunt stârnite foamea și setea mea. Masa este un ospăț numai pentru astfel de oameni. Să nu-mi lipsească această trezire în pregătirea mea!
+
+Dar, vai! Dacă atât de puțin am putut participa la lucrarea de pregătire a mesei cu mâncarea ei, cum aș putea să mă pregătesc în calitate de oaspete la acest ospăț? Domnul care spune: „Toate lucrurile sunt pregătite”, a pregătit și haina de nuntă. El însuși îi va îmbrăca pe invitați și-i va pregăti pentru ospățul Lui. De aceea, și acest lucru îl voi cere de la El. Pe Domnul, l-au întrebat ucenicii: „Unde voieşti să-Ţi pregătim Paştele?” Pe El pot și Îl voi întreba și eu: „Doamne, cum vrei Tu să pregătesc Paștele?” În această săptămână, voi rămâne la picioarele lui, meditând în tăcere și rugăciune, având ochii și inima ațintite asupra Lui. Știu cu siguranță că voi găsi ce am nevoie pentru sărbătorirea acestui ospăț.
+
+**Rugăciune**
+
+Apropiindu-mă de masa Ta, izbăvește-mă, Doamne, de orice superficialitate și ușurătate! De prea multe ori am privit participarea la masa Ta ca pe un lucru de la sine înțeles. Am trecut cu vederea cât de necesar este să îndepărtez pietrele din cale atunci când Domnul Însuși vine să-Și pregătească calea și să-Și netezească cărările. Am socotit primirea binecuvântării ca pe ceva neînsemnat. Iartă-mi această greșeală, Doamne! Lucrează Tu Însuți, ca sufletul meu să înțeleagă ce înseamnă că omul păcătos se va întâlni cu Dumnezeu lui. Lucrează Tu Însuți în mine adevărata conștiență și disponibilitate de a părăsi și de a pune deoparte orice păcat și de a mă încredința pe deplin Ție, într-o predare reală a întregului meu suflet cu toate puterile lui.
+
+Doamne Isuse, Te implor, ascultă această cerere a mea. O, Doamne, fă să nu pierd binecuvântarea prin neglijență și pasivitate. O, Domnul Meu, ce mult Te-a costat pe Tine să-mi pregătești această masă, însă acum, nici măcar aceasta nu-mi este de ajuns. Trebuie să Te mai rog să mă pregătești și pe mine pentru această masă. Îți mulțumesc pentru siguranța plină de bucurie pe care o am că vei face acest lucru. De aceea, mă așez în această săptămână în mâinile Tale ca, prin prin lucrarea Ta în mine să ia naștere în sufletul meu o atitudine corectă.
+
+Domnul meu prețios, dă-mi o inimă frântă și zdrobită și învață-mă să privesc la Tine cu o credință vie și activă, ca la Prietenul meu, Mântuitorul meu, Totul pentru mine. Doamne Isuse, lucrează să pot spune și că: Nu am decât un singur gând, o singură dorință, iar aceasta este Isus. În acest fel voi fi pregătit să-L cinstesc pe Tatăl, slăvindu-Te pe Tine prin mărturia mea voioasă că nu doresc nimic altceva în afară de Tine și de dragostea Ta minunată.
+
+Mântuitorul meu, depind de Tine pe tot parcursul acestei săptămâni. Lucrează în mine o adevărată pregătire pentru Masa Ta. Aștept aceasta de la Tine. Amin!
