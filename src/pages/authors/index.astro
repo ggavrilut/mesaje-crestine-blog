@@ -1,0 +1,28 @@
+---
+import Base from '../../layouts/Base.astro';
+import { SITE_NAME, authorPath, getAuthors, getPosts } from '../../lib/site.ts';
+
+const posts = await getPosts();
+const authors = [...(await getAuthors()).values()]
+  .map((author) => ({ author, count: posts.filter((p) => p.data.author.some((a) => a.id === author.id)).length }))
+  .filter(({ count }) => count > 0)
+  .sort((a, b) => a.author.data.name.localeCompare(b.author.data.name, 'ro'));
+---
+<Base
+  title={`Autori | ${SITE_NAME}`}
+  description="Autorii ale căror scrieri sunt publicate pe Mesaje Creștine, de la Watchman Nee și Andrew Murray la Stephen Kaung, cu lista articolelor fiecăruia."
+  path="/authors/"
+  breadcrumbs={[{ name: 'Autori', path: '/authors/' }]}
+>
+  <section class="container page">
+    <h1 class="page-title">Autori</h1>
+    <ul class="author-list">
+      {authors.map(({ author, count }) => (
+        <li>
+          <a href={authorPath(author)}>{author.data.name}</a>
+          <span class="meta">{count === 1 ? '1 articol' : `${count} articole`}</span>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

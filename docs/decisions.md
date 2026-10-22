@@ -3,6 +3,34 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-22** Author portraits (owner): the ten portraits in the WordPress media library
+  that belong to authors of the site are imported (`PORTRAITS` in `bin/import-wp.ts`); the
+  other sixteen authors keep the design's striped circle until the owner supplies one.
+- **2026-10-22** Visual design (owner): the redesign handed off in
+  `design/design_handoff_mesaje_crestine/` replaces the WordPress look, which had been rebuilt
+  the same day. Post dates stay visible, as both the handoff and `seo.md` want.
+- **2026-10-22** Site images (owner): the WordPress "MC" monogram (192×192) stays the logo
+  in JSON-LD; the favicon set and the default social card are new, drawn from
+  `src/brand/mark.svg` by `bin/make-brand-images.ts`, because the monogram's ring text is
+  noise at favicon size. The card is the `og:image` of every page and coverless post, but
+  not a post's JSON-LD `image`, which Google wants to represent the article.
+- **2026-10-22** `despre-noi` and `contact` are not imported (owner): on WordPress the first
+  is a theme demo placeholder and the second only the form. Both are built as new pages at the
+  same URLs, the about text from the owner, the form from the contact-form spec.
+- **2026-10-22** Import findings settled by the owner: a post's `author` may list several
+  authors, and a post with none is imported as a draft; `cover` (and until the post writer's
+  pass, `coverAlt`, `description`, `related`) is optional for imported posts only; a video
+  inside an article's text is a line holding only its YouTube URL, at its original place.
+- **2026-10-22** The importer reads a post from its rendered page whenever the page has no
+  `post-content` element (developer): `rugaciune`'s REST content holds 69 of the 385 words
+  readers see, so the page, not the API, is the text.
+- **2026-10-22** Dependencies (owner approved the list): `astro` 7, `@astrojs/markdown-satteri`
+  at Astro's own version (to switch off smart punctuation), and for development
+  `@astrojs/check`, `typescript` 6 (the newest `@astrojs/check` supports), `cheerio`,
+  `@types/node`. `@astrojs/sitemap` was approved but dropped: the sitemap is built from the
+  collections so `lastmod` follows real changes and one-post author pages stay out
+  (`seo.md`). HTML becomes Markdown through our own converter, not turndown, which escapes
+  text in ways that break the text check.
 - **2026-10-22** Publishing runs as fixed phases, one specialist each (owner): `bin/fetch-doc`
   (a script: it guards the text, so no model in that step), `post-writer`, `publisher`
   prepare, `seo-reviewer` (read-only gate, separate from the `seo` strategist so the check is

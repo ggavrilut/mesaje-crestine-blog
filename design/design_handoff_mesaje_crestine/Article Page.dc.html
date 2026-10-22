@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fbfcfb;color:#2f3532;font-family:Roboto,system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:#2c8c84;text-decoration:none}
+a:hover{color:#1d6d66}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#f3f6f5;border-bottom:1px solid #e2e8e5;position:sticky;top:0;z-index:5">
+    <div style="max-width:1440px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="Homepage Redesign.dc.html" style="font-size:17px;font-weight:300;letter-spacing:0.14em;color:#2f3532">MESAJE CREȘTINE</a>
+      <nav style="display:flex;gap:24px;font-size:14px;font-weight:400;flex-wrap:wrap">
+        <a href="Homepage Redesign.dc.html#articole" style="color:#4b5550">Articole</a>
+        <a href="Homepage Redesign.dc.html#autori" style="color:#4b5550">Autori</a>
+      </nav>
+    </div>
+    <div style="height:2px;background:transparent">
+      <div style="height:2px;background:#1da69a;width:{{ progress }}"></div>
+    </div>
+  </header>
+
+  <section style="background:#fbfcfb">
+    <div style="max-width:1040px;margin:0 auto;padding:72px 32px 40px;display:grid;gap:20px;justify-items:center;text-align:center">
+      <a href="https://mesaje-crestine.ro/authors/stephen-kaung/" style="font-size:13px;letter-spacing:0.16em;text-transform:uppercase;font-weight:400;color:#2c8c84">Stephen Kaung</a>
+      <div style="font-size:14px;font-weight:400;color:#6b7670;margin-top:-10px">22 octombrie 2026</div>
+      <h1 style="margin:0;font-weight:300;font-size:clamp(34px,4.8vw,54px);line-height:1.12;color:#2f3532;text-wrap:balance">Cum va fi îndreptată Biserica? Biruind.</h1>
+      <div style="display:flex;gap:20px;font-size:14px;font-weight:400">
+        <a href="http://www.facebook.com/sharer.php?u=https%3A%2F%2Fmesaje-crestine.ro%2F2026%2F10%2Fcum-va-fi-indreptata-biserica-biruind%2F" style="color:#56625c">Facebook</a>
+        <a href="https://api.whatsapp.com/send?text=https%3A%2F%2Fmesaje-crestine.ro%2F2026%2F10%2Fcum-va-fi-indreptata-biserica-biruind%2F" style="color:#56625c">WhatsApp</a>
+        <button onClick="{{ copyLink }}" style="font:400 14px Roboto,sans-serif;background:none;border:none;padding:0;color:#56625c;cursor:pointer">{{ copyLabel }}</button>
+      </div>
+    </div>
+    <div>
+      <img src="https://mesaje-crestine.ro/wp-content/uploads/2025/07/alexey-elfimov-01huESAdPAQ-unsplash-scaled.jpg" alt="Cum va fi îndreptată Biserica? Biruind." style="display:block;width:100%;aspect-ratio:21/8;object-fit:cover">
+    </div>
+  </section>
+  <main style="flex:1;width:100%;max-width:1040px;margin:0 auto;padding:64px 32px 32px;display:grid;gap:24px;font-family:'Source Serif 4',Georgia,serif;font-size:{{ bodySize }};line-height:1.75;color:#3a423e">
+    <blockquote style="margin:0;padding-left:24px;border-left:2px solid #1da69a;font-style:italic;color:#2f3532;text-wrap:pretty">„Cine are urechi să asculte ceea ce Duhul zice bisericilor: Celui care va birui îi voi da să mănânce din pomul vieții, care este în raiul lui Dumnezeu.” – Apocalipsa 2:7</blockquote>
+    <p style="margin:0;text-wrap:pretty">Acest lucru este repetat de șapte ori în capitolele 2 și 3.</p>
+    <blockquote style="margin:0;padding-left:24px;border-left:2px solid #1da69a;font-style:italic;color:#2f3532;text-wrap:pretty">„Ei l-au biruit prin sângele Mielului și prin cuvântul mărturiei lor, și nu și-au iubit viața chiar până la moarte.” – Apocalipsa 12:11</blockquote>
+    <p style="margin:0;text-wrap:pretty">Să ne rugăm:</p>
+    <p style="margin:0;font-style:italic;text-wrap:pretty">Iubite Doamne, continuând să stăm în prezența Ta, vrem să ne deschidem inimile față de Tine și să spunem: Doamne ai ceva să ne spui? Vorbește, robii Tăi ascultă, în numele Tău. Amin.</p>
+    <p style="margin:0;text-wrap:pretty">La un moment dat, fratele Sparks i-a pus fratelui Nee o întrebare: Care este lucrul din Biblie care este cel mai greu de împlinit? Fratele nostru Nee a răspuns acestei întrebări prin versetul 27 de la Efeseni 5: „ca s-o înfățișeze înaintea Sa ca o Biserică glorioasă, fără pată, fără zbârcitură sau altceva de felul acesta, ci sfântă și fără vină”. Potrivit fratelui nostru, acesta este lucrul cel mai greu de împlinit.</p>
+    <p style="margin:0;text-wrap:pretty">Frați și surori, privind la Biserică astăzi, privind la noi înșine, privind în jurul nostru, cu cât ne gândim mai mult la ce ar trebui să fie Biserica, cu atât vedem că acest lucru pare tot mai imposibil. Omenește vorbind, pare imposibil. Dar iubiți frați și surori, cu Dumnezeu nimic nu este imposibil. Cel ce a făcut promisiunea, o va împlini. Dar cum?</p>
+    <p style="margin:0;text-wrap:pretty">De asemenea, putem observa că fiecare din cele șapte scrisori scrise celor șapte biserici din Asia Mică este încheiată cu o chemare. Și chemarea este personală, „cine are urechi să asculte ceea ce Duhul zice bisericilor”. Cu alte cuvinte, observăm că Dumnezeu are o strategie. Și va face acest lucru prin biruitori.</p>
+    <h2 style="margin:16px 0 0;font-family:Roboto,sans-serif;font-weight:300;font-size:1.5em;line-height:1.25;color:#2f3532">Secretul biruitorilor</h2>
+    <p style="margin:0;text-wrap:pretty">Dar frați și surori, acest lucru va fi în viitor, cum rămâne cu prezentul? Noi încă trăim. Suntem în pragul acelei răpiri. Suntem pregătiți? Suntem gata? Secretul este dat în Apocalipsa 12:11. Acesta este secretul.</p>
+    <p style="margin:0;text-wrap:pretty"><strong style="font-weight:500">Numărul unu, prin sângele Mielului.</strong> Frați și surori, să nu vă gândiți că am avut nevoie de sângele Mielului doar atunci când am fost mântuiți. Avem nevoie tot timpul de curățarea lui.</p>
+    <p style="margin:0;text-wrap:pretty"><strong style="font-weight:500">Numărul doi, prin cuvântul mărturiei lor.</strong> Ei au o mărturie. Care este mărturia lor? Este mărturia lui Isus.</p>
+    <p style="margin:0;text-wrap:pretty"><strong style="font-weight:500">Numărul trei, nu și-au iubit viețile, chiar până la moarte.</strong> Sunt gata să se lepede de viața sufletului lor pentru a-L urma pe Domnul.</p>
+    <p style="margin:0;text-wrap:pretty">Acesta este secretul biruitorilor. Așadar, iubiți frați și surori, suntem noi gata? Dacă chemarea vine în această noapte, vom pleca? Domnul să ne ajute!</p>
+    <p style="margin:0;text-wrap:pretty">Să ne rugăm.</p>
+    <p style="margin:0;font-style:italic;text-wrap:pretty">Iubite Doamne, Te lăudăm și Îți mulțumim că Tu încă aștepți. Fă-ne gata și folosește-ne ca pe aceia care pregătesc venirea Ta iminentă. Îți cerem în Numele Tău. Amin.</p>
+
+    <p style="margin:0;font-family:Roboto,sans-serif;font-size:14px;line-height:1.6;color:#6b7670"><a href="https://christiantestimonyministry.com/item/how-will-the-church-be-made-right-by-overcoming-">Mesaj</a> rostit în data de 13 aprilie 2014, în Richmond, Virginia. Continuarea mesajului <a href="https://mesaje-crestine.ro/2026/10/marturia-lui-isus/">„Mărturia lui Isus”</a>.</p>
+
+    <div style="display:flex;align-items:center;gap:20px;padding:28px 0;border-top:1px solid #e2e8e5;border-bottom:1px solid #e2e8e5;font-family:Roboto,sans-serif">
+      <div style="width:56px;height:56px;border-radius:50%;flex:none;background:repeating-linear-gradient(135deg,#e6ece9 0 6px,#eef2f0 6px 12px)"></div>
+      <div style="display:grid;gap:4px">
+        <div style="font-size:12px;letter-spacing:0.14em;text-transform:uppercase;font-weight:400;color:#6b7670">Autor</div>
+        <a href="https://mesaje-crestine.ro/authors/stephen-kaung/" style="font-size:18px;font-weight:400;color:#2f3532">Stephen Kaung</a>
+      </div>
+      <a href="https://mesaje-crestine.ro/authors/stephen-kaung/" style="margin-left:auto;font-size:14px;font-weight:400">Toate articolele →</a>
+    </div>
+  </main>
+
+  <section style="width:100%;max-width:1440px;margin:0 auto;padding:48px 32px 24px;display:grid;gap:28px">
+    <div style="display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap">
+      <h2 style="margin:0;font-weight:300;font-size:28px;color:#2f3532">Citește și</h2>
+      <a href="https://mesaje-crestine.ro/2026/10/marturia-lui-isus/" style="font-size:15px;font-weight:400">← Articolul anterior: Mărturia lui Isus</a>
+    </div>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,280px),1fr));gap:32px">
+      <a href="https://mesaje-crestine.ro/2022/09/rugaciune-si-povara/" style="display:grid;gap:14px;color:inherit">
+        <div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e6ece9 0 10px,#eef2f0 10px 20px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#7b8781">imagine articol</div>
+        <h3 style="margin:0;font-weight:300;font-size:22px;line-height:1.3;color:#2c8c84">Rugăciune și povară</h3>
+      </a>
+      <a href="https://mesaje-crestine.ro/2021/11/traind-prin-viata-divina/" style="display:grid;gap:14px;color:inherit">
+        <div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e6ece9 0 10px,#eef2f0 10px 20px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#7b8781">imagine articol</div>
+        <h3 style="margin:0;font-weight:300;font-size:22px;line-height:1.3;color:#2c8c84">Trăind prin viața divină</h3>
+      </a>
+      <a href="https://mesaje-crestine.ro/2025/07/rugaciunea-pentru-revenirea-domnului/" style="display:grid;gap:14px;color:inherit">
+        <div style="aspect-ratio:3/2;background:repeating-linear-gradient(135deg,#e6ece9 0 10px,#eef2f0 10px 20px);display:flex;align-items:center;justify-content:center;font-family:ui-monospace,Menlo,monospace;font-size:12px;color:#7b8781">imagine articol</div>
+        <h3 style="margin:0;font-weight:300;font-size:22px;line-height:1.3;color:#2c8c84">Rugăciunea pentru revenirea Domnului</h3>
+      </a>
+    </div>
+  </section>
+
+  <footer id="contact" style="background:#56625c;color:#e9efec;margin-top:48px">
+    <div style="max-width:1440px;margin:0 auto;padding:72px 32px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:56px">
+      <div style="display:grid;gap:20px;align-content:start">
+        <div style="font-size:18px;letter-spacing:0.14em;font-weight:300">MESAJE CREȘTINE</div>
+        <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:22px;line-height:1.5;color:#f4f7f5;text-wrap:pretty">„Căutați mai întâi Împărăția lui Dumnezeu și dreptatea Lui, și toate aceste lucruri vi se vor da pe deasupra.”</p>
+        <div style="font-size:14px;font-weight:400;color:#c5d3cd">Matei 6:33</div>
+      </div>
+      <form style="display:grid;gap:12px;align-content:start" onSubmit="{{ onSubmit }}">
+        <div style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;font-weight:400;color:#bcd9d4">Contact</div>
+        <input placeholder="Nume" style="font:300 16px Roboto,sans-serif;padding:12px 14px;min-height:46px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none">
+        <input placeholder="Email" type="email" style="font:300 16px Roboto,sans-serif;padding:12px 14px;min-height:46px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none">
+        <textarea placeholder="Mesaj" rows="4" style="font:300 16px Roboto,sans-serif;padding:12px 14px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none;resize:vertical"></textarea>
+        <button type="submit" style="justify-self:start;font:400 15px Roboto,sans-serif;padding:12px 28px;min-height:46px;border:none;background:#1da69a;color:#fff;border-radius:2px;cursor:pointer" style-hover="background:#17897f">{{ sendLabel }}</button>
+      </form>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:24px 32px 32px;border-top:1px solid #6b7670;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#c5d3cd">
+      <span>© 2021–2026 Mesaje Creștine</span>
+      <a href="https://www.facebook.com/Mesaje-Cre%C8%99tine-100365085780276" style="color:#e9efec">Facebook</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;textSize&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;mic&quot;,&quot;normal&quot;,&quot;mare&quot;],&quot;default&quot;:&quot;normal&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showProgress&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+class Component extends DCLogic {
+  state = { p: 0, copied: false, sent: false };
+  componentDidMount() {
+    this.onScroll = () => {
+      const el = document.scrollingElement || document.documentElement;
+      const max = el.scrollHeight - el.clientHeight;
+      this.setState({ p: max > 0 ? Math.min(1, el.scrollTop / max) : 0 });
+    };
+    window.addEventListener('scroll', this.onScroll, { passive: true });
+  }
+  componentWillUnmount() { window.removeEventListener('scroll', this.onScroll); }
+  renderVals() {
+    const sizes = { mic: "17px", normal: "19px", mare: "21px" };
+    return {
+      progress: (this.props.showProgress ?? true) ? (this.state.p * 100).toFixed(1) + "%" : "0%",
+      copyLabel: this.state.copied ? "Link copiat" : "Copiază link",
+      copyLink: () => { navigator.clipboard?.writeText("https://mesaje-crestine.ro/2026/10/cum-va-fi-indreptata-biserica-biruind/"); this.setState({ copied: true }); },
+      bodySize: sizes[this.props.textSize ?? "normal"] || "19px",
+      sendLabel: this.state.sent ? "Mulțumim!" : "Trimite",
+      onSubmit: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

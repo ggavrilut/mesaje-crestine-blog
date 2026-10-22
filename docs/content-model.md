@@ -29,8 +29,10 @@ Missing title or author: the post writer asks. A video that is not a YouTube lin
 
 ### From a Google Doc link
 
-The owner may give a Google Doc link instead; the doc holds the same text and metadata
-block. The doc must be shared as "Anyone with the link: Viewer".
+The owner may give a Google Doc link instead. The doc must be shared as "Anyone with the
+link: Viewer". The metadata block at its end is optional: when it is missing, title, author
+and the rest come from the owner's `/publish` message, or the post writer asks. The doc's
+name is not a title: Google returns it without diacritics.
 
 1. Take the document ID from the link (`/document/d/<ID>/`).
 2. Download with `bin/fetch-doc <link> <slug>`, **never with WebFetch**: WebFetch passes the page through a model that summarises and
@@ -43,8 +45,10 @@ block. The doc must be shared as "Anyone with the link: Viewer".
    ask the owner to share it. Never guess the text from anything else.
 4. Record the link as `sourceDoc` in the front matter, so a later update reads the same doc.
 
-The `format=md` export and how images come out are confirmed on the first real doc
-(`state.md`).
+Measured on the first real doc (2026-10-22): the `txt` export starts with a BOM and uses
+CRLF line endings; the `md` export has the same 809 words once its escapes (`\!`, `\[`,
+`\]`, `\-`) are read as the characters they stand for, so it is safe as the formatting
+reference. A `--------------` line inside the text is part of the article, not metadata.
 
 ## Layout on disk
 
@@ -68,10 +72,10 @@ content/
 | `description` | yes | post writer | 120–155 characters, a summary in Romanian, `seo.md` |
 | `date` | yes | input or today | ISO 8601 with offset, Europe/Bucharest |
 | `updated` | no | post writer | set only when the content changes |
-| `author` | yes | input | slug of a file in `content/authors/`; a new author gets a file |
-| `cover` | yes | input | `./cover.jpg`, at least 1200 px wide (`seo.md`); narrower → the post writer asks for a larger one. Optimised at build, never by hand |
+| `author` | yes | input | slug of a file in `content/authors/`, or a list of slugs for several authors; a new author gets a file |
+| `cover` | yes | input | `./cover.jpg`, at least 1200 px wide (`seo.md`); narrower → the post writer asks for a larger one. Optimised at build, never by hand. Optional for imported posts (with `legacyUrl`), as are `coverAlt`, `description` and `related` until the post writer's pass |
 | `coverAlt` | yes | post writer | describes the image, in Romanian |
-| `video` | no | input | YouTube URL |
+| `video` | no | input | YouTube URL, shown after the text. A video placed inside the text is a line holding only `https://www.youtube.com/watch?v=<id>`: it renders as the video, and the text check skips it |
 | `source` | no | input | citation shown under the article |
 | `sourceDoc` | no | post writer | the Google Doc link, when the input came from one |
 | `related` | yes | post writer | 2–4 slugs: same author first, then same topic (no categories, `decisions.md`) |
@@ -81,7 +85,10 @@ content/
 ## Author front matter
 
 `name` (as written in the input), `slug`, optional `bio` (owner-supplied, never written by an
-agent) and optional `image` with `imageAlt`.
+agent) and optional `image` (`./<slug>.jpg` next to the file) with `imageAlt`, and
+`imagePosition`, the crop of the round portrait: sharp's gravity (`top`, `left top`) or
+`attention` (the default). A new portrait for an imported author goes in the importer's
+`PORTRAITS`, or a re-import drops it.
 
 ## What formatting may do to the body
 
@@ -92,6 +99,10 @@ agent) and optional `image` with `imageAlt`.
 | Turn lines that already read as a list into a Markdown list | Add headings, a summary, an introduction or a conclusion |
 | Italic or bold where the input already has it | Add links inside the text (links go through `related` and `author`) |
 
-**Check:** the words of `index.md`'s body, stripped of Markdown syntax, must equal the words of
-`source.txt`, character for character. This becomes a script in `bin/` once the site is
-scaffolded (`state.md`); until then the post writer runs the comparison and shows its output.
+**Check:** every build compares each post's rendered text with its `source.txt`, word for
+word and character for character (line and paragraph breaks may differ), and fails on the
+first difference, naming the post and the word (`src/integrations/build-checks.ts`). It reads
+the built page, so it also catches the Markdown renderer changing text: Astro's renderer
+turns on smart punctuation (`"` to `“”`, `--` to `–`) and bare-URL links by default, and
+both are off in `astro.config.ts`. Known conflict: a Markdown list drops the `-` or `1.` the
+input had, so the check fails on a list the table above allows (`state.md`).

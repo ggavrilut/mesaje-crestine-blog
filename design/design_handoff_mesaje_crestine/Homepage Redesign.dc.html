@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#fbfcfb;color:#2f3532;font-family:Roboto,system-ui,sans-serif;font-weight:300;-webkit-font-smoothing:antialiased}
+a{color:#2c8c84;text-decoration:none}
+a:hover{color:#1d6d66}
+*{box-sizing:border-box}
+</style>
+</helmet>
+<div style="min-height:100vh;display:flex;flex-direction:column">
+  <header style="background:#f3f6f5;border-bottom:1px solid #e2e8e5">
+    <div style="max-width:1440px;margin:0 auto;padding:12px 32px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap">
+      <a href="#" style="font-size:17px;font-weight:300;letter-spacing:0.14em;color:#2f3532">MESAJE CREȘTINE</a>
+      <nav style="display:flex;gap:24px;font-size:14px;font-weight:400;flex-wrap:wrap">
+        <a href="#articole" style="color:#4b5550">Articole</a>
+        <a href="#autori" style="color:#4b5550">Autori</a>
+      </nav>
+    </div>
+  </header>
+
+  <sc-if value="{{ heroDark }}" hint-placeholder-val="{{ true }}">
+    <section style="background:#56625c;color:#f4f7f5">
+      <div style="max-width:1440px;margin:0 auto;padding:56px 32px 52px;display:grid;gap:18px">
+                <blockquote style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-weight:300;font-size:clamp(20px,2.7vw,31px);line-height:1.3;text-wrap:pretty">„Vegheați dar, rugându‐vă în orice vreme, ca să fiți socotiți vrednici să scăpați de toate acestea care au să fie și să stați înaintea Fiului omului.”</blockquote>
+        <div style="display:flex;align-items:center;gap:14px;font-size:15px;font-weight:400;color:#dfe8e4"><span style="width:32px;height:1px;background:#9fc9c2"></span>Luca 21:36 <span style="color:#b3c2bc;font-weight:300">VDCL 31</span></div>
+      </div>
+    </section>
+  </sc-if>
+  <sc-if value="{{ heroLight }}" hint-placeholder-val="{{ false }}">
+    <section style="background:#fbfcfb;border-bottom:1px solid #e2e8e5">
+      <div style="max-width:1440px;margin:0 auto;padding:56px 32px 48px;display:grid;gap:18px;justify-items:center;text-align:center">
+                <blockquote style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:clamp(20px,2.7vw,30px);line-height:1.35;color:#3d4642;text-wrap:balance">„Vegheați dar, rugându‐vă în orice vreme, ca să fiți socotiți vrednici să scăpați de toate acestea care au să fie și să stați înaintea Fiului omului.”</blockquote>
+        <div style="font-size:15px;font-weight:400;color:#56625c">Luca 21:36 · VDCL 31</div>
+      </div>
+    </section>
+  </sc-if>
+
+  <main id="articole" style="flex:1;max-width:1440px;width:100%;margin:0 auto;padding:72px 32px 40px;display:grid;gap:56px">
+    <article style="display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,420px),1fr));gap:48px;align-items:center">
+      <a href="Article Page.dc.html" style="display:block"><img src="https://mesaje-crestine.ro/wp-content/uploads/2025/07/alexey-elfimov-01huESAdPAQ-unsplash-scaled.jpg" alt="Cum va fi îndreptată Biserica? Biruind." style="display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border-radius:2px"></a>
+      <div style="display:grid;gap:18px;align-content:start">
+        <div style="display:flex;gap:12px;font-size:13px;letter-spacing:0.12em;text-transform:uppercase;font-weight:400;color:#2c8c84"><span>Cel mai recent</span><span style="color:#9aa59f">·</span><span style="color:#6b7670">22 octombrie 2026</span></div>
+        <h1 style="margin:0;font-weight:300;font-size:clamp(32px,3.6vw,44px);line-height:1.15;color:#2f3532;text-wrap:balance"><a href="Article Page.dc.html" style="color:inherit">Cum va fi îndreptată Biserica? Biruind.</a></h1>
+        <div style="font-size:15px;font-weight:400;color:#56625c">Stephen Kaung</div>
+        <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:19px;line-height:1.65;color:#434b47;text-wrap:pretty">Dar frați și surori, acest lucru va fi în viitor, cum rămâne cu prezentul? Noi încă trăim. Suntem în pragul acelei răpiri. Suntem pregătiți? Cum putem trăi o viață de biruință? Secretul este dat în Apocalipsa 12:11…</p>
+        <a href="Article Page.dc.html" style="font-size:15px;font-weight:400;display:flex;gap:8px;align-items:center">Citește articolul <span>→</span></a>
+      </div>
+    </article>
+
+    <section id="autori" style="display:grid;gap:32px;border-top:1px solid #e2e8e5;padding-top:48px">
+      <div style="display:flex;justify-content:space-between;align-items:baseline;gap:24px;flex-wrap:wrap">
+        <h2 style="margin:0;font-weight:300;font-size:30px;color:#2f3532">Articole</h2>
+        <div style="display:flex;gap:8px;flex-wrap:wrap">
+          <sc-for list="{{ chips }}" as="c" hint-placeholder-count="6">
+            <button onClick="{{ c.onClick }}" style="font-family:Roboto,sans-serif;font-size:14px;font-weight:400;padding:8px 16px;min-height:36px;border-radius:999px;cursor:pointer;border:1px solid {{ c.border }};background:{{ c.bg }};color:{{ c.fg }}">{{ c.label }}</button>
+          </sc-for>
+        </div>
+      </div>
+
+      <div style="display:grid;grid-template-columns:{{ cols }};gap:0 56px">
+        <sc-for list="{{ posts }}" as="p" hint-placeholder-count="6">
+          <article style="display:grid;gap:10px;padding:28px 0;border-bottom:1px solid #e8ede9">
+            <div style="display:flex;gap:10px;font-size:13px;font-weight:400;color:#6b7670"><span>{{ p.author }}</span><span style="color:#b0bab5">·</span><span>{{ p.date }}</span></div>
+            <h3 style="margin:0;font-weight:300;font-size:26px;line-height:1.25;text-wrap:balance"><a href="{{ p.url }}" style="color:#2c8c84">{{ p.title }}</a></h3>
+            <sc-if value="{{ showExcerpts }}" hint-placeholder-val="{{ true }}">
+              <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-size:17px;line-height:1.6;color:#4b5550;text-wrap:pretty">{{ p.excerpt }}</p>
+            </sc-if>
+          </article>
+        </sc-for>
+      </div>
+
+      <nav style="display:flex;gap:6px;justify-content:center;font-size:15px;font-weight:400;padding-top:8px">
+        <span style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;background:#56625c;color:#fff;border-radius:2px">1</span>
+        <a href="https://mesaje-crestine.ro/page/2/" style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#4b5550">2</a>
+        <a href="https://mesaje-crestine.ro/page/3/" style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#4b5550">3</a>
+        <span style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#9aa59f">…</span>
+        <a href="https://mesaje-crestine.ro/page/8/" style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#4b5550">8</a>
+        <a href="https://mesaje-crestine.ro/page/2/" style="min-width:40px;height:40px;display:flex;align-items:center;justify-content:center;color:#2c8c84">→</a>
+      </nav>
+    </section>
+  </main>
+
+  <footer id="contact" style="background:#56625c;color:#e9efec;margin-top:48px">
+    <div style="max-width:1440px;margin:0 auto;padding:72px 32px 40px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:56px">
+      <div style="display:grid;gap:20px;align-content:start">
+        <div style="font-size:18px;letter-spacing:0.14em;font-weight:300">MESAJE CREȘTINE</div>
+        <p style="margin:0;font-family:'Source Serif 4',Georgia,serif;font-style:italic;font-weight:300;font-size:22px;line-height:1.5;color:#f4f7f5;text-wrap:pretty">„Căutați mai întâi Împărăția lui Dumnezeu și dreptatea Lui, și toate aceste lucruri vi se vor da pe deasupra.”</p>
+        <div style="font-size:14px;font-weight:400;color:#c5d3cd">Matei 6:33</div>
+      </div>
+      <form style="display:grid;gap:12px;align-content:start" onSubmit="{{ onSubmit }}">
+        <div style="font-size:13px;letter-spacing:0.18em;text-transform:uppercase;font-weight:400;color:#bcd9d4">Contact</div>
+        <input placeholder="Nume" style="font:300 16px Roboto,sans-serif;padding:12px 14px;min-height:46px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none">
+        <input placeholder="Email" type="email" style="font:300 16px Roboto,sans-serif;padding:12px 14px;min-height:46px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none">
+        <textarea placeholder="Mesaj" rows="4" style="font:300 16px Roboto,sans-serif;padding:12px 14px;border:1px solid #7b8781;background:#4d5853;color:#fff;border-radius:2px;outline:none;resize:vertical"></textarea>
+        <button type="submit" style="justify-self:start;font:400 15px Roboto,sans-serif;padding:12px 28px;min-height:46px;border:none;background:#1da69a;color:#fff;border-radius:2px;cursor:pointer" style-hover="background:#17897f">{{ sendLabel }}</button>
+      </form>
+    </div>
+    <div style="max-width:1440px;margin:0 auto;padding:24px 32px 32px;border-top:1px solid #6b7670;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;font-size:13px;color:#c5d3cd">
+      <span>© 2021–2026 Mesaje Creștine</span>
+      <a href="https://www.facebook.com/Mesaje-Cre%C8%99tine-100365085780276" style="color:#e9efec">Facebook</a>
+    </div>
+  </footer>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;heroStyle&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;dark&quot;,&quot;light&quot;],&quot;default&quot;:&quot;dark&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;layout&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;two&quot;,&quot;single&quot;],&quot;default&quot;:&quot;two&quot;,&quot;tsType&quot;:&quot;string&quot;},&quot;showExcerpts&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;}}">
+const POSTS = [
+  { title: "Mărturia lui Isus", author: "Stephen Kaung", date: "Oct 2026", url: "https://mesaje-crestine.ro/2026/10/marturia-lui-isus/", excerpt: "În final, aș vrea să vă relatez o întâmplare, un vis al lui A.J. Gordon. Acesta a fost un mare slujitor al Domnului în Noua Anglie…" },
+  { title: "Care este viziunea noastră?", author: "Stephen Kaung", date: "Oct 2026", url: "https://mesaje-crestine.ro/2026/10/care-este-viziunea-noastra/", excerpt: "Cui i se va descoperi Domnul pe Sine Însuși? În predica de pe munte scrie: „Binecuvântați sunt cei săraci în duh, căci a lor este împărăția cerurilor”…" },
+  { title: "Ceasul hotărârii", author: "Erich Sauer", date: "Oct 2026", url: "https://mesaje-crestine.ro/2026/10/ceasul-hotararii/", excerpt: "Putem vedea câteva din tacticile folosite de păcat în experiența amară a lui Esau. Păcatul folosește „momentele de slăbiciune” din viața omului…" },
+  { title: "Un ajutor sau o piedică?", author: "Erich Sauer", date: "Iul 2026", url: "https://mesaje-crestine.ro/2026/07/un-ajutor-sau-o-piedica/", excerpt: "Privind la Isus, primim noi însărcinări. Ochii noștri încep să vadă nevoile și necazurile din jurul nostru…" },
+  { title: "Să ne uităm țintă la Cristos!", author: "Erich Sauer", date: "Mai 2026", url: "https://mesaje-crestine.ro/2026/05/sa-ne-uitam-tinta-la-cristos/", excerpt: "Numai un singur lucru ne poate ajuta când suntem în această stare: să ne întoarcem din nou privirea la Isus Cristos…" },
+  { title: "Credincios în cele mai mici lucruri – Luca 16:10", author: "A.B. Simpson", date: "Feb 2026", url: "https://mesaje-crestine.ro/2026/02/credincios-in-cele-mai-mici-lucruri-luca-1610/", excerpt: "Omul care și-a ratat oportunitatea pe care o avea nu a fost cel cu cinci talanți, nici cel cu doi, ci omul care avea doar unul…" },
+  { title: "Care este porunca noastră?", author: "Stephen Kaung", date: "Iul 2025", url: "https://mesaje-crestine.ro/2025/07/care-este-porunca-noastra/", excerpt: "Frați și surori, care este însă viziunea care a constituit începutul acestei adunări? Nu disprețuim evanghelizarea, acesta este primul pas…" },
+  { title: "Cum să înviezi morții", author: "Charles H. Spurgeon", date: "Iul 2025", url: "https://mesaje-crestine.ro/2025/07/cum-sa-inviezi-mortii/", excerpt: "De aceea, țelul nostru este învierea lor! Misiunea noastră este ca morții să învieze! Noi suntem asemenea lui Petru la Iope…" },
+  { title: "Rugăciunea pentru revenirea Domnului", author: "D.M. Panton", date: "Iul 2025", url: "https://mesaje-crestine.ro/2025/07/rugaciunea-pentru-revenirea-domnului/", excerpt: "Căci toate nevoile creației își găsesc răspuns doar în Venirea Lui…" }
+];
+const AUTHORS = ["Toți", "Stephen Kaung", "Erich Sauer", "A.B. Simpson", "Charles H. Spurgeon", "D.M. Panton"];
+
+class Component extends DCLogic {
+  state = { author: "Toți", sent: false };
+  renderVals() {
+    const { author, sent } = this.state;
+    const hero = this.props.heroStyle ?? "dark";
+    const layout = this.props.layout ?? "two";
+    const chips = AUTHORS.map(a => {
+      const on = a === author;
+      return { label: a, bg: on ? "#56625c" : "transparent", fg: on ? "#fff" : "#4b5550", border: on ? "#56625c" : "#d3dcd7", onClick: () => this.setState({ author: a }) };
+    });
+    return {
+      heroDark: hero === "dark",
+      heroLight: hero === "light",
+      chips,
+      posts: POSTS.filter(p => author === "Toți" || p.author === author),
+      cols: layout === "two" ? "repeat(auto-fit,minmax(min(100%,420px),1fr))" : "minmax(0,760px)",
+      showExcerpts: this.props.showExcerpts ?? true,
+      sendLabel: sent ? "Mulțumim!" : "Trimite",
+      onSubmit: e => { e.preventDefault(); this.setState({ sent: true }); }
+    };
+  }
+}
+</script>
+</body>
+</html>

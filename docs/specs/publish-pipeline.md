@@ -19,10 +19,13 @@ in the doc, character for character.
   `format=txt` export above the last `---` line, leading BOM stripped, nothing else),
   `meta.txt` (below it), `source.md` (the `format=md` export) and any embedded images; exits
   non-zero with a clear message when the doc is not shared or the link is not a Google Doc.
-  Written 2026-10-22: failure paths tested, the success path waits for a real doc.
-- [ ] Running `bin/fetch-doc` twice on an unchanged doc gives identical files.
-- [ ] The text-integrity check (`content-model.md`) fails the build when a post body differs
-  from its `source.txt`.
+  Built 2026-10-22; on a real doc `source.txt` is the export minus the BOM, byte for byte.
+  A doc without a metadata block keeps the whole text and an empty `meta.txt`. The split at
+  a real metadata block is not yet tested on a doc.
+- [x] Running `bin/fetch-doc` twice on an unchanged doc gives identical files (2026-10-22).
+- [x] The text-integrity check (`content-model.md`) fails the build when a post body differs
+  from its `source.txt` (`src/integrations/build-checks.ts`; one changed diacritic failed the
+  build, 2026-10-22).
 - [ ] The publisher's "prepare" lists the files the upload adds, changes and deletes on the
   host, and the exact command; it never lists `.well-known/` or `.ftpquota` for deletion.
 - [ ] The deploy script refuses to upload unless it is given the commit hash that was
@@ -39,8 +42,7 @@ git-ignored file the deploy script reads.
 
 ## Open questions
 
-- `format=md` export fidelity and embedded images: confirmed on the first real doc. Gabriel
-  sends a sample.
+- Embedded images: the first sample had none; confirm on the first doc that has one.
 
 ## Done when
 

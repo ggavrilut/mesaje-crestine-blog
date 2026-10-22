@@ -1,0 +1,32 @@
+---
+// The chronological archive: /blog/, then /blog/page/2/ and on, the paths WordPress used.
+import Base from '../../layouts/Base.astro';
+import Pager from '../../components/Pager.astro';
+import PostList from '../../components/PostList.astro';
+import { PER_PAGE, SITE_NAME, getPosts, type Post } from '../../lib/site.ts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  const pages = Math.ceil(posts.length / PER_PAGE);
+  return Array.from({ length: pages }, (_, i) => ({
+    params: { page: i === 0 ? undefined : `page/${i + 1}` },
+    props: { posts: posts.slice(i * PER_PAGE, (i + 1) * PER_PAGE), number: i + 1, pages },
+  }));
+}
+
+const { posts, number, pages } = Astro.props as { posts: Post[]; number: number; pages: number };
+const pathOf = (n: number) => (n === 1 ? '/blog/' : `/blog/page/${n}/`);
+const title = number === 1 ? `Articole | ${SITE_NAME}` : `Articole, pagina ${number} | ${SITE_NAME}`;
+---
+<Base
+  title={title}
+  description={number === 1 ? 'Toate articolele publicate pe Mesaje Creștine, de la cel mai nou la cel mai vechi: meditații, predici și scrieri creștine traduse în limba română.' : undefined}
+  path={pathOf(number)}
+  breadcrumbs={[{ name: 'Articole', path: '/blog/' }, ...(number > 1 ? [{ name: `Pagina ${number}`, path: pathOf(number) }] : [])]}
+>
+  <section class="container page">
+    <h1 class="page-title">Articole{number > 1 && `, pagina ${number}`}</h1>
+    <PostList posts={posts} headingLevel={2} />
+    <Pager current={number} pages={pages} pathOf={pathOf} />
+  </section>
+</Base>

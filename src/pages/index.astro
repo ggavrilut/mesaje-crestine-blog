@@ -1,0 +1,80 @@
+---
+// The home page of the design handoff: verse band, the newest post featured, the next nine in
+// the article list, then the pages of the archive (/blog/page/N/).
+import { Picture } from 'astro:assets';
+import Base from '../layouts/Base.astro';
+import Pager from '../components/Pager.astro';
+import PostList from '../components/PostList.astro';
+import { displayDate, isoBucharest } from '../lib/dates.ts';
+import { HERO_VERSE, PER_PAGE, SITE_NAME, SITE_URL, authorPath, authorsOf, excerpt, getAuthors, getPosts, postPath } from '../lib/site.ts';
+
+const all = await getPosts();
+const authors = await getAuthors();
+const [featured, ...rest] = all.slice(0, PER_PAGE);
+const featuredPath = postPath(featured);
+// Author chips: the five authors with the most posts, each linking to their page.
+const chips = [...authors.values()]
+  .map((author) => ({ author, count: all.filter((p) => p.data.author.some((a) => a.id === author.id)).length }))
+  .sort((a, b) => b.count - a.count || a.author.data.name.localeCompare(b.author.data.name, 'ro'))
+  .slice(0, 5)
+  .map(({ author }) => author);
+const graph = [
+  { '@type': 'WebSite', '@id': `${SITE_URL}/#website`, name: SITE_NAME, url: `${SITE_URL}/`, inLanguage: 'ro-RO', publisher: { '@id': `${SITE_URL}/#organization` } },
+];
+---
+<Base
+  title={SITE_NAME}
+  description="Meditații, predici și scrieri creștine traduse în limba română, de la Watchman Nee, Andrew Murray, Stephen Kaung, A.B. Simpson și alți slujitori ai Domnului."
+  path="/"
+  graph={graph}
+>
+  <section class="verse-band">
+    <figure class="container">
+      <blockquote>„{HERO_VERSE.text}”</blockquote>
+      <figcaption><span class="rule" aria-hidden="true"></span>{HERO_VERSE.reference} <span class="version">{HERO_VERSE.version}</span></figcaption>
+    </figure>
+  </section>
+
+  <div id="articole" class="container home">
+    <article class="featured">
+      <a class="featured-image" href={featuredPath} tabindex="-1" aria-hidden="true">
+        {featured.data.cover ? (
+          <Picture
+            src={featured.data.cover}
+            alt={featured.data.coverAlt}
+            formats={['avif', 'webp']}
+            widths={[480, 800, 1200].filter((w) => w < featured.data.cover!.width).concat(Math.min(featured.data.cover.width, 1600))}
+            sizes="(min-width: 1440px) 664px, (min-width: 904px) 50vw, 100vw"
+            loading="eager"
+            fetchpriority="high"
+          />
+        ) : <span class="placeholder"></span>}
+      </a>
+      <div class="featured-text">
+        <p class="label">
+          <span>Cel mai recent</span>
+          <span class="dot" aria-hidden="true">·</span>
+          <time datetime={isoBucharest(featured.data.date)}>{displayDate(featured.data.date)}</time>
+        </p>
+        <h1><a href={featuredPath}>{featured.data.title}</a></h1>
+        <p class="featured-author">
+          {authorsOf(featured, authors).map((a, i) => <>{i > 0 && ', '}<a href={authorPath(a)}>{a.data.name}</a></>)}
+        </p>
+        <p class="featured-excerpt">{excerpt(featured, 40)}</p>
+        <a class="read-more" href={featuredPath}>Citește articolul <span aria-hidden="true">→</span></a>
+      </div>
+    </article>
+
+    <section id="autori" class="article-list" aria-labelledby="list-title">
+      <div class="list-head">
+        <h2 id="list-title">Articole</h2>
+        <nav class="chips" aria-label="Autori">
+          <span class="chip active" aria-current="page">Toți</span>
+          {chips.map((a) => <a class="chip" href={authorPath(a)}>{a.data.name}</a>)}
+        </nav>
+      </div>
+      <PostList posts={rest} />
+      <Pager current={1} pages={Math.ceil(all.length / PER_PAGE)} pathOf={(n) => (n === 1 ? '/' : `/blog/page/${n}/`)} />
+    </section>
+  </div>
+</Base>

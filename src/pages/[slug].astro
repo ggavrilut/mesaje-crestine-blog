@@ -1,0 +1,155 @@
+---
+import { getImage, Picture } from 'astro:assets';
+import { render } from 'astro:content';
+import Base from '../layouts/Base.astro';
+import AuthorPortrait from '../components/AuthorPortrait.astro';
+import { SITE_URL, absolute, authorPath, authorsOf, getAuthors, getPosts, neighbours, pageTitle, postPath, relatedPosts, type Post } from '../lib/site.ts';
+import { displayDate, isoBucharest } from '../lib/dates.ts';
+import { facadeHtml, youtubeId } from '../lib/youtube.ts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return posts.map((post) => ({ params: { slug: post.id }, props: { post, all: posts } }));
+}
+
+const { post, all } = Astro.props as { post: Post; all: Post[] };
+const { data } = post;
+const authors = authorsOf(post, await getAuthors());
+const { Content } = await render(post);
+const published = isoBucharest(data.date);
+const modified = isoBucharest(data.updated ?? data.date);
+const path = postPath(post);
+const related = relatedPosts(post, all);
+const { older } = neighbours(post, all);
+const shareUrl = encodeURIComponent(absolute(path));
+const videoId = data.video ? youtubeId(data.video) : undefined;
+
+const og = data.cover && (await getImage({ src: data.cover, width: 1200, height: 630, fit: 'cover', format: 'jpg' }));
+const image = og && { src: og.src, width: 1200, height: 630, alt: data.coverAlt };
+// The hero is full-bleed: up to 2400 px for wide, dense screens.
+const coverWidths = data.cover ? [640, 960, 1280, 1600, 1920, 2400].filter((w) => w < data.cover!.width).concat(Math.min(data.cover.width, 2400)) : [];
+const relatedWidths = (w: number) => [400, 800].filter((x) => x < w).concat(Math.min(w, 800));
+
+const graph = [
+  {
+    '@type': 'BlogPosting',
+    '@id': `${absolute(path)}#article`,
+    headline: data.title,
+    ...(data.description && { description: data.description }),
+    ...(og && { image: absolute(og.src) }),
+    datePublished: published,
+    dateModified: modified,
+    inLanguage: 'ro-RO',
+    author: authors.map((a) => ({ '@type': 'Person', name: a.data.name, url: absolute(authorPath(a)) })),
+    publisher: { '@id': `${SITE_URL}/#organization` },
+    mainEntityOfPage: absolute(path),
+  },
+];
+---
+<Base
+  title={pageTitle(data.title, data.seoTitle)}
+  description={data.description || undefined}
+  path={path}
+  ogType="article"
+  image={image || undefined}
+  article={{ published, modified, authors: authors.map((a) => absolute(authorPath(a))) }}
+  graph={graph}
+  breadcrumbs={[{ name: 'Autori', path: '/authors/' }, { name: authors[0].data.name, path: authorPath(authors[0]) }, { name: data.title, path }]}
+  hideBreadcrumbs
+  progress
+>
+  <article>
+    <header class="title-block">
+      <p class="title-author">
+        {authors.map((a, i) => <>{i > 0 && ', '}<a href={authorPath(a)}>{a.data.name}</a></>)}
+      </p>
+      <time class="title-date" datetime={published}>{displayDate(data.date)}</time>
+      <h1>{data.title}</h1>
+      <p class="share">
+        <a href={`https://www.facebook.com/sharer.php?u=${shareUrl}`} rel="noopener">Facebook</a>
+        <a href={`https://api.whatsapp.com/send?text=${shareUrl}`} rel="noopener">WhatsApp</a>
+        <button type="button" data-copy-link={absolute(path)} hidden>Copiază link</button>
+      </p>
+    </header>
+    {data.cover && (
+      <figure class="hero-image">
+        <Picture
+          src={data.cover}
+          alt={data.coverAlt}
+          formats={['avif', 'webp']}
+          widths={coverWidths}
+          sizes="100vw"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </figure>
+    )}
+    <div class="article-main">
+      <div class="prose" data-article-body>
+        <Content />
+      </div>
+      {videoId && <Fragment set:html={facadeHtml(videoId)} />}
+      {data.source && <p class="source-note">{data.source}</p>}
+      {authors.map((a) => (
+        <aside class="author-box" aria-label="Autor">
+          <AuthorPortrait author={a} size={56} />
+          <div>
+            <p class="author-box-label">Autor</p>
+            <a class="author-box-name" href={authorPath(a)}>{a.data.name}</a>
+          </div>
+          <a class="author-box-all" href={authorPath(a)}>Toate articolele <span aria-hidden="true">→</span></a>
+        </aside>
+      ))}
+    </div>
+  </article>
+
+  <section class="container read-also" aria-labelledby="read-also-title">
+    <div class="read-also-head">
+      <h2 id="read-also-title">Citește și</h2>
+      {older && <a href={postPath(older)} rel="prev"><span aria-hidden="true">←</span> Articolul anterior: {older.data.title}</a>}
+    </div>
+    <div class="related-grid">
+      {related.map((p) => (
+        <a class="related-card" href={postPath(p)}>
+          {p.data.cover ? (
+            <Picture
+              src={p.data.cover}
+              alt=""
+              formats={['avif', 'webp']}
+              widths={relatedWidths(p.data.cover.width)}
+              sizes="(min-width: 1440px) 448px, (min-width: 688px) 33vw, 100vw"
+              loading="lazy"
+            />
+          ) : <span class="placeholder"></span>}
+          <h3>{p.data.title}</h3>
+        </a>
+      ))}
+    </div>
+  </section>
+</Base>
+
+<script>
+  // Click-to-load: the YouTube player loads only when the reader asks for it.
+  document.querySelectorAll<HTMLAnchorElement>('a.yt-facade').forEach((link) => {
+    link.addEventListener('click', (event) => {
+      event.preventDefault();
+      const frame = document.createElement('iframe');
+      frame.src = `https://www.youtube-nocookie.com/embed/${link.dataset.yt}?autoplay=1`;
+      frame.title = 'Videoclip YouTube';
+      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+      link.replaceChildren(frame);
+    }, { once: true });
+  });
+
+  // "Copiază link": shown only where the clipboard is available.
+  document.querySelectorAll<HTMLButtonElement>('button[data-copy-link]').forEach((button) => {
+    if (!navigator.clipboard) return;
+    button.hidden = false;
+    button.addEventListener('click', () => {
+      navigator.clipboard.writeText(button.dataset.copyLink!).then(
+        () => { button.textContent = 'Link copiat'; },
+        () => { /* refused by the browser: the label stays, nothing was copied */ },
+      );
+    });
+  });
+</script>

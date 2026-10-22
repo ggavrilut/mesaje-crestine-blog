@@ -12,8 +12,9 @@ not linked: when the guide changes, the copies here are updated by hand.
 
 ## Setup
 
-Not scaffolded yet: the Astro site arrives after the import spec is agreed
-(`docs/state.md`). Requires Node 24 and npm. The commands will be in `docs/dev-environment.md`.
+Requires Node 24 and npm. `npm install`, then `npm run dev` for the site on
+`http://localhost:4321/`; every command and what it should print is in
+`docs/dev-environment.md`.
 
 ## Working with the AI agents
 
@@ -31,6 +32,7 @@ them, how to work with them and how to teach them.
 | `docs/state.md` | What is in flight, open questions, declined proposals |
 | `agent/` | Sources of each agent's Role block, design record |
 | `evals/` | Behaviour scenarios, run after any change to an agent |
-| `bin/check` | The fast check: run before committing |
-| `src/` | The Astro site (to come) |
-| `content/` | Posts and authors (to come) |
+| `bin/` | `check` (the fast check: run before committing), `fetch-doc`, `import-wp.ts`, `check-redirects.ts`, `make-brand-images.ts` |
+| `src/` | The Astro site |
+| `content/` | Posts and authors |
+| `import/` | The WordPress import's report, old URL list and redirect list |

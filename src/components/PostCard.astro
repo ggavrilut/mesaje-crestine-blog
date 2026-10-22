@@ -1,0 +1,23 @@
+---
+// A post in a list (design handoff, article list): author · date, title, excerpt.
+import { isoBucharest, shortDate } from '../lib/dates.ts';
+import { authorsOf, excerpt, postPath, type Author, type Post } from '../lib/site.ts';
+
+interface Props {
+  post: Post;
+  authors: Map<string, Author>;
+  headingLevel?: 2 | 3;
+}
+
+const { post, authors, headingLevel = 3 } = Astro.props;
+const Heading = `h${headingLevel}` as 'h2' | 'h3';
+---
+<article class="post-card">
+  <p class="meta">
+    <span>{authorsOf(post, authors).map((a) => a.data.name).join(', ')}</span>
+    <span class="dot" aria-hidden="true">·</span>
+    <time datetime={isoBucharest(post.data.date)}>{shortDate(post.data.date)}</time>
+  </p>
+  <Heading class="post-card-title"><a href={postPath(post)}>{post.data.title}</a></Heading>
+  <p class="post-card-excerpt">{excerpt(post, 24)}</p>
+</article>

@@ -1,0 +1,12 @@
+---
+// Served by Apache with status 404 (and 410) through ErrorDocument in .htaccess.
+import Base from '../layouts/Base.astro';
+import { SITE_NAME } from '../lib/site.ts';
+---
+<Base title={`Pagina nu a fost găsită | ${SITE_NAME}`} path="/404.html" noindex>
+  <section class="container page">
+    <h1 class="page-title">Pagina nu a fost găsită</h1>
+    <p>Pagina căutată nu există sau a fost mutată.</p>
+    <p><a href="/blog/">Toate articolele</a> · <a href="/authors/">Autorii</a></p>
+  </section>
+</Base>

@@ -33,14 +33,27 @@ get md "$tmp/doc.md"
 # Strip a leading UTF-8 byte-order mark only; every other byte stays.
 sed '1s/^\xEF\xBB\xBF//' "$tmp/doc.txt" > "$tmp/clean.txt"
 
-# Split at the last line that is exactly '---' (CRLF tolerated): text above, metadata below.
+# The metadata block is optional: the last line that is exactly '---' (CRLF tolerated), but
+# only when a labelled line (Titlu:, Autor:, ...) follows it. Otherwise a '---' is part of
+# the article, and the whole doc is text; the post writer then asks for title and author.
 last=$(grep -nE '^---\r?$' "$tmp/clean.txt" | tail -n 1 | cut -d: -f1)
-[ -n "$last" ] || die "no metadata block: the doc must end with a '---' line, then Titlu:, Autor:, ..."
+if [ -n "$last" ] && tail -n "+$((last + 1))" "$tmp/clean.txt" \
+    | grep -qiE '^[[:space:]]*(titlu|title|autor|author|imagine|image|video|data|date|sursa|source)[[:space:]]*:'; then
+  :
+else
+  last=
+fi
 
 dir=content/posts/$slug
 mkdir -p "$dir"
-head -n "$((last - 1))" "$tmp/clean.txt" > "$dir/source.txt"
-tail -n "+$((last + 1))" "$tmp/clean.txt" > "$dir/meta.txt"
+if [ -n "$last" ]; then
+  head -n "$((last - 1))" "$tmp/clean.txt" > "$dir/source.txt"
+  tail -n "+$((last + 1))" "$tmp/clean.txt" > "$dir/meta.txt"
+else
+  cp "$tmp/clean.txt" "$dir/source.txt"
+  : > "$dir/meta.txt"
+  printf 'note: no metadata block; title and author must come from the owner\n' >&2
+fi
 cp "$tmp/doc.md" "$dir/source.md"
 
 # Embedded images come only in the zip export (HTML plus images/).

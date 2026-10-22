@@ -41,6 +41,7 @@ Other harnesses, one line each. All read `AGENTS.md`; only the skill folder diff
 
 ```sh
 cd <project>
+npm install # once, and after a pull that changed package.json
 bin/check   # the setup is intact: symlink, budget, pointer lines, links, no placeholder left
 claude      # or the harness you installed
 ```

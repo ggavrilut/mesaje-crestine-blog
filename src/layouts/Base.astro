@@ -1,0 +1,112 @@
+---
+// Every page's <head> follows docs/seo.md: one title, description, canonical and each social
+// tag; lang ro; JSON-LD as one @graph.
+import { Font } from 'astro:assets';
+import '../styles/global.css';
+import { FACEBOOK_URL, FOOTER_VERSE, SITE_NAME, SITE_URL, absolute } from '../lib/site.ts';
+
+export interface Props {
+  title: string;
+  description?: string;
+  path: string;
+  noindex?: boolean;
+  ogType?: 'website' | 'article' | 'profile';
+  image?: { src: string; width: number; height: number; alt: string };
+  article?: { published: string; modified: string; authors: string[] };
+  graph?: object[];
+  /** Always in the JSON-LD (docs/seo.md); shown on the page too unless `hideBreadcrumbs`. */
+  breadcrumbs?: { name: string; path: string }[];
+  /** Pages from the design handoff, which has no visible breadcrumbs. */
+  hideBreadcrumbs?: boolean;
+  /** The reading-progress bar under the header (article pages). */
+  progress?: boolean;
+}
+
+const { title, description, path, noindex = false, ogType = 'website', article, graph = [], breadcrumbs, hideBreadcrumbs = false, progress = false } = Astro.props;
+// Pages and posts without their own picture share the site card (public/og-default.png).
+const image = Astro.props.image ?? { src: '/og-default.png', width: 1200, height: 630, alt: SITE_NAME };
+const canonical = absolute(path);
+const org = {
+  '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: `${SITE_URL}/`,
+  logo: { '@type': 'ImageObject', url: absolute('/logo.png'), width: 192, height: 192 },
+};
+const crumbs = breadcrumbs && {
+  '@type': 'BreadcrumbList',
+  itemListElement: [{ name: 'Acasă', path: '/' }, ...breadcrumbs].map((c, i) => ({
+    '@type': 'ListItem', position: i + 1, name: c.name, item: absolute(c.path),
+  })),
+};
+const jsonLd = { '@context': 'https://schema.org', '@graph': [org, ...graph, ...(crumbs ? [crumbs] : [])] };
+---
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <Font cssVariable="--font-roboto" preload={[{ weight: 300, style: 'normal' }]} />
+    <Font cssVariable="--font-serif" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    <link rel="canonical" href={canonical} />
+    <meta name="robots" content={noindex ? 'noindex, follow' : 'index, follow, max-image-preview:large'} />
+    <link rel="icon" href="/favicon.ico" sizes="48x48" />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
+    <meta property="og:locale" content="ro_RO" />
+    <meta property="og:site_name" content={SITE_NAME} />
+    <meta property="og:type" content={ogType} />
+    <meta property="og:title" content={title} />
+    {description && <meta property="og:description" content={description} />}
+    <meta property="og:url" content={canonical} />
+    <meta property="og:image" content={absolute(image.src)} />
+    <meta property="og:image:width" content={String(image.width)} />
+    <meta property="og:image:height" content={String(image.height)} />
+    <meta property="og:image:alt" content={image.alt} />
+    {article && <meta property="article:published_time" content={article.published} />}
+    {article && <meta property="article:modified_time" content={article.modified} />}
+    {article?.authors.map((url) => <meta property="article:author" content={url} />)}
+    <meta name="twitter:card" content="summary_large_image" />
+    <script type="application/ld+json" set:html={JSON.stringify(jsonLd)} />
+  </head>
+  <body>
+    <a class="skip" href="#main">Sari la conținut</a>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="logo" href="/">{SITE_NAME}</a>
+        <nav class="header-nav" aria-label="Principal">
+          <a href="/#articole">Articole</a>
+          <a href="/authors/">Autori</a>
+        </nav>
+      </div>
+      {progress && <div class="progress" aria-hidden="true"><div class="progress-bar"></div></div>}
+    </header>
+    <main id="main">
+      {breadcrumbs && !hideBreadcrumbs && (
+        <nav class="breadcrumbs container" aria-label="Breadcrumb">
+          <a href="/">Acasă</a>
+          {breadcrumbs.map((c, i) => (
+            <>
+              <span aria-hidden="true">›</span>
+              {i === breadcrumbs.length - 1 ? <span aria-current="page">{c.name}</span> : <a href={c.path}>{c.name}</a>}
+            </>
+          ))}
+        </nav>
+      )}
+      <slot />
+    </main>
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <div class="footer-about">
+          <p class="footer-logo">{SITE_NAME}</p>
+          <p class="footer-verse">„{FOOTER_VERSE.text}”</p>
+          <p class="footer-reference">{FOOTER_VERSE.reference}</p>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <span>© 2021–{new Date().getFullYear()} {SITE_NAME}</span>
+        <a href={FACEBOOK_URL} rel="noopener">Facebook</a>
+      </div>
+    </footer>
+  </body>
+</html>

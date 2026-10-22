@@ -1,0 +1,43 @@
+---
+import Base from '../../layouts/Base.astro';
+import { getImage } from 'astro:assets';
+import AuthorPortrait from '../../components/AuthorPortrait.astro';
+import PostList from '../../components/PostList.astro';
+import { SITE_NAME, absolute, authorPath, getAuthors, getPosts, indexable, type Author, type Post } from '../../lib/site.ts';
+
+export async function getStaticPaths() {
+  const posts = await getPosts();
+  return [...(await getAuthors()).values()]
+    .map((author) => ({ author, posts: posts.filter((p) => p.data.author.some((a) => a.id === author.id)) }))
+    .filter(({ posts }) => posts.length > 0)
+    .map(({ author, posts }) => ({ params: { slug: author.id }, props: { author, posts } }));
+}
+
+const { author, posts } = Astro.props as { author: Author; posts: Post[] };
+const { name, bio, image, imagePosition } = author.data;
+const portrait = image && (await getImage({ src: image, width: 400, height: 400, fit: 'cover', position: imagePosition, format: 'jpg' }));
+const path = authorPath(author);
+const graph = [
+  {
+    '@type': 'ProfilePage',
+    mainEntity: { '@type': 'Person', name, url: absolute(path), ...(bio && { description: bio }), ...(portrait && { image: absolute(portrait.src) }) },
+  },
+];
+---
+<Base
+  title={`${name} | ${SITE_NAME}`}
+  description={bio}
+  path={path}
+  ogType="profile"
+  noindex={!indexable(posts.length)}
+  graph={graph}
+  breadcrumbs={[{ name: 'Autori', path: '/authors/' }, { name, path }]}
+>
+  <section class="container page">
+    {image && <AuthorPortrait author={author} size={96} />}
+    <p class="page-label">Autor</p>
+    <h1 class="page-title">{name}</h1>
+    {bio && <p class="page-intro">{bio}</p>}
+    <PostList posts={posts} headingLevel={2} />
+  </section>
+</Base>

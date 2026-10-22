@@ -1,0 +1,23 @@
+# Old WordPress URLs that are not posts (docs/seo.md, the move). Hand-maintained; copied into
+# .htaccess at build after the generated per-post rules. mod_alias applies the first match,
+# so exact rules stay above patterns. Every target is absolute, so no second hop to https.
+
+# Pages and archives
+RedirectMatch 301 ^/acasa-2/?$ https://mesaje-crestine.ro/
+RedirectMatch 301 ^/page/[0-9]+/?$ https://mesaje-crestine.ro/blog/
+RedirectMatch 301 ^/category/ https://mesaje-crestine.ro/blog/
+RedirectMatch 301 ^/tag/ https://mesaje-crestine.ro/blog/
+RedirectMatch 301 ^/author/ https://mesaje-crestine.ro/blog/
+RedirectMatch 301 ^/authors/([a-z0-9-]+)/page/[0-9]+/?$ https://mesaje-crestine.ro/authors/$1/
+RedirectMatch 301 ^/[0-9]{4}/(?:[0-9]{2}/(?:[0-9]{2}/)?)?(?:page/[0-9]+/?)?$ https://mesaje-crestine.ro/blog/
+
+# Feeds and sitemaps
+RedirectMatch 301 ^/feed/?$ https://mesaje-crestine.ro/rss.xml
+RedirectMatch 301 ^/.+/feed/?$ https://mesaje-crestine.ro/rss.xml
+RedirectMatch 301 ^/sitemap\.rss$ https://mesaje-crestine.ro/rss.xml
+RedirectMatch 301 ^/sitemap\.xml$ https://mesaje-crestine.ro/sitemap-index.xml
+RedirectMatch 301 ^/[a-z_-]+-sitemap\.xml$ https://mesaje-crestine.ro/sitemap-index.xml
+
+# Placeholders with no equivalent: gone (docs/seo.md, content quality signals)
+RedirectMatch 410 ^/sample-page/?$
+RedirectMatch 410 ^/template/

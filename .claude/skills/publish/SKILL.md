@@ -16,8 +16,9 @@ stop happens here. Copy this checklist into your reply and tick it as you go:
 - [ ] 1. **Fetch**: `bin/fetch-doc <link> <slug>`. Not shared, or not a doc → stop, ask
   Gabriel to share it "Anyone with the link: Viewer". Pasted text instead of a link → skip
   to 2. No link or text (a code-only deploy) → start at 3.
-- [ ] 2. **Compose**: `post-writer` subagent with the fetched folder (or the pasted text).
-  Missing title or author → stop, ask. Its report lists suspected typos: show them and stop;
+- [ ] 2. **Compose**: `post-writer` subagent with the fetched folder (or the pasted text),
+  plus any metadata Gabriel wrote after the link in his `/publish` message. Missing title or
+  author → stop, ask. Its report lists suspected typos: show them and stop;
   Gabriel fixes them in the doc (→ back to 1) or says continue.
 - [ ] 3. **Build**: `publisher` subagent, "prepare". A failed check or a text-integrity
   difference → stop; the owning agent fixes it (→ back to 2).
