@@ -8,7 +8,8 @@ _Last updated 2026-10-22_
 
 ## In flight
 
-- Agent setup done (three agents, docs, evals). Next: the owner reviews
+- Agent setup done (five agents, `/publish` skill, docs, evals); `specs/publish-pipeline.md`
+  drafted. Next: the owner reviews
   `specs/wordpress-import.md`, then the developer scaffolds Astro and builds the importer.
 
 ## Open questions
@@ -27,14 +28,11 @@ _Last updated 2026-10-22_
 
 Lessons or proposals without an incident yet; not rules.
 
-- The deploy script refuses to run unless an SEO review exists for the commit being
-  deployed, so the review holds even if a session forgets it (a rule that must always hold is
-  code, not prose). Part of the deploy spec.
-- Google Doc input: confirm `format=md` export and embedded images on the first real doc
-  (`content-model.md`).
 - A text-integrity script in `bin/` comparing each post's body with its `source.txt`
   (`content-model.md`), and a hook running it after the post writer edits a post.
 - An SEO lint of `dist/` run by `bin/check` after a build (`testing.md`).
+- Cap stored originals at 2400 px wide when a post or the import saves them: the build
+  serves optimised copies anyway, and an 8 MB original stays in git history forever.
 
 ## Declined proposals
 
@@ -44,6 +42,8 @@ Not re-proposed without new evidence.
   with 301s.
 - 2026-10-22 A git-based CMS for other authors: declined, posts go through the post writer.
 - 2026-10-22 Mailjet for the contact form: not needed, the host's own mail is authenticated.
+- 2026-10-22 A report-only proofreader phase: declined by the owner; the post writer keeps
+  flagging typos.
 - 2026-10-22 reCAPTCHA: replaced by Turnstile (Google cookies that EU regulators treat as
   needing consent).
 

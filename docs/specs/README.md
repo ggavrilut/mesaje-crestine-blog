@@ -7,3 +7,4 @@ in the same commit. Every spec has exactly one row here.
 | Spec | Status | Owner |
 |---|---|---|
 | `wordpress-import.md` | draft | Gabriel Gavrilut |
+| `publish-pipeline.md` | draft | Gabriel Gavrilut |

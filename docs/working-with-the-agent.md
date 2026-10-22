@@ -53,24 +53,21 @@ What the agent receives with every message: the harness's own system prompt, **t
 only when its pointer line in `AGENTS.md` says so. That is why `AGENTS.md` stays about 40
 lines and everything else lives one link away in `docs/`.
 
-### The three agents
+### The agents
 
 | Agent | Where | Call it with | It writes |
 |---|---|---|---|
 | developer | `AGENTS.md`, the main session | just talk to it | code, docs, specs; deploys only on your yes |
 | `seo` | `.claude/agents/seo.md` | "Use the seo agent to audit …" | `docs/seo.md`, specs, `docs/state.md` |
-| `post-writer` | `.claude/agents/post-writer.md` | "Use the post-writer agent: <your text with the metadata block>" | `content/posts/`, `content/authors/` |
+| `post-writer` | `.claude/agents/post-writer.md` | through `/publish`, or "Use the post-writer agent: …" | `content/posts/`, `content/authors/` |
+| `seo-reviewer` | `.claude/agents/seo-reviewer.md` | through `/publish` | nothing (read-only) |
+| `publisher` | `.claude/agents/publisher.md` | through `/publish` | `dist/`, the live site after your yes |
 
-**Publishing a post**, end to end:
-
-1. `claude` in the repo, then: "Use the post-writer agent: <Google Doc link>" (or paste the
-   text with its metadata block). The doc is shared "Anyone with the link: Viewer".
-2. It creates the post and reports what it filled, what it inferred and any suspected typo.
-   A typo is fixed by you in the doc, then: "update the post from the doc".
-3. Look at it: the diff, or the local preview (`docs/dev-environment.md`).
-4. "Deploy": the developer builds, runs the `seo` agent's review, and shows you its verdict
-   with the exact upload command. Nothing goes live until you say yes.
-5. "Commit".
+**Publishing a post**: `/publish <Google Doc link>` (doc shared "Anyone with the link:
+Viewer"). It runs the phases in `docs/workflow.md` and stops when you must decide: suspected
+typos (fix them in the doc, or say continue), an SEO finding, and always before the upload,
+where it shows the SEO verdict, what changes on the host and the exact command. `/publish`
+with no link deploys code changes only. Then "commit".
 
 The developer may also hand a task to a subagent itself. `/agents` lists them. The input
 format for a post is in `docs/content-model.md`: the text, then `---`, then `Titlu:`,

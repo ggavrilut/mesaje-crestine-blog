@@ -78,6 +78,17 @@ for f in .claude/agents/*.md; do
   fi
 done
 
+# 8b. Each skill sits at .claude/skills/<name>/SKILL.md with a matching name and is pointed at from AGENTS.md
+for f in .claude/skills/*/SKILL.md; do
+  [ -e "$f" ] || continue
+  name=$(basename "$(dirname "$f")")
+  if sed -n '2,4p' "$f" | grep -qx "name: $name" && grep -qF "$f" AGENTS.md; then
+    ok "skill $name: name matches, pointed at from AGENTS.md"
+  else
+    bad "skill $f: front matter must say 'name: $name' and AGENTS.md must point at $f"
+  fi
+done
+
 # 9. Every Role block is 130-170 words (agent/meta-prompt.md), from the marker to the first ## heading
 for f in AGENTS.md .claude/agents/*.md; do
   [ -e "$f" ] || continue
@@ -85,8 +96,8 @@ for f in AGENTS.md .claude/agents/*.md; do
   if [ "$n" -ge 130 ] && [ "$n" -le 170 ]; then ok "$f Role block is $n words"; else bad "$f Role block is $n words (130-170)"; fi
 done
 
-# 10. Every repo path an agent is pointed at in backticks exists (pointer lines are not links)
-missing=$(grep -ohE '`(docs|agent|evals|bin|\.claude)/[^`<*]*`' AGENTS.md .claude/agents/*.md | tr -d '`' | sort -u \
+# 10. Every repo path an agent or skill is pointed at in backticks exists (pointer lines are not links)
+missing=$(grep -ohE '`(docs|agent|evals|bin|\.claude)/[^`<*]*`' AGENTS.md .claude/agents/*.md .claude/skills/*/SKILL.md 2>/dev/null | tr -d '`' | sort -u \
   | while read -r path; do [ -e "$path" ] || printf '%s\n' "$path"; done)
 if [ -n "$missing" ]; then
   printf '%s\n' "$missing" | while read -r m; do bad "an agent file points at $m, which does not exist"; done; fail=1

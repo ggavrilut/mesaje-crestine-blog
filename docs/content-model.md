@@ -33,9 +33,8 @@ The owner may give a Google Doc link instead; the doc holds the same text and me
 block. The doc must be shared as "Anyone with the link: Viewer".
 
 1. Take the document ID from the link (`/document/d/<ID>/`).
-2. Download with `curl -sSL`, **never with WebFetch**: WebFetch passes the page through a
-   model that summarises and rewrites, which breaks the text rule. The post writer does not
-   have WebFetch for this reason.
+2. Download with `bin/fetch-doc <link> <slug>`, **never with WebFetch**: WebFetch passes the page through a model that summarises and
+   rewrites, which breaks the text rule. No agent here has WebFetch except `seo`.
    - Text for `source.txt`: `https://docs.google.com/document/d/<ID>/export?format=txt`.
      Strip only a leading byte-order mark (U+FEFF); nothing else is touched.
    - Formatting for the body (italic, bold, quotes): the same URL with `format=md`.
@@ -53,6 +52,8 @@ The `format=md` export and how images come out are confirmed on the first real d
 content/
   posts/<slug>/index.md     front matter + body
   posts/<slug>/source.txt   the input text, verbatim, metadata block removed
+  posts/<slug>/meta.txt     the metadata block (from a Google Doc)
+  posts/<slug>/source.md    the doc's Markdown export: formatting reference only
   posts/<slug>/cover.jpg    the cover image (any web format)
   authors/<slug>.md         one per author: front matter + optional bio
 ```
@@ -68,7 +69,7 @@ content/
 | `date` | yes | input or today | ISO 8601 with offset, Europe/Bucharest |
 | `updated` | no | post writer | set only when the content changes |
 | `author` | yes | input | slug of a file in `content/authors/`; a new author gets a file |
-| `cover` | yes | input | `./cover.jpg` |
+| `cover` | yes | input | `./cover.jpg`, at least 1200 px wide (`seo.md`); narrower → the post writer asks for a larger one. Optimised at build, never by hand |
 | `coverAlt` | yes | post writer | describes the image, in Romanian |
 | `video` | no | input | YouTube URL |
 | `source` | no | input | citation shown under the article |

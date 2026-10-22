@@ -18,6 +18,7 @@ A rule enters here with its source. Advice without one is a candidate in `state.
 | G-article | "Article structured data": developers.google.com/search/docs/appearance/structured-data/article |
 | G-video | "Video SEO best practices" and VideoObject: developers.google.com/search/docs/appearance/video |
 | G-image | "Image SEO best practices": developers.google.com/search/docs/appearance/google-images |
+| G-discover | "Get on Discover": developers.google.com/search/docs/appearance/google-discover |
 | G-links | "Link best practices": developers.google.com/search/docs/crawling-indexing/links-crawlable |
 | G-canon | "Consolidate duplicate URLs": developers.google.com/search/docs/crawling-indexing/consolidate-duplicate-urls |
 | G-sitemap | "Sitemaps overview": developers.google.com/search/docs/crawling-indexing/sitemaps/overview |
@@ -96,6 +97,9 @@ A rule enters here with its source. Advice without one is a candidate in `state.
 ### Images
 - Every content image has Romanian `alt` text describing it, a descriptive file name, and
   explicit `width` and `height`. Served through `astro:assets` as AVIF/WebP with `srcset`. (G-image, CWV: CLS)
+- Covers are at least 1200 px wide, and every page carries
+  `<meta name="robots" content="max-image-preview:large">`, so Google may show the large
+  preview in Discover and search. (G-discover)
 - The cover image is the LCP element: `loading="eager"` and `fetchpriority="high"`; every
   other image `loading="lazy"`. (CWV)
 

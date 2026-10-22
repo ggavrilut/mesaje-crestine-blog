@@ -3,6 +3,11 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-22** Publishing runs as fixed phases, one specialist each (owner): `bin/fetch-doc`
+  (a script: it guards the text, so no model in that step), `post-writer`, `publisher`
+  prepare, `seo-reviewer` (read-only gate, separate from the `seo` strategist so the check is
+  narrow and consistent), the owner's yes, `publisher` upload. Orchestrated by the `/publish`
+  skill in the main session. Supersedes the developer running `seo` before deploys (below).
 - **2026-10-22** Every deploy is preceded by an SEO review by the `seo` subagent, run by the
   developer (owner's requirement). Subagents cannot launch subagents in Claude Code, so the
   agent that deploys runs it, not the post writer (`workflow.md`).

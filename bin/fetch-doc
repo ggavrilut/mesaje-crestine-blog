@@ -1,0 +1,57 @@
+#!/bin/sh
+# Phase 1 of /publish: download a Google Doc exactly, never through a model.
+# Usage: bin/fetch-doc <google-doc-link> <slug>
+# Writes content/posts/<slug>/: source.txt (the text, byte for byte, BOM stripped),
+# meta.txt (the block after the last '---' line), source.md (formatting reference) and
+# images/ when the doc embeds any. Spec: docs/specs/publish-pipeline.md.
+cd "$(dirname "$0")/.." || exit 2
+die() { printf 'fetch-doc: %s\n' "$*" >&2; exit 1; }
+
+[ $# -eq 2 ] || die "usage: bin/fetch-doc <google-doc-link> <slug>"
+id=$(printf '%s' "$1" | sed -nE 's#.*docs\.google\.com/document/d/([A-Za-z0-9_-]+).*#\1#p')
+[ -n "$id" ] || die "not a Google Doc link: $1"
+slug=$2
+printf '%s' "$slug" | grep -qxE '[a-z0-9]+(-[a-z0-9]+)*' || die "slug must be lowercase ASCII words joined by hyphens: $slug"
+
+tmp=$(mktemp -d) || exit 2
+trap 'rm -rf "$tmp"' EXIT
+
+# get <format> <file>: fails when Google answers with HTML (login page: the doc is not shared)
+get() {
+  info=$(curl -sSL -o "$2" -w '%{http_code} %{content_type} %{url_effective}' \
+    "https://docs.google.com/document/d/$id/export?format=$1") || die "download failed ($1)"
+  case "$info" in
+    200\ text/html*|*accounts.google.com*) die "the doc is not shared: set it to 'Anyone with the link: Viewer'" ;;
+    200\ *) ;;
+    *) die "Google answered: $info" ;;
+  esac
+}
+
+get txt "$tmp/doc.txt"
+get md "$tmp/doc.md"
+
+# Strip a leading UTF-8 byte-order mark only; every other byte stays.
+sed '1s/^\xEF\xBB\xBF//' "$tmp/doc.txt" > "$tmp/clean.txt"
+
+# Split at the last line that is exactly '---' (CRLF tolerated): text above, metadata below.
+last=$(grep -nE '^---\r?$' "$tmp/clean.txt" | tail -n 1 | cut -d: -f1)
+[ -n "$last" ] || die "no metadata block: the doc must end with a '---' line, then Titlu:, Autor:, ..."
+
+dir=content/posts/$slug
+mkdir -p "$dir"
+head -n "$((last - 1))" "$tmp/clean.txt" > "$dir/source.txt"
+tail -n "+$((last + 1))" "$tmp/clean.txt" > "$dir/meta.txt"
+cp "$tmp/doc.md" "$dir/source.md"
+
+# Embedded images come only in the zip export (HTML plus images/).
+if command -v unzip >/dev/null 2>&1; then
+  get zip "$tmp/doc.zip"
+  if unzip -qq -o "$tmp/doc.zip" 'images/*' -d "$dir" 2>/dev/null; then
+    printf 'images: %s\n' "$(ls "$dir/images" | wc -l)"
+  fi
+else
+  printf 'warning: unzip not installed, embedded images not fetched\n' >&2
+fi
+
+printf 'ok: %s (source.txt %s words, meta.txt %s lines)\n' "$dir" \
+  "$(wc -w < "$dir/source.txt")" "$(wc -l < "$dir/meta.txt")"

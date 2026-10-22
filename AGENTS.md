@@ -22,7 +22,7 @@
 
 ## Non-standard things
 
-- Three agents: this role is the developer's; the `seo` and `post-writer` subagents in `.claude/agents/` have their own.
+- Subagents in `.claude/agents/` have their own roles; anything goes live only through `/publish` (`.claude/skills/publish/SKILL.md`).
 - Static Astro, FTP-deployed to cPanel shared hosting (Apache: redirects in `.htaccess`).
 - `bin/check`: the fast check; run it before committing.
 

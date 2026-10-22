@@ -17,18 +17,19 @@ Not scaffolded yet: the Astro site arrives after the import spec is agreed
 
 ## Working with the AI agents
 
-Read `docs/working-with-the-agent.md`: how to install a harness, the three agents and how to
-call them, how to work with them and how to teach them.
+Read `docs/working-with-the-agent.md`: how to install a harness, the agents and how to call
+them, how to work with them and how to teach them.
 
 ## Map
 
 | Where | What |
 |---|---|
 | `AGENTS.md` (= `CLAUDE.md`) | The developer agent: loaded with every request |
-| `.claude/agents/` | The `seo` and `post-writer` subagents |
+| `.claude/agents/` | The subagents: `seo`, `post-writer`, `seo-reviewer`, `publisher` |
+| `.claude/skills/publish/` | `/publish`: the phase-by-phase publishing pipeline |
 | `docs/` | Project knowledge, one topic per file; `docs/specs/` one spec per feature |
 | `docs/state.md` | What is in flight, open questions, declined proposals |
-| `agent/` | Sources of the three Role blocks, design record |
+| `agent/` | Sources of each agent's Role block, design record |
 | `evals/` | Behaviour scenarios, run after any change to an agent |
 | `bin/check` | The fast check: run before committing |
 | `src/` | The Astro site (to come) |

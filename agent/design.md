@@ -1,6 +1,6 @@
 # Agent design
 
-Design record for this project's three agents, written against the guide in
+Design record for this project's agents, written against the guide in
 `/home/gabriel/work/ai-project-setup/` (Part 1 for the repo setup, Part 2
 `docs/building-agents-checklist.md` for the agents). Read it before editing `../AGENTS.md`,
 `../.claude/agents/`, anything in this directory, `../bin/check` or `../evals/`.
@@ -15,15 +15,17 @@ copy, a content agent must not change a word.
 
 ## 2. Classification
 
-| Question | developer | seo | post-writer |
-|---|---|---|---|
-| Is it an agent? | Yes: edits code, runs builds | Yes: fetches pages, writes rules and specs | Yes: writes post files, runs checks |
-| Business category | Collaborator | Advisor | Assistant |
-| Technical type | Goal-based | Goal-based, retrieval | Simple reflex with a fixed recipe |
-| Governance band | Write-back to the repo; deploy only on a yes | Write-back to docs only | Write-back to `content/` only |
-| Criticality × complexity | High × high: plan | High × medium: do now | High × low: do now |
-| Autonomy | Human-invoked; small edits free | Called by the owner or the developer | Called by the owner or the developer |
-| Adoption phase | 1, assistant | 1, assistant | 1, assistant |
+| Agent | Category | Type | Governance band | Criticality × complexity |
+|---|---|---|---|---|
+| developer | Collaborator | Goal-based | Write-back to the repo | High × high: plan |
+| `seo` | Advisor | Goal-based, retrieval | Write-back to docs only | High × medium: do now |
+| `post-writer` | Assistant | Simple reflex, fixed recipe | Write-back to `content/` only | High × low: do now |
+| `seo-reviewer` | Advisor | Simple reflex, fixed checklist | Read-only | High × low: do now |
+| `publisher` | Performer | Goal-based | **Writes to the live site**, only with the owner's yes for the exact commit | High × medium: do now |
+
+All are human-invoked (directly or through `/publish`) and in adoption phase 1, assistant.
+The publisher is the only one that touches a live system, so its upload is gated in code as
+well as in prose (`../docs/specs/publish-pipeline.md`).
 
 ## 3. Scope and system message
 
@@ -33,6 +35,10 @@ copy, a content agent must not change a word.
   `docs/state.md`), the web read-only. Search Console and Bing only through the owner.
 - **post-writer**: turns the owner's input into a post. Environment: writes
   `content/posts/`, `content/authors/`; reads the rest.
+- **seo-reviewer**: the read-only SEO gate of `/publish`. Environment: reads the repo and
+  `dist/`; no write tools.
+- **publisher**: builds, uploads and verifies. Environment: writes `dist/`; the FTP host only
+  with the owner's yes for the exact prepared commit.
 - **Knowledge:** `../docs/` and `../docs/specs/`, through the pointer lines in each agent's
   file.
 - **System messages:** each Role block comes from the meta-prompt framework (guide Part 2,
@@ -62,10 +68,14 @@ others must not: the post writer may never change text, the SEO agent's natural 
 ("rewrite the intro with the keyword") is exactly what the post writer must refuse. Separate
 roles keep each instruction set short and testable in isolation.
 
-- **Pattern:** handoff, human-routed. The owner calls an agent; the developer may delegate a
-  post to `post-writer` or an audit to `seo`, and **must** run `seo` before every deploy
-  (`../docs/workflow.md`). Subagents cannot launch subagents, so every handoff goes through
-  the main session.
+- **Pattern:** two shapes. Publishing is **sequential**: the `/publish` skill runs fixed
+  phases (script → `post-writer` → `publisher` prepare → `seo-reviewer` → owner's yes →
+  `publisher` upload), one specialist per phase (owner, 2026-10-22). Everything else is
+  handoff, human-routed: the owner calls an agent, the developer may delegate. Subagents
+  cannot launch subagents or stop to ask, so the main session runs every phase and every
+  stop.
+- **Deterministic first:** fetching the doc is a script, not an agent, because it guards the
+  text; an agent there could only add risk.
 - **Communication:** through files only. SEO rules in `docs/seo.md`, buildable work in
   `docs/specs/`, open items in `docs/state.md`. Nothing passes through private memory.
 - **Writes:** the guide's default is that subagents never write. Here each writes only its own
