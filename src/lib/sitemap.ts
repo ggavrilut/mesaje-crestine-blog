@@ -10,6 +10,7 @@ export async function sitemapEntries(): Promise<{ path: string; lastmod?: Date }
     { path: '/', lastmod: newest },
     { path: '/blog/', lastmod: newest },
     { path: '/authors/' },
+    { path: '/contact/' },
   ];
   for (let n = 2; n <= Math.ceil(posts.length / PER_PAGE); n++) entries.push({ path: `/blog/page/${n}/` });
   for (const author of (await getAuthors()).values()) {

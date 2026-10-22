@@ -1,0 +1,108 @@
+---
+// The contact form (docs/specs/contact-form.md): the handoff's footer column, also on
+// /contact/ (`light`). Sent with fetch to /contact.php; Turnstile's script loads only when the
+// reader first focuses a field, so no third-party script comes with the page.
+import { TURNSTILE_SITE_KEY } from '../lib/site.ts';
+
+interface Props {
+  /** On the page background (/contact/) instead of the slate footer. */
+  light?: boolean;
+  /** Prefix for the field ids, unique per page. */
+  id: string;
+}
+
+const { light = false, id } = Astro.props;
+---
+<form class:list={['contact-form', { light }]} action="/contact.php" method="post" data-contact-form data-sitekey={TURNSTILE_SITE_KEY}>
+  {!light && <p class="contact-label">Contact</p>}
+  <label class="visually-hidden" for={`${id}-name`}>Nume</label>
+  <input id={`${id}-name`} name="name" placeholder="Nume" autocomplete="name" required maxlength="100" />
+  <label class="visually-hidden" for={`${id}-email`}>Email</label>
+  <input id={`${id}-email`} name="email" type="email" placeholder="Email" autocomplete="email" required maxlength="254" />
+  <label class="visually-hidden" for={`${id}-message`}>Mesaj</label>
+  <textarea id={`${id}-message`} name="message" placeholder="Mesaj" rows="4" required maxlength="5000"></textarea>
+  <div class="honeypot" aria-hidden="true">
+    <label for={`${id}-website`}>Nu completați acest câmp</label>
+    <input id={`${id}-website`} name="website" tabindex="-1" autocomplete="off" />
+  </div>
+  <div class="turnstile" data-turnstile></div>
+  <button type="submit">Trimite</button>
+  <p class="form-status" role="status" aria-live="polite"></p>
+  <p class="form-note">Folosim numele și adresa de email doar ca să vă răspundem; mesajul nu este păstrat pe site.</p>
+  <noscript><p class="form-status">Formularul are nevoie de JavaScript. Ne puteți scrie și pe Facebook.</p></noscript>
+</form>
+
+<script>
+  // Cloudflare Turnstile, loaded on first focus and rendered only if a challenge is needed.
+  declare global {
+    interface Window { turnstile?: { render(el: Element, options: object): string; reset(id: string): void } }
+  }
+
+  let script: Promise<void> | undefined;
+  // One script for every form on the page.
+  const loadTurnstile = () => (script ??= new Promise((resolve, reject) => {
+    const tag = document.createElement('script');
+    tag.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+    tag.async = true;
+    tag.onload = () => resolve();
+    tag.onerror = () => reject(new Error('Turnstile did not load'));
+    document.head.append(tag);
+  }));
+
+  document.querySelectorAll<HTMLFormElement>('form[data-contact-form]').forEach((form) => {
+    const status = form.querySelector<HTMLElement>('.form-status')!;
+    const button = form.querySelector<HTMLButtonElement>('button[type="submit"]')!;
+    // The newest token: Turnstile renews it when it expires (5 minutes) and after each send.
+    let widget: string | undefined;
+    let current = '';
+    const waiting: ((token: string) => void)[] = [];
+
+    const ready = () => loadTurnstile().then(() => {
+      widget ??= window.turnstile!.render(form.querySelector('[data-turnstile]')!, {
+        sitekey: form.dataset.sitekey,
+        appearance: 'interaction-only',
+        language: 'ro',
+        callback: (token: string) => { current = token; waiting.splice(0).forEach((done) => done(token)); },
+        'expired-callback': () => { current = ''; },
+        'error-callback': () => { current = ''; },
+      });
+    });
+    const nextToken = async () => {
+      await ready();
+      return current || new Promise<string>((resolve) => waiting.push(resolve));
+    };
+
+    form.addEventListener('focusin', () => { ready().catch(() => {}); }, { once: true });
+    form.addEventListener('input', () => { button.textContent = 'Trimite'; });
+
+    form.addEventListener('submit', async (event) => {
+      event.preventDefault();
+      button.disabled = true;
+      status.textContent = '';
+      const token = await Promise.race([
+        nextToken(),
+        new Promise<string>((resolve) => setTimeout(() => resolve(''), 20_000)),
+      ]).catch(() => '');
+      if (!token) {
+        status.textContent = 'Verificarea anti-spam nu s-a încărcat. Reîncărcați pagina și încercați din nou.';
+        button.disabled = false;
+        return;
+      }
+      const data = new FormData(form);
+      data.set('cf-turnstile-response', token);
+      data.set('page', location.href);
+      const res = await fetch(form.action, { method: 'POST', body: data, headers: { Accept: 'application/json' } }).catch(() => null);
+      const body = res ? await res.json().catch(() => ({})) : {};
+      if (res?.ok && body.ok) {
+        form.reset();
+        button.textContent = 'Mulțumim!';
+      } else {
+        status.textContent = body.error || 'Mesajul nu a putut fi trimis. Încercați din nou mai târziu.';
+      }
+      button.disabled = false;
+      // A token is single-use: ask Turnstile for the next one.
+      current = '';
+      window.turnstile!.reset(widget!);
+    });
+  });
+</script>

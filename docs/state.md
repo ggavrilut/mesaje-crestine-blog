@@ -16,15 +16,12 @@ _Last updated 2026-10-22_
   deploy script. The visual design (`specs/visual-design.md`, from the owner's handoff in
   `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
   contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
-  password-protected `nou.mesaje-crestine.ro`; first upload not yet done.
+  password-protected `nou.mesaje-crestine.ro`; first upload done (commit `3ed51db`): Gabriel reviews it. Contact form
+  (`specs/contact-form.md`) built and tested locally; next: the owner's config file on the
+  server, a preview deploy, one real message.
 
 ## Open questions
 
-- **Contact form config on the server**: the deploy FTP account only reaches `public_html`,
-  so the config with the `contact@` SMTP password and the Turnstile secret key cannot sit
-  outside it by FTP. Either the owner creates it once in cPanel's File Manager above
-  `public_html`, or it goes in a `public_html` folder denied by `.htaccess`. The contact-form
-  spec decides. The secrets are typed there by Gabriel, never pasted in a chat.
 - **About text** for `/despre-noi/` (`decisions.md`): Gabriel.
 - **Lists versus the text check**: `content-model.md` allows turning list-like lines into a
   Markdown list, but the list then drops the input's `-` or `1.` and the build's text check

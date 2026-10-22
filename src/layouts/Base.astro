@@ -3,6 +3,7 @@
 // tag; lang ro; JSON-LD as one @graph.
 import { Font } from 'astro:assets';
 import '../styles/global.css';
+import ContactForm from '../components/ContactForm.astro';
 import { FACEBOOK_URL, FOOTER_VERSE, SITE_NAME, SITE_URL, absolute } from '../lib/site.ts';
 
 export interface Props {
@@ -20,9 +21,11 @@ export interface Props {
   hideBreadcrumbs?: boolean;
   /** The reading-progress bar under the header (article pages). */
   progress?: boolean;
+  /** The footer's contact form; off on /contact/, which has its own. */
+  footerForm?: boolean;
 }
 
-const { title, description, path, noindex = false, ogType = 'website', article, graph = [], breadcrumbs, hideBreadcrumbs = false, progress = false } = Astro.props;
+const { title, description, path, noindex = false, ogType = 'website', article, graph = [], breadcrumbs, hideBreadcrumbs = false, progress = false, footerForm = true } = Astro.props;
 // Pages and posts without their own picture share the site card (public/og-default.png).
 const image = Astro.props.image ?? { src: '/og-default.png', width: 1200, height: 630, alt: SITE_NAME };
 const canonical = absolute(path);
@@ -102,6 +105,7 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [org, ...graph, ...
           <p class="footer-verse">„{FOOTER_VERSE.text}”</p>
           <p class="footer-reference">{FOOTER_VERSE.reference}</p>
         </div>
+        {footerForm && <ContactForm id="footer-contact" />}
       </div>
       <div class="container footer-bottom">
         <span>© 2021–{new Date().getFullYear()} {SITE_NAME}</span>

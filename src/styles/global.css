@@ -37,6 +37,7 @@ h1, h2, h3 { margin: 0; font-weight: 300; color: var(--ink); text-wrap: balance;
 p { margin: 0; text-wrap: pretty; }
 img { max-width: 100%; }
 .container { width: 100%; max-width: 1440px; margin: 0 auto; padding-inline: 32px; }
+.visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
 .skip { position: absolute; left: -999px; }
 .skip:focus { left: 1rem; top: 1rem; z-index: 10; background: #fff; padding: 0.5rem; }
 .placeholder { display: block; background: var(--stripes); }
@@ -63,10 +64,9 @@ img { max-width: 100%; }
 
 /* Footer */
 .site-footer { margin-top: 48px; background: var(--slate); color: #e9efec; }
-/* The handoff's second column, the contact form, waits for its own spec: the first keeps its
-   two-column width. */
-.footer-inner { padding-block: 72px 40px; }
-.footer-about { display: grid; gap: 20px; max-width: 660px; }
+/* Two columns: about and the contact form. On /contact/ (no form) the first keeps its width. */
+.footer-inner { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 320px), 1fr)); gap: 56px; padding-block: 72px 40px; }
+.footer-about { display: grid; gap: 20px; align-content: start; max-width: 660px; }
 .footer-logo { font-size: 18px; font-weight: 300; letter-spacing: 0.14em; text-transform: uppercase; }
 .footer-verse { color: var(--on-slate); font: italic 300 22px/1.5 var(--serif); }
 .footer-reference { color: var(--on-slate-muted); font-size: 14px; font-weight: 400; }
@@ -178,3 +178,25 @@ img { max-width: 100%; }
 .author-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0 56px; margin: 0; padding: 0; list-style: none; }
 .author-list li { display: grid; gap: 6px; padding-block: 20px; border-bottom: 1px solid var(--line-soft); }
 .author-list a { font-size: 22px; line-height: 1.3; }
+
+/* Contact form: the footer's slate version, and the light one on /contact/ */
+.contact-form { display: grid; gap: 12px; align-content: start; }
+.contact-label { color: #bcd9d4; font-size: 13px; font-weight: 400; letter-spacing: 0.18em; text-transform: uppercase; }
+.contact-form input, .contact-form textarea { min-height: 46px; padding: 12px 14px; border: 1px solid #7b8781; border-radius: 2px; background: #4d5853; color: #fff; font: 300 16px var(--sans); outline: none; }
+.contact-form textarea { resize: vertical; }
+.contact-form input::placeholder, .contact-form textarea::placeholder { color: var(--on-slate-muted); opacity: 1; }
+.contact-form input:focus, .contact-form textarea:focus { border-color: #bcd9d4; }
+.contact-form button { justify-self: start; min-height: 46px; padding: 12px 28px; border: 0; border-radius: 2px; background: var(--brand); color: #fff; font: 400 15px var(--sans); cursor: pointer; }
+.contact-form button:hover { background: #17897f; }
+.contact-form button:disabled { opacity: 0.6; cursor: progress; }
+.form-status:empty { display: none; }
+.form-status { color: #fff; font-size: 14px; font-weight: 400; }
+.form-note { color: var(--on-slate-muted); font-size: 13px; }
+.honeypot { position: absolute; left: -9999px; }
+.turnstile:empty { display: none; }
+.contact-form.light { max-width: 640px; }
+.contact-form.light input, .contact-form.light textarea { border-color: var(--chip-line); background: #fff; color: var(--ink); }
+.contact-form.light input::placeholder, .contact-form.light textarea::placeholder { color: var(--muted); }
+.contact-form.light input:focus, .contact-form.light textarea:focus { border-color: var(--teal); }
+.contact-form.light .form-status { color: #a1362c; }
+.contact-form.light .form-note { color: var(--muted); }

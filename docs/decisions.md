@@ -3,6 +3,10 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Contact form (owner): the secrets live in `mesaje-crestine-contact.php`,
+  which the owner creates in the cPanel home folder, above `public_html`, so they never pass
+  through git, FTP or the web folder; the deploy account cannot reach it, by design. SMTP
+  through PHPMailer 7.1.1 (copied unmodified into `public/_lib/`), not a hand-written client.
 - **2026-10-22** Author portraits (owner): the ten portraits in the WordPress media library
   that belong to authors of the site are imported (`PORTRAITS` in `bin/import-wp.ts`); the
   other sixteen authors keep the design's striped circle until the owner supplies one.

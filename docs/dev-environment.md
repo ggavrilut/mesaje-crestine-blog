@@ -34,6 +34,28 @@ Read `.env` only with a parser: Node's `process.loadEnvFile()` in scripts, never
 it made the shell's error messages print parts of `FTP_PASSWORD` and `SMTP_PASSWORD` into an
 agent chat, and both had to be changed.
 
+Contact form config on the server (`specs/contact-form.md`): one file the owner creates in
+cPanel's File Manager, in the home folder (the one that contains `public_html`, not inside
+it), named `mesaje-crestine-contact.php`, with the real values typed in place of the
+descriptions. Never copy it into the repo, the site or a chat:
+
+```php
+<?php
+// Contact form config for mesaje-crestine.ro (docs/specs/contact-form.md).
+return [
+    'to' => 'the Gmail address that receives the messages',
+    'smtp_password' => 'the password of contact@mesaje-crestine.ro',
+    'turnstile_secret' => 'the Turnstile widget secret key',
+];
+```
+
+Local test of the form, nothing sent: build with `PUBLIC_TURNSTILE_SITE_KEY=1x00000000000000000000AA`
+(Cloudflare's always-pass test key), serve `dist/` with `php -S`, and point
+`MC_CONTACT_CONFIG` at a config with the test secret `1x0000000000000000000000000000000AA`
+(always pass) or `2x0000000000000000000000000000000AA` (always fail) and `smtp_host`,
+`smtp_port`, `smtp_secure` `''`, `smtp_auth` `false` aimed at a local SMTP catcher. A deploy
+builds with the real key.
+
 SMTP for the contact form: `titan.solutiiweb.com`, port 465 (SSL), user
 `contact@mesaje-crestine.ro`; login checked without sending on 2026-10-22. Same certificate
 trap as FTPS: connect to `titan.solutiiweb.com`, not the domain. Values come from the owner's cPanel; this file

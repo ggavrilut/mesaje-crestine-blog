@@ -1,0 +1,19 @@
+---
+// /contact/: the WordPress page's URL, now the contact form on its own (docs/specs/contact-form.md).
+import Base from '../layouts/Base.astro';
+import ContactForm from '../components/ContactForm.astro';
+import { SITE_NAME } from '../lib/site.ts';
+---
+<Base
+  title={`Contact | ${SITE_NAME}`}
+  description="Scrieți-ne un mesaj prin formularul de contact al site-ului Mesaje Creștine; vă răspundem pe adresa de email pe care o lăsați."
+  path="/contact/"
+  breadcrumbs={[{ name: 'Contact', path: '/contact/' }]}
+  footerForm={false}
+>
+  <section class="container page">
+    <h1 class="page-title">Contact</h1>
+    <p class="page-intro">Scrieți-ne un mesaj și vă răspundem pe adresa de email pe care o lăsați.</p>
+    <ContactForm id="page-contact" light />
+  </section>
+</Base>

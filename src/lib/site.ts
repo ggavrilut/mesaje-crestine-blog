@@ -90,3 +90,9 @@ export function neighbours(post: Post, all: Post[]): { older?: Post; newer?: Pos
 
 /** Archive pages with fewer than two posts are not indexed (docs/seo.md). */
 export const indexable = (postCount: number) => postCount >= 2;
+
+/**
+ * Turnstile site key, public (it ships in every page; docs/architecture.md, contact form).
+ * Local tests build with Cloudflare's test key in PUBLIC_TURNSTILE_SITE_KEY.
+ */
+export const TURNSTILE_SITE_KEY = import.meta.env.PUBLIC_TURNSTILE_SITE_KEY || '0x4AAAAAAFhL6pcNmP1n77El';

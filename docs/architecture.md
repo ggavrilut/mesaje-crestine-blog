@@ -32,7 +32,8 @@ agreed design; each piece is marked as it lands.
   `mesaje-crestine.ro`, Managed mode, pre-clearance off (it would set a `cf_clearance`
   cookie); site key `0x4AAAAAAFhL6pcNmP1n77El` (public, ships in the page). The secret key
   goes in the server-side config only. Local development uses Cloudflare's published test
-  keys. Spec to be written.
+  keys. Built 2026-10-23: `public/contact.php`, `src/components/ContactForm.astro`, PHPMailer in
+  `public/_lib/`; spec `specs/contact-form.md`.
 - **Analytics**: Google Analytics 4 with Consent Mode v2, denied by default, behind a small
   self-built consent banner; loaded async (`seo.md`, performance). Property `353403051`,
   measurement ID `G-7SDPW1HTQF` (the one the WordPress site loads, 2026-10-22). Both are

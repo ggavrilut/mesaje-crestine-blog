@@ -18,19 +18,19 @@ cut-over procedure.
 
 ## Behaviour
 
-- [ ] `npm run deploy -- preview` builds from a clean tree, compares `dist/` with what the
+- [x] `npm run deploy -- preview` builds from a clean tree, compares `dist/` with what the
   target holds and prints the plan: files to upload, files to delete, bytes, the commit and a
   plan ID. It changes nothing on the server.
-- [ ] `npm run deploy -- preview --yes <plan ID>` uploads only if the commit and the build
+- [x] `npm run deploy -- preview --yes <plan ID>` uploads only if the commit and the build
   still give that plan ID, so a yes covers exactly the plan that was shown (`hard-rules.md`).
 - [ ] The script deletes only files that its own previous deploy uploaded (listed in
   `.deploy-manifest.json` on the target); anything else in the folder is never touched.
 - [ ] The preview refuses to upload unless the subdomain answers 401 (password-protected).
   Its `.htaccess` keeps cPanel's Directory Privacy lines, adds
   `X-Robots-Tag: noindex, nofollow`, and points the redirects at the preview host.
-- [ ] After the upload, the preview still answers 401 and the manifest on the server names
+- [x] After the upload, the preview still answers 401 and the manifest on the server names
   the deployed commit.
-- [ ] `.env` is read with `process.loadEnvFile()`, never by a shell
+- [x] `.env` is read with `process.loadEnvFile()`, never by a shell
   (`dev-environment.md`); no secret is printed.
 
 ## Data and interfaces
@@ -41,6 +41,18 @@ cut-over procedure.
 - Writes on the server: the site's files, `.htaccess`, `.deploy-manifest.json` (path → SHA-256
   of each uploaded file, the commit, the time).
 - Dependency: `basic-ftp` (dev), FTPS with TLS (owner, 2026-10-23).
+
+## Results
+
+2026-10-23, first preview deploy: the dry run gave plan `6e6f11617ea5` (commit `3ed51db`,
+1,046 files, 118.5 MB, nothing to delete); a wrong plan ID was refused before any upload; the
+approved plan uploaded, the manifest on the server names `3ed51db`, and every preview path,
+the manifest included, answers 401. Not yet exercised on the server: a delete (needs a
+second deploy) and the refusal of an unprotected preview.
+
+Through the main domain, `mesaje-crestine.ro/nou/` answers WordPress's 404 page with the
+password challenge: WordPress catches the 401. No preview file is served that way. It ends
+with WordPress; the `/nou` folder is removed at cut-over.
 
 ## Open questions
 
