@@ -15,7 +15,8 @@ _Last updated 2026-10-22_
   last import. Not yet built: search, analytics with the consent banner, contact form, the
   deploy script. The visual design (`specs/visual-design.md`, from the owner's handoff in
   `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
-  contact form waits for its spec.
+  contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
+  password-protected `nou.mesaje-crestine.ro`; first upload not yet done.
 
 ## Open questions
 

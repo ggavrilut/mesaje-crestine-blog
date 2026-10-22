@@ -16,6 +16,7 @@ is deleted.**
 | New post | `/publish <Google Doc link>`: the phases below | Gabriel, at the stops |
 | Verify | `bin/check`, then the checks in `testing.md` | |
 | Commit | `conventions.md` | when asked |
+| Preview | `npm run deploy -- preview`: plan, then upload with the plan ID (`specs/deploy.md`); WordPress stays live | Gabriel, for each plan |
 | Deploy | `/publish` (no link for a code-only deploy: phases 3–7) | Gabriel, every time |
 
 ## Publishing: one specialist per phase

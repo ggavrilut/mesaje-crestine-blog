@@ -14,6 +14,7 @@ Runtime: Node 24 (it runs the `bin/*.ts` scripts directly, no build step), npm 1
 | Build | `npm run build` | `text integrity: N posts equal their source.txt`, then `Complete!`; output in `dist/` with `.htaccess` |
 | Preview the build | `npm run preview` | `dist/` served on `http://localhost:4321/` (no `.htaccess`: redirects are checked by the next row) |
 | Redirect check | `npm run check-redirects` (after a build) | one line of counts; every `FAIL` is an old URL that would be lost |
+| Preview deploy | `npm run deploy -- preview`, then `npm run deploy -- preview --yes <plan ID>` after the owner's yes | the plan (files to upload and delete, plan ID); with `--yes`, `now serves <commit> at https://nou.mesaje-crestine.ro (password-protected)`. Needs a clean tree; `docs/specs/deploy.md` |
 | Text against its origin | `npm run verify-text [-- <slug>…]` | `verify-text: N ok, 0 differ, …`; reads Google Docs and, until cut-over, the live site |
 | Icons and social card | `node bin/make-brand-images.ts` | `public/favicon.*`, `apple-touch-icon.png`, `og-default.png` rewritten from `src/brand/mark.svg`; look at the card's `ș ț` |
 | WordPress import | `npm run import` | `problems 0, text differences 0`; details in `import/report.md`. Reads the live site only; overwrites imported posts' `index.md` |
@@ -27,6 +28,11 @@ Env files: a git-ignored `.env` at the root, copied from `.env.example`: `FTP_HO
 `FTP_USER`, `FTP_PASSWORD`, `FTP_REMOTE_DIR`, and the contact form's `TURNSTILE_SECRET_KEY`
 and `SMTP_PASSWORD` (the `contact@` mailbox), which reach the server's config file as the
 contact-form spec decides.
+
+Read `.env` only with a parser: Node's `process.loadEnvFile()` in scripts, never the shell's
+`.` or `source`. The values are unquoted and contain shell characters; on 2026-10-23 sourcing
+it made the shell's error messages print parts of `FTP_PASSWORD` and `SMTP_PASSWORD` into an
+agent chat, and both had to be changed.
 
 SMTP for the contact form: `titan.solutiiweb.com`, port 465 (SSL), user
 `contact@mesaje-crestine.ro`; login checked without sending on 2026-10-22. Same certificate

@@ -9,3 +9,4 @@ in the same commit. Every spec has exactly one row here.
 | `wordpress-import.md` | building | Gabriel Gavrilut |
 | `publish-pipeline.md` | draft | Gabriel Gavrilut |
 | `visual-design.md` | building | Gabriel Gavrilut |
+| `deploy.md` | building | Gabriel Gavrilut |
