@@ -3,6 +3,11 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Brand images (owner), superseding 2026-10-22 site images: the owner supplies
+  the finished files in `public/` (`logo.svg`, `mark.svg`, the favicons, `apple-touch-icon.png`,
+  `og-default.png`), and `logo.svg` replaces the monogram as the JSON-LD logo. The generator
+  `bin/make-brand-images.ts` is deleted, because it overwrote those files with the old teal
+  set. The logo's text is drawn as outlines, so it looks the same without Roboto.
 - **2026-10-23** The PDF of `o-mantuire-asa-de-mare` (owner): kept, linked under the title as
   on WordPress, where it sat above the article. It lives in the post folder as the post's
   `pdf`, so any post can have one, and its old `/wp-content/uploads/` URL gets a 301.
@@ -25,7 +30,7 @@ entry that names the one it supersedes. Read before reopening a settled question
   `design/design_handoff_mesaje_crestine/` replaces the WordPress look, which had been rebuilt
   the same day. Post dates stay visible, as both the handoff and `seo.md` want.
 - **2026-10-22** Site images (owner): the WordPress "MC" monogram (192×192) stays the logo
-  in JSON-LD (replaced 2026-10-23 by the owner's `public/logo.svg`); the favicon set and the default social card are new, drawn from
+  in JSON-LD; the favicon set and the default social card are new, drawn from
   `src/brand/mark.svg` by `bin/make-brand-images.ts`, because the monogram's ring text is
   noise at favicon size. The card is the `og:image` of every page and coverless post, but
   not a post's JSON-LD `image`, which Google wants to represent the article.

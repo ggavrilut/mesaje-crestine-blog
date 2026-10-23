@@ -16,7 +16,6 @@ Runtime: Node 24 (it runs the `bin/*.ts` scripts directly, no build step), npm 1
 | Redirect check | `npm run check-redirects` (after a build) | one line of counts; every `FAIL` is an old URL that would be lost |
 | Preview deploy | `npm run deploy -- preview`, then `npm run deploy -- preview --yes <plan ID>` after the owner's yes | the plan (files to upload and delete, plan ID); with `--yes`, `now serves <commit> at https://nou.mesaje-crestine.ro (password-protected)`. Needs a clean tree; `docs/specs/deploy.md` |
 | Text against its origin | `npm run verify-text [-- <slug>…]` | `verify-text: N ok, 0 differ, …`; reads Google Docs and, until cut-over, the live site |
-| Icons and social card | `node bin/make-brand-images.ts` | `public/favicon.*`, `apple-touch-icon.png`, `og-default.png` rewritten from `src/brand/mark.svg`; look at the card's `ș ț` |
 | WordPress import | `npm run import` | `problems 0, text differences 0`; details in `import/report.md`. Reads the live site only; overwrites imported posts' `index.md` |
 
 The first build takes about 4 minutes, almost all of it AVIF encoding of the covers; later

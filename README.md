@@ -32,7 +32,7 @@ them, how to work with them and how to teach them.
 | `docs/state.md` | What is in flight, open questions, declined proposals |
 | `agent/` | Sources of each agent's Role block, design record |
 | `evals/` | Behaviour scenarios, run after any change to an agent |
-| `bin/` | `check` (the fast check: run before committing), `fetch-doc`, `import-wp.ts`, `check-redirects.ts`, `make-brand-images.ts` |
+| `bin/` | `check` (the fast check: run before committing), `fetch-doc`, `import-wp.ts`, `check-redirects.ts` |
 | `src/` | The Astro site |
 | `content/` | Posts and authors |
 | `import/` | The WordPress import's report, old URL list and redirect list |
