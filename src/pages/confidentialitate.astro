@@ -1,0 +1,160 @@
+---
+// /confidentialitate/: what data reaches the site's owner or other services, and why
+// (docs/specs/analytics.md, privacy page). Must describe exactly what the site does: update it
+// in the same commit as any change to analytics, cookies, the contact form, embeds or the host,
+// and before a new service (a newsletter, say) goes live.
+import Base from '../layouts/Base.astro';
+import { GA_ID, SITE_NAME } from '../lib/site.ts';
+
+const gaCookie = `_ga_${GA_ID.slice(2)}`;
+---
+<Base
+  title={`Politica de confidențialitate | ${SITE_NAME}`}
+  description="Ce date ajung la Mesaje Creștine și la serviciile pe care le folosește, de ce, cât timp sunt păstrate și ce drepturi aveți asupra lor."
+  path="/confidentialitate/"
+  breadcrumbs={[{ name: 'Confidențialitate', path: '/confidentialitate/' }]}
+>
+  <section class="container page">
+    <h1 class="page-title">Politica de confidențialitate</h1>
+    <p class="page-intro">
+      Puteți citi tot site-ul fără cont și fără să ne dați vreo dată. Mai jos explicăm, conform
+      Regulamentului (UE) 2016/679 (GDPR), ce date ajung totuși la noi sau la serviciile pe care le
+      folosim, de ce, cât timp și ce drepturi aveți.
+    </p>
+    <div class="prose legal">
+      <h2>Cine răspunde de datele dumneavoastră?</h2>
+      <p>
+        Site-ul mesaje-crestine.ro este administrat de Gabriel Gavrilut, care este operatorul
+        datelor descrise aici. Ne puteți scrie oricând prin <a href="/contact/">formularul de contact</a>.
+      </p>
+
+      <h2>Ce date prelucrăm, de ce și pe ce temei?</h2>
+
+      <h3>Statistici de vizitare (Google Analytics)</h3>
+      <p>
+        Ca să știm câte persoane citesc site-ul, ce articole, cât timp și pe ce cale ajung la noi (de
+        exemplu, dintr-un motor de căutare), folosim Google Analytics 4, un serviciu al Google Ireland
+        Limited.
+      </p>
+      <ul>
+        <li>
+          Dacă acceptați cookie-urile de analiză, Google Analytics vă recunoaște ca același vizitator la
+          vizitele următoare, prin cookie-urile descrise mai jos. Temeiul: consimțământul dumneavoastră
+          (art. 6 alin. (1) lit. a) din GDPR).
+        </li>
+        <li>
+          Dacă refuzați sau nu ați ales încă, nu se pune niciun cookie, dar pagina trimite către Google
+          semnale fără cookie-uri și fără identificator (că o pagină a fost vizitată, adresa ei, tipul de
+          dispozitiv), folosite doar pentru statistici agregate. Temeiul: interesul nostru legitim de a
+          ști cum este folosit site-ul (art. 6 alin. (1) lit. f) din GDPR).
+        </li>
+        <li>
+          Google Analytics nu păstrează adresele IP. Am dezactivat semnalele Google și personalizarea
+          reclamelor: datele nu sunt folosite pentru publicitate.
+        </li>
+      </ul>
+
+      <h3>Formularul de contact</h3>
+      <p>
+        Când ne scrieți, numele, adresa de email și mesajul ajung prin email la administratorul
+        site-ului, într-o căsuță Gmail (un serviciu Google). Le folosim doar ca să vă răspundem; site-ul
+        nu le păstrează. Ca să oprească mesajele trimise automat, formularul folosește Cloudflare
+        Turnstile (Cloudflare, Inc.), care se încarcă doar când începeți să completați formularul,
+        primește adresa IP și date tehnice despre browser ca să verifice că mesajul vine de la o persoană
+        și nu pune cookie-uri. Temeiul: interesul nostru legitim de a vă răspunde și de a ține departe
+        mesajele automate (art. 6 alin. (1) lit. f) din GDPR).
+      </p>
+
+      <h3>Videoclipuri YouTube</h3>
+      <p>
+        Unele articole conțin videoclipuri YouTube (Google). Imaginea de previzualizare se încarcă de pe
+        serverele YouTube, care primesc astfel adresa IP și date tehnice despre browser, fără cookie-uri.
+        Playerul se încarcă doar când apăsați pe imagine, de pe youtube-nocookie.com; din acel moment se
+        aplică politica de confidențialitate a Google.
+      </p>
+
+      <h3>Distribuirea pe Facebook și WhatsApp</h3>
+      <p>
+        Linkurile de distribuire sunt simple linkuri: nimic nu se trimite către Facebook sau WhatsApp până
+        nu le apăsați.
+      </p>
+
+      <h3>Găzduirea site-ului</h3>
+      <p>
+        Serverul care găzduiește site-ul înregistrează, ca orice server web, fiecare cerere: adresa IP,
+        pagina cerută, data și ora, browserul. Aceste jurnale servesc la funcționarea și securitatea
+        site-ului. Temeiul: interesul nostru legitim (art. 6 alin. (1) lit. f) din GDPR).
+      </p>
+
+      <h2>Ce cookie-uri și ce date din browser folosim?</h2>
+      <p>
+        Un cookie este un mic fișier pe care un site îl lasă în browserul dumneavoastră ca să își
+        amintească ceva la vizita următoare. Site-ul folosește doar următoarele:
+      </p>
+      <ul>
+        <li>
+          <code>_ga</code> și <code>{gaCookie}</code>, de la Google Analytics, puse doar după ce acceptați;
+          păstrate cel mult 2 ani.
+        </li>
+        <li>
+          <code>mc-consent</code>, alegerea dumneavoastră despre cookie-uri, păstrată în memoria
+          browserului (nu într-un cookie) și cerută din nou după 6 luni. Este necesară ca să nu vă întrebăm
+          la fiecare pagină și nu se trimite nicăieri.
+        </li>
+      </ul>
+      <p>
+        Vă puteți schimba alegerea oricând din linkul „Setări cookie” din subsolul fiecărei pagini.
+        Puteți și șterge sau bloca cookie-urile din setările browserului; site-ul funcționează la fel și
+        fără ele.
+      </p>
+
+      <h2>Sunteți obligat să ne dați date?</h2>
+      <p>
+        Nu. Citirea site-ului nu cere nicio dată, refuzul cookie-urilor nu limitează nimic, iar
+        formularul de contact îl folosiți doar dacă doriți să ne scrieți.
+      </p>
+
+      <h2>Cine are acces la date?</h2>
+      <p>
+        Administratorul site-ului și, pentru serviciile descrise mai sus, furnizorii care le prestează:
+        Google (Analytics, Gmail, YouTube), Cloudflare (Turnstile) și furnizorul de găzduire. Nu vindem și
+        nu închiriem date nimănui. Le-am putea transmite autorităților doar dacă legea ne obligă.
+      </p>
+
+      <h2>Sunt transferate datele în afara Uniunii Europene?</h2>
+      <p>
+        Google și Cloudflare pot prelucra date și în Statele Unite, în baza Cadrului UE-SUA privind
+        protecția datelor (EU-U.S. Data Privacy Framework), pe care Comisia Europeană îl recunoaște ca
+        oferind o protecție adecvată.
+      </p>
+
+      <h2>Cât timp păstrăm datele?</h2>
+      <ul>
+        <li>Statisticile detaliate din Google Analytics: 14 luni, apoi sunt șterse.</li>
+        <li>Mesajele de contact: cât timp este nevoie pentru discuție; la cererea dumneavoastră le ștergem.</li>
+        <li>Jurnalele serverului: o perioadă limitată, stabilită de furnizorul de găzduire.</li>
+        <li>Alegerea despre cookie-uri: 6 luni, în browserul dumneavoastră.</li>
+      </ul>
+
+      <h2>Ce drepturi aveți?</h2>
+      <p>
+        Puteți cere accesul la datele dumneavoastră, rectificarea sau ștergerea lor, restricționarea
+        prelucrării, vă puteți opune prelucrării și puteți primi datele într-un format portabil
+        (art. 15–21 din GDPR). Consimțământul îl puteți retrage oricând, fără să afecteze prelucrarea
+        făcută înainte. Pentru oricare dintre acestea, scrieți-ne prin
+        <a href="/contact/">formularul de contact</a>.
+      </p>
+      <p>
+        Puteți depune și o plângere la Autoritatea Națională de Supraveghere a Prelucrării Datelor cu
+        Caracter Personal (ANSPDCP), <a href="https://www.dataprotection.ro/" rel="noopener">dataprotection.ro</a>.
+      </p>
+
+      <h2>Ce se întâmplă când se schimbă ceva?</h2>
+      <p>
+        Dacă vom folosi date în alt mod sau vom adăuga un serviciu nou (de exemplu, un newsletter),
+        îl vom descrie aici înainte să-l folosim și, unde legea o cere, vă vom cere mai întâi
+        consimțământul. Ultima actualizare: 23 octombrie 2026.
+      </p>
+    </div>
+  </section>
+</Base>

@@ -1,0 +1,61 @@
+---
+// The analytics consent banner (docs/specs/analytics.md). Hidden until its script finds no
+// stored choice, or the footer's "Setări cookie" asks for it; so without JavaScript nothing
+// shows. The consent defaults and gtag.js are set up in Base.astro's <head>, before this runs.
+import { GA_ID } from '../lib/site.ts';
+---
+<section class="consent" aria-label="Cookie-uri" data-consent hidden>
+  <p>
+    Folosim Google Analytics ca să vedem câte persoane citesc articolele și cum ajung la ele.
+    Cookie-urile de analiză se pun doar dacă acceptați. <a href="/confidentialitate/">Detalii</a>
+  </p>
+  <p class="consent-current" data-consent-current hidden></p>
+  <div class="consent-buttons">
+    <button type="button" data-consent-choice="granted">Accept</button>
+    <button type="button" data-consent-choice="denied">Refuz</button>
+  </div>
+</section>
+
+<script define:vars={{ gaId: GA_ID }} is:inline>
+  // The stored choice's key and shape match the <head> script in Base.astro, which reads it.
+  (() => {
+    const KEY = 'mc-consent';
+    const banner = document.querySelector('[data-consent]');
+    const current = document.querySelector('[data-consent-current]');
+    const choice = window.mcConsent;
+
+    const show = () => {
+      const now = window.mcConsent;
+      current.hidden = !now;
+      current.textContent = now === 'granted' ? 'Acum: acceptat.' : now === 'denied' ? 'Acum: refuzat.' : '';
+      banner.hidden = false;
+    };
+
+    banner.querySelectorAll('[data-consent-choice]').forEach((button) => {
+      button.addEventListener('click', () => {
+        const value = button.dataset.consentChoice;
+        try {
+          localStorage.setItem(KEY, JSON.stringify({ analytics: value, at: new Date().toISOString() }));
+        } catch { /* private window or storage off: the banner asks again next page */ }
+        window.gtag('consent', 'update', { analytics_storage: value });
+        if (value === 'denied') {
+          // Refusing after accepting: remove what GA4 already set (its cookies sit on the site's domain).
+          const domain = location.hostname.replace(/^www\./, '');
+          for (const name of ['_ga', `_ga_${gaId.slice(2)}`]) {
+            document.cookie = `${name}=; Max-Age=0; path=/`;
+            document.cookie = `${name}=; Max-Age=0; path=/; domain=.${domain}`;
+          }
+        }
+        window.mcConsent = value;
+        banner.hidden = true;
+      });
+    });
+
+    document.querySelectorAll('[data-consent-open]').forEach((link) => {
+      link.hidden = false;
+      link.addEventListener('click', show);
+    });
+
+    if (!choice) show();
+  })();
+</script>

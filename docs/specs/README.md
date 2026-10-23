@@ -11,3 +11,4 @@ in the same commit. Every spec has exactly one row here.
 | `visual-design.md` | building | Gabriel Gavrilut |
 | `deploy.md` | building | Gabriel Gavrilut |
 | `contact-form.md` | built | Gabriel Gavrilut |
+| `analytics.md` | built | Gabriel Gavrilut |

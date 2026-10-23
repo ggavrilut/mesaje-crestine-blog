@@ -3,6 +3,9 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Privacy page operator (owner): `/confidentialitate/` names Gabriel Gavrilut
+  as the operator, reachable through the contact form. Considered and set aside: no name
+  ("administratorul site-ului"), which falls short of GDPR art. 13(1)(a), and an initial.
 - **2026-10-23** Brand images (owner), superseding 2026-10-22 site images: the owner supplies
   the finished files in `public/` (`logo.svg`, `mark.svg`, the favicons, `apple-touch-icon.png`,
   `og-default.png`), and `logo.svg` replaces the monogram as the JSON-LD logo. The generator

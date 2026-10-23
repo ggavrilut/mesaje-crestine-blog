@@ -4,7 +4,8 @@
 import { Font } from 'astro:assets';
 import '../styles/global.css';
 import ContactForm from '../components/ContactForm.astro';
-import { FACEBOOK_URL, FOOTER_VERSE, SITE_NAME, SITE_URL, absolute } from '../lib/site.ts';
+import ConsentBanner from '../components/ConsentBanner.astro';
+import { FACEBOOK_URL, FOOTER_VERSE, GA_ID, SITE_NAME, SITE_URL, absolute } from '../lib/site.ts';
 
 export interface Props {
   title: string;
@@ -46,6 +47,28 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [org, ...graph, ...
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script define:vars={{ gaId: GA_ID }} is:inline>
+      // Analytics (docs/specs/analytics.md): Consent Mode v2, everything denied until the reader
+      // accepts; a choice stored in the last 6 months applies before gtag.js sends anything.
+      // gtag.js loads only on the live host, so the preview and local builds send nothing.
+      window.dataLayer = window.dataLayer || [];
+      window.gtag = function () { dataLayer.push(arguments); };
+      gtag('consent', 'default', { analytics_storage: 'denied', ad_storage: 'denied', ad_user_data: 'denied', ad_personalization: 'denied' });
+      gtag('set', 'ads_data_redaction', true);
+      try {
+        const stored = JSON.parse(localStorage.getItem('mc-consent'));
+        if (stored && Date.now() - Date.parse(stored.at) < 182 * 864e5) window.mcConsent = stored.analytics;
+      } catch { /* no storage: no choice, the banner asks */ }
+      if (window.mcConsent === 'granted') gtag('consent', 'update', { analytics_storage: 'granted' });
+      if (location.hostname === 'mesaje-crestine.ro') {
+        gtag('js', new Date());
+        gtag('config', gaId);
+        const tag = document.createElement('script');
+        tag.async = true;
+        tag.src = `https://www.googletagmanager.com/gtag/js?id=${gaId}`;
+        document.head.append(tag);
+      }
+    </script>
     <Font cssVariable="--font-roboto" preload={[{ weight: 300, style: 'normal' }]} />
     <Font cssVariable="--font-serif" />
     <title>{title}</title>
@@ -111,8 +134,13 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [org, ...graph, ...
       </div>
       <div class="container footer-bottom">
         <span>© 2021–{new Date().getFullYear()} {SITE_NAME}</span>
-        <a href={FACEBOOK_URL} rel="noopener">Facebook</a>
+        <span class="footer-links">
+          <a href={FACEBOOK_URL} rel="noopener">Facebook</a>
+          <a href="/confidentialitate/">Confidențialitate</a>
+          <button type="button" class="footer-button" data-consent-open hidden>Setări cookie</button>
+        </span>
       </div>
     </footer>
+    <ConsentBanner />
   </body>
 </html>

@@ -37,7 +37,16 @@ agreed design; each piece is marked as it lands.
 - **Analytics**: Google Analytics 4 with Consent Mode v2, denied by default, behind a small
   self-built consent banner; loaded async (`seo.md`, performance). Property `353403051`,
   measurement ID `G-7SDPW1HTQF` (the one the WordPress site loads, 2026-10-22). Both are
-  public identifiers, not secrets: the ID ships in every page. Not built yet.
+  public identifiers, not secrets: the ID ships in every page. `gtag.js` loads only on
+  `mesaje-crestine.ro`. Built 2026-10-23: the `<head>` script in `src/layouts/Base.astro`,
+  `src/components/ConsentBanner.astro`; privacy page `src/pages/confidentialitate.astro`;
+  spec `specs/analytics.md`.
+- **Privacy page** (`/confidentialitate/`): describes exactly what the site processes, never
+  what it might. A change that adds a cookie, a third-party request or a new use of data (a
+  newsletter, say) updates it in the same commit, before going live. A new cookie purpose gets
+  its own switch in the banner, off by default (the stored choice is keyed by purpose,
+  `{"analytics": …}`); a newsletter gets its own sign-up consent (double opt-in), its provider
+  named on the page, and an unsubscribe link in every email.
 - **WordPress importer**: a one-off script reading the live site's public REST API and pages,
   writing `content/` and `import/`. Built: `bin/import-wp.ts`. Spec: `specs/wordpress-import.md`.
 - **Host**: cPanel shared hosting, Apache, reached by FTPS. Receives `dist/`. WordPress lives

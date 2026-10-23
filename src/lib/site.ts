@@ -2,6 +2,8 @@ import { getCollection, type CollectionEntry } from 'astro:content';
 
 export const SITE_NAME = 'Mesaje Creștine';
 export const SITE_URL = 'https://mesaje-crestine.ro';
+/** The GA4 measurement ID (docs/architecture.md, analytics): public, it ships in every page. */
+export const GA_ID = 'G-7SDPW1HTQF';
 export const PER_PAGE = 10;
 export const FACEBOOK_URL = 'https://www.facebook.com/Mesaje-Cre%C8%99tine-100365085780276';
 

@@ -73,6 +73,18 @@ img { max-width: 100%; }
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 16px; padding-block: 24px 32px; border-top: 1px solid var(--muted); color: var(--on-slate-muted); font-size: 13px; }
 .footer-bottom a { color: #e9efec; }
 .footer-bottom a:hover { color: #fff; }
+.footer-links { display: flex; flex-wrap: wrap; gap: 24px; }
+.footer-button { padding: 0; border: 0; background: none; color: #e9efec; font: inherit; cursor: pointer; }
+.footer-button:hover { color: #fff; }
+
+/* Consent banner (specs/analytics.md): over the page, never moving it; the two choices alike. */
+.consent { position: fixed; inset: auto 16px 16px; z-index: 50; display: grid; gap: 12px; max-width: 640px; margin-inline: auto; padding: 16px 20px; border: 1px solid var(--line); border-radius: 4px; background: #fff; box-shadow: 0 8px 28px rgb(0 0 0 / 0.14); color: var(--body); font-size: 14px; line-height: 1.5; }
+.consent[hidden] { display: none; }
+.consent p { margin: 0; }
+.consent-current { color: var(--muted); }
+.consent-buttons { display: flex; gap: 12px; }
+.consent-buttons button { min-width: 112px; min-height: 40px; padding: 8px 20px; border: 1px solid var(--slate); border-radius: 2px; background: #fff; color: var(--ink); font: 400 14px var(--sans); cursor: pointer; }
+.consent-buttons button:hover { background: var(--header-bg); }
 
 /* Home: verse band */
 .verse-band { background: var(--slate); color: var(--on-slate); }
@@ -176,6 +188,7 @@ img { max-width: 100%; }
 .page-label { color: var(--teal); font-size: 13px; font-weight: 400; letter-spacing: 0.12em; text-transform: uppercase; }
 .page-title { font-size: clamp(32px, 3.6vw, 44px); line-height: 1.15; }
 .page-intro { max-width: 760px; color: #434b47; font: 400 19px/1.65 var(--serif); }
+.legal { max-width: 760px; }
 .author-list { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr)); gap: 0 56px; margin: 0; padding: 0; list-style: none; }
 .author-list li { display: grid; gap: 6px; padding-block: 20px; border-bottom: 1px solid var(--line-soft); }
 .author-list a { font-size: 22px; line-height: 1.3; }

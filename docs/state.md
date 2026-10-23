@@ -12,7 +12,7 @@ _Last updated 2026-10-23_
   26 authors, zero text differences), redirects generated and checked. Not committed yet.
   Remaining for `specs/wordpress-import.md`: its open questions, the `despre-noi` and
   `contact` pages, the post writer's pass (descriptions, cover alt text, related) after the
-  last import. Not yet built: search, analytics with the consent banner, contact form, the
+  last import. Not yet built: search, the
   deploy script. The visual design (`specs/visual-design.md`, from the owner's handoff in
   `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
   contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
@@ -22,13 +22,10 @@ _Last updated 2026-10-23_
 
 ## Next session (2026-10-23)
 
-- **Brand images** (`decisions.md`, 2026-10-23 brand images): done and committed; the
-  Schema.org validator gives 0 errors, 0 warnings on home, `kenosis` and an author page.
-  Still to do: the Rich Results Test, being run 2026-10-23 by another session, which holds
-  the Playwright browser; record its result here.
-- **Then, in order** (`decisions.md`, 2026-10-23 next work): the analytics spec and build
-  (with the consent banner and a "cookie settings" link); the privacy page draft; the PWA
-  spec and build. The 73 descriptions are done (owner-reviewed); `coverAlt` and `related`
+- **Analytics and the privacy page**: built, tested locally and owner-approved 2026-10-23
+  (`specs/analytics.md`, results). They go live with the new site at cut-over (gtag.js loads
+  only on `mesaje-crestine.ro`, so the preview sends nothing); then a check in GA4 Realtime.
+- **Then** (`decisions.md`, 2026-10-23 next work): the PWA spec and build. The 73 descriptions are done (owner-reviewed); `coverAlt` and `related`
   of the post writer's pass (`specs/wordpress-import.md`) are not.
 
 ## Open questions
