@@ -3,6 +3,10 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Cut-over now, without a last import (nothing new on WordPress) and without a
+  full cPanel backup (owner: what matters is already kept, the database stays on the host).
+  Supersedes the backup step of `workflow.md` for this cut-over: WordPress's files are moved
+  into a closed `_wordpress/`, not deleted, and deleted only two weeks later with a yes.
 - **2026-10-23** WordPress leftovers (owner, after the list of old URLs not imported): the
   three quotes become posts (supersedes their 301s to related posts in the entry below); every
   author term gets a page, even with no posts, `noindex` and out of the sitemap under two

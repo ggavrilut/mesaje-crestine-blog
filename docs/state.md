@@ -28,9 +28,9 @@ _Last updated 2026-10-23_
 - **Cut-over** (owner asked 2026-10-23 "when can it go live?"). Blocking: (1) done
   2026-10-23: every old URL has a rule (`check-redirects` 0 failing); (2) done 2026-10-23: the PWA
   (`specs/pwa.md`, built, tested locally, texts approved) ships at
-  cut-over, replacing the SuperPWA worker that caches same-site files forever; (3) the cut-over procedure (spec and
-  build; the deploy script refuses the live target until then; WordPress's database stays on
-  the host, `decisions.md`); (4) merge `import-wordpress` into
+  cut-over, replacing the SuperPWA worker that caches same-site files forever; (3) the cut-over procedure
+  (`specs/cutover.md`, drafted 2026-10-23, for the owner's review; then the build and a
+  rehearsal on the preview); (4) merge `import-wordpress` into
   `main`. Not blocking: `coverAlt` and `related` (the rest of the post writer's pass),
   typos, excerpts, Bing, search.
 

@@ -80,3 +80,29 @@ if (process.argv.includes('--verbose')) [...results.ok, ...results.gone].forEach
 other.forEach((l) => console.log(`FAIL  ${l}`));
 if (media.length) console.log(`FAIL  ${media.length} image URLs under /wp-content/uploads/ have no rule yet`);
 process.exitCode = results.fail.length ? 1 : 0;
+
+// --live (specs/cutover.md): the same old URLs asked of the live site, which must answer what
+// dist/ promises: the same 301 target, the 410, or the 200.
+if (process.argv.includes('--live')) {
+  const expected = (path: string): { status: number; to?: string } => {
+    const hit = match(path);
+    if (hit) return hit.rule.status === 410 ? { status: 410 } : { status: hit.rule.status, to: hit.to };
+    if (serves(path)) return { status: 200 };
+    return { status: 301, to: `${SITE}${path}/` }; // Apache's DirectorySlash
+  };
+  const live: string[] = [];
+  const queue = [...paths];
+  await Promise.all(Array.from({ length: 6 }, async () => {
+    for (let path = queue.shift(); path; path = queue.shift()) {
+      const want = expected(path);
+      const res = await fetch(`${SITE}${path}`, { redirect: 'manual' }).catch((e) => ({ status: 0, headers: new Headers(), error: e.message }));
+      const location = res.headers.get('location');
+      const got = location ? new URL(location, SITE).href : undefined;
+      const ok = res.status === want.status && (want.to === undefined || got === new URL(want.to, SITE).href);
+      if (!ok) live.push(`${path}  live ${res.status}${got ? ` -> ${got}` : ''}, expected ${want.status}${want.to ? ` -> ${want.to}` : ''}`);
+    }
+  }));
+  console.log(`live: ${paths.length} old URLs asked of ${SITE}: ${paths.length - live.length} as expected, ${live.length} not`);
+  live.sort().forEach((l) => console.log(`LIVE  ${l}`));
+  if (live.length) process.exitCode = 1;
+}

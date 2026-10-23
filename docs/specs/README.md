@@ -13,3 +13,4 @@ in the same commit. Every spec has exactly one row here.
 | `contact-form.md` | built | Gabriel Gavrilut |
 | `analytics.md` | built | Gabriel Gavrilut |
 | `pwa.md` | built | Gabriel Gavrilut |
+| `cutover.md` | draft | Gabriel Gavrilut |
