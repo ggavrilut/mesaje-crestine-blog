@@ -4,7 +4,7 @@ Written by `bin/import-wp.ts` (`docs/specs/wordpress-import.md`). Every list bel
 sorted, so two runs on an unchanged site give the same file.
 
 - Posts imported: 73 of 73 published
-- Authors with at least one post: 26 of 32 terms
+- Authors with at least one post: 29 of 32 terms
 - Posts read from the rendered page (no post-content element): 10
 - Old sitemap URLs: 165 (`import/legacy-urls.txt`)
 
@@ -63,18 +63,16 @@ None.
 
 None.
 
-## Redirects written to import/redirects.tsv (author terms without posts, the PDF, portraits, covers)
+## Redirects written to import/redirects.tsv (the PDF, portraits, covers)
 
-- `/authors/christian-chen/` → `/authors/`
-- `/authors/george-muller/` → `/authors/`
-- `/authors/hudson-taylor/` → `/authors/`
-- `/authors/j-wilbur-chapman/` → `/authors/`
-- `/authors/john-saunders/` → `/authors/`
-- `/authors/victor-matthews/` → `/authors/`
 - `/wp-content/uploads/2021/10/DSC_0215_edited-min-1-scaled.jpg` → `/partasia/`
+- `/wp-content/uploads/2021/10/George_Muller.jpg` → `/authors/george-muller/`
 - `/wp-content/uploads/2021/10/IMG_7324-scaled.jpg` → `/sa-intelegem-caile-domnului/`
+- `/wp-content/uploads/2021/10/JohnWilburChapman.jpg` → `/authors/j-wilbur-chapman/`
+- `/wp-content/uploads/2021/10/TaylorH.jpg` → `/authors/hudson-taylor/`
 - `/wp-content/uploads/2021/10/ValeaDraganului2018-143-scaled.jpg` → `/domn-peste-toate-sau-deloc/`
 - `/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-18-at-20.02.30-min.jpeg` → `/iata-ca-vin-ca-un-hot/`
+- `/wp-content/uploads/2021/10/chen.jpeg` → `/authors/christian-chen/`
 - `/wp-content/uploads/2021/10/cropped-sparks.jpg` → `/authors/t-austin-sparks/`
 - `/wp-content/uploads/2021/10/kaung.jpg` → `/authors/stephen-kaung/`
 - `/wp-content/uploads/2021/10/reidhead.jpeg` → `/authors/paris-reidhead/`
@@ -130,10 +128,6 @@ None.
 
 ## Media not used as a cover or portrait
 
-- 108 image/jpeg /wp-content/uploads/2021/10/JohnWilburChapman.jpg (attached to nothing)
-- 109 image/jpeg /wp-content/uploads/2021/10/TaylorH.jpg (attached to nothing)
-- 110 image/jpeg /wp-content/uploads/2021/10/George_Muller.jpg (attached to nothing)
-- 126 image/jpeg /wp-content/uploads/2021/10/chen.jpeg (attached to nothing)
 - 191 image/jpeg /wp-content/uploads/2021/10/IMG_3167-min-scaled.jpg (attached to nothing)
 - 192 image/jpeg /wp-content/uploads/2021/10/DSC_0002_edited_edited-min-scaled.jpg (attached to nothing)
 - 195 image/jpeg /wp-content/uploads/2021/10/IMG_3162-min-scaled.jpg (attached to nothing)

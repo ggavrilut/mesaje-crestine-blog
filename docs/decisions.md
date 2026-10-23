@@ -3,6 +3,11 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** WordPress leftovers (owner, after the list of old URLs not imported): the
+  three quotes become posts (supersedes their 301s to related posts in the entry below); every
+  author term gets a page, even with no posts, `noindex` and out of the sitemap under two
+  posts (`seo.md` forbids empty pages: noindex keeps them out of Google); `necunoscut` keeps
+  its page; the zip `fragmente-lda.zip` is dropped, the owner downloaded it.
 - **2026-10-23** Remaining old URLs (owner, on the `seo` agent's proposal,
   `specs/wordpress-import.md`): 301 only to a page on the same subject, else 410. Old cover
   images 301 to their post, portraits to their author page, the rest of `/wp-content/` 410.

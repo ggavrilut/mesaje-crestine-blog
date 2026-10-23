@@ -1,4 +1,4 @@
-// The text a reader sees on a live WordPress post page. Shared by the importer (live page
+// The text a reader sees on a live WordPress post or quote page. Shared by the importer (live page
 // against the imported text) and bin/verify-text.ts (live page against source.txt), so both
 // read a page the same way.
 import type * as cheerio from 'cheerio';
@@ -9,6 +9,9 @@ export const isBricksPage = (page: cheerio.CheerioAPI) => page('.bricks-element-
 
 /** The text a reader sees on the live page, for the word-for-word comparison. */
 export function liveText(page: cheerio.CheerioAPI, bricks: boolean): string {
+  // A quote page (/quote/<x>/): the quote's paragraphs, alone in <main>.
+  const quote = page('main.bricks-quote-wrapper');
+  if (quote.length) return blockText(page, quote.children().toArray());
   if (bricks) {
     const els = page('main .bricks-element-text .text-wrapper')
       .toArray()

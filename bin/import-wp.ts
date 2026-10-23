@@ -27,6 +27,10 @@ const PORTRAITS: Record<string, { media: number; position?: string }> = {
   'a-n-groves': { media: 754 },
   'alexander-maclaren': { media: 913 },
   'andrew-murray': { media: 513 },
+  'christian-chen': { media: 126 },
+  'george-muller': { media: 110 },
+  'hudson-taylor': { media: 109 },
+  'j-wilbur-chapman': { media: 108 },
   'lance-lambert': { media: 804 },
   'lilias-trotter': { media: 514, position: 'top' },
   'paris-reidhead': { media: 127 },
@@ -92,6 +96,8 @@ const bucharest = (utc: string) => isoBucharest(new Date(utc + 'Z'));
 const decode = (html: string) => cheerio.load(html, null, false).text();
 const path = (url: string) => new URL(url, SITE).pathname;
 const yaml = (value: unknown) => JSON.stringify(value); // JSON scalars and arrays are valid YAML
+/** A slug from a Romanian title (`seo.md`, URLs): diacritics dropped, lowercase words joined by hyphens. */
+const slugify = (title: string) => title.normalize('NFD').replace(/[\u0300-\u036f]/g, '').toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '');
 
 /** Old post links inside the text point at the new URL; everything else is kept. */
 function linkRewriter(slugs: Set<string>) {
@@ -295,8 +301,54 @@ async function main() {
     rows.push(p.slug);
   });
 
+  // The three quotes (`/quote/<x>/`): not in the REST API, read from their pages; each becomes a
+  // post whose text is the quote (owner, 2026-10-23). The page title holds "<title> – <author>".
+  const quoteSlugs: string[] = [];
+  for (const url of legacy.filter((u) => /\/quote\/[^/]+\/$/.test(u))) {
+    const page = cheerio.load(await (await get(url)).text());
+    const full = (page('meta[property="og:title"]').attr('content') ?? '').replace(/ - Mesaje Creștine$/, '');
+    const cut = full.lastIndexOf(' – ');
+    const [title, authorName] = cut > 0 ? [full.slice(0, cut), full.slice(cut + 3)] : [full, ''];
+    const term = terms.find((t) => decode(t.name) === authorName);
+    if (!term) { problems.push(`- quote ${path(url)}: author "${authorName}" is not an author term`); continue; }
+    usedAuthors.set(term.slug, term);
+    const slug = slugify(title);
+    if (slugs.has(slug) || RESERVED.has(slug)) throw new Error(`quote slug "${slug}" collides`);
+    const nodes = page('main.bricks-quote-wrapper').children().toArray();
+    const markdown = blocksToMarkdown(page, nodes, link);
+    const source = blockText(page, nodes);
+    const diff = firstDifference(liveText(page, true), source);
+    if (!source.trim()) problems.push(`- quote ${path(url)}: empty text`);
+    if (diff) diffs.push(`- \`${slug}\` (quote), word ${diff.index}: live "${diff.expected}" / imported "${diff.actual}"`);
+    const dir = `${ROOT}content/posts/${slug}`;
+    await mkdir(dir, { recursive: true });
+    const kept = existsSync(`${dir}/index.md`) ? await readFile(`${dir}/index.md`, 'utf8') : '';
+    const keep = (key: string, empty: string) => {
+      const line = kept.match(new RegExp(`^${key}: .*$`, 'm'))?.[0];
+      return line && line !== `${key}: ${empty}` ? line : undefined;
+    };
+    const publishedAt = page('meta[property="article:published_time"]').attr('content')!;
+    const front = [
+      '---',
+      `title: ${yaml(title)}`,
+      `slug: ${slug}`,
+      ...[keep('seoTitle', '""')].filter((l): l is string => !!l),
+      keep('description', '""') ?? `description: ""`,
+      `date: ${yaml(isoBucharest(new Date(publishedAt)))}`,
+      `author: ${yaml([term.slug])}`,
+      keep('related', '[]') ?? `related: []`,
+      `legacyUrl: ${url}`,
+      '---',
+      '',
+    ].join('\n');
+    await writeFile(`${dir}/index.md`, front + markdown);
+    await writeFile(`${dir}/source.txt`, source + '\n');
+    quoteSlugs.push(slug);
+  }
+
   await mkdir(`${ROOT}content/authors`, { recursive: true });
-  for (const t of [...usedAuthors.values()].sort((a, b) => a.slug.localeCompare(b.slug))) {
+  // Every author term gets a page, with posts or not (owner, 2026-10-23; noindex below two posts).
+  for (const t of [...terms].sort((a, b) => a.slug.localeCompare(b.slug))) {
     const name = decode(t.name);
     const lines = [`name: ${yaml(name)}`, `slug: ${t.slug}`];
     const portrait = PORTRAITS[t.slug];
@@ -312,12 +364,11 @@ async function main() {
     await writeFile(`${ROOT}content/authors/${t.slug}.md`, `---\n${lines.join('\n')}\n---\n`);
   }
   for (const slug of Object.keys(PORTRAITS)) {
-    if (!usedAuthors.has(slug)) problems.push(`- author \`${slug}\`: has a portrait but no posts`);
+    if (!terms.some((t) => t.slug === slug)) problems.push(`- author \`${slug}\`: has a portrait but no author term`);
   }
 
   // Redirects that are not posts (those come from each post's legacyUrl at build).
   const redirects = [
-    ...terms.filter((t) => !usedAuthors.has(t.slug)).map((t) => `/authors/${t.slug}/\t/authors/`),
     ...pdfRedirects,
     ...portraitRedirects,
     // An old cover image goes to its post (specs/wordpress-import.md, remaining old URLs): the
@@ -332,7 +383,7 @@ async function main() {
   await writeFile(`${ROOT}import/redirects.tsv`, '# old path<TAB>new path, written by bin/import-wp.ts\n' + redirects.join('\n') + '\n');
   await writeFile(`${ROOT}import/legacy-urls.txt`, legacy.join('\n') + '\n');
 
-  const known = new Set(published.map((p) => p.slug));
+  const known = new Set([...published.map((p) => p.slug), ...quoteSlugs]);
   const stale = (await readdir(`${ROOT}content/posts`)).filter(
     (s) => !known.has(s) && existsSync(`${ROOT}content/posts/${s}/index.md`),
   );
@@ -366,14 +417,14 @@ async function main() {
   section('Posts read from the rendered page', bricksNotes);
   note(); note(`## Citations under the article`); note(); note(`${citations.length} posts have one, stored as \`source\`.`);
   section('Citation links into the WordPress uploads (they need a home on the new site before cut-over)', citationUploads);
-  section('Redirects written to import/redirects.tsv (author terms without posts, the PDF, portraits, covers)', redirects.map((r) => `- \`${r.split('\t')[0]}\` → \`${r.split('\t')[1]}\``));
+  section('Redirects written to import/redirects.tsv (the PDF, portraits, covers)', redirects.map((r) => `- \`${r.split('\t')[0]}\` → \`${r.split('\t')[1]}\``));
   section('Author descriptions not imported (bios are owner-supplied)', bios.map((t) => `- \`${t.slug}\`: "${t.description.trim()}"`));
   section('Media not used as a cover or portrait', unused.map((m) => `- ${m.id} ${m.mime_type} ${path(m.source_url)}${m.post ? ` (attached to post ${m.post}${published.find((p) => p.id === m.post) ? `, \`${published.find((p) => p.id === m.post)!.slug}\`` : ''})` : ' (attached to nothing)'}`));
   section('Imported post folders no longer on WordPress', staleImported);
   section('Old non-post URLs (each needs a page, a redirect or a 410)', nonPost.map((u) => `- \`${path(u)}\``));
   await writeFile(`${ROOT}import/report.md`, report.join('\n') + '\n');
 
-  console.log(`wrote ${rows.length} posts, ${usedAuthors.size} authors; problems ${problems.length}, text differences ${diffs.length}`);
+  console.log(`wrote ${rows.length} posts and ${quoteSlugs.length} quotes, ${terms.length} authors; problems ${problems.length}, text differences ${diffs.length}`);
   console.log('report: import/report.md');
   if (problems.length || diffs.length) process.exitCode = 1;
 }

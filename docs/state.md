@@ -41,8 +41,6 @@ _Last updated 2026-10-23_
 - **Lists versus the text check**: `content-model.md` allows turning list-like lines into a
   Markdown list, but the list then drops the input's `-` or `1.` and the build's text check
   fails. Keep the markers as text, or teach the check about lists? Gabriel.
-- **Import questions** for the owner: `specs/wordpress-import.md`, open questions (the zip,
-  now under the `/wp-content/` 410 unless kept; the `necunoscut` author).
 - **Excerpts**: the live lists show WordPress's excerpts, often hand-picked from mid-article;
   the new site shows the first words (40 featured, 24 in lists). Import the hand-picked ones?
   The handoff shows such passages too. Owner.

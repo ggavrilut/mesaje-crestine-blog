@@ -23,12 +23,9 @@ RedirectMatch 410 ^/sample-page/?$
 RedirectMatch 410 ^/template/
 RedirectMatch 410 ^/despre-noi/?$
 
-# Quotes and daily verses: one sentence each; to the post on the same subject, else gone
-# (specs/wordpress-import.md, remaining old URLs, owner 2026-10-23)
+# Daily verses: one sentence each; to the post on the same subject, else gone. The three quotes
+# are posts, redirected by their legacyUrl (specs/wordpress-import.md, owner 2026-10-23)
 RedirectMatch 301 ^/quote/?$ https://mesaje-crestine.ro/blog/
-RedirectMatch 301 ^/quote/105/?$ https://mesaje-crestine.ro/domn-peste-toate-sau-deloc/
-RedirectMatch 301 ^/quote/107/?$ https://mesaje-crestine.ro/focalizat-o-poveste-si-o-cantare/
-RedirectMatch 301 ^/quote/cristos-este-sau-domn-peste-toate-sau-nu-este-domn-deloc-hudson-taylor/?$ https://mesaje-crestine.ro/domn-peste-toate-sau-deloc/
 RedirectMatch 301 ^/dailyverse/?$ https://mesaje-crestine.ro/blog/
 RedirectMatch 301 ^/dailyverse/2021-10-18-ioan-1415/?$ https://mesaje-crestine.ro/ma-iubesti/
 RedirectMatch 301 ^/dailyverse/2021-10-20-ioan-1623/?$ https://mesaje-crestine.ro/eu-am-biruit-lumea-ioan-1633/

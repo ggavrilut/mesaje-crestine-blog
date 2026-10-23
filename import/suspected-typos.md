@@ -31,6 +31,8 @@ left out. Delete an entry once the owner has decided it.
 
 ## Spelling and grammar
 
+- `orice-imi-intuneca-viziunea-lui-cristos` (quote, J. Wilbur Chapman): "și trebui să-l
+  părăsesc" (trebuie)
 - `sa-tinem-tare-increderea-evrei-36`: condmanări
 - `eu-am-biruit-lumea-ioan-1633`: noștrii
 - `cele-vazute-sunt-trecatoare-2-corinteni-418`: "să să încreadă"

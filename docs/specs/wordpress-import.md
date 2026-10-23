@@ -71,16 +71,14 @@ author terms without posts). Post redirects come from each post's `legacyUrl` at
 
 ## Open questions
 
-- The zip `fragmente-lda.zip` is attached to `cum-sa-traiesti-in-cristos`, but no imported
-  text links it. Keep, link or drop? Owner. (The PDF of `o-mantuire-asa-de-mare` is kept as
-  its `pdf`, `decisions.md` 2026-10-23.)
-- The `quote` (3) and `dailyverse` (5) posts and their archives are in the old sitemap but
-  not in the REST API. A page, a 301 to a related post, or a 410? `seo` agent, then owner.
-- The 41 image URLs under `/wp-content/uploads/` in the old sitemap: 301 to the post that
-  uses the image, or let them 404? `seo` agent.
 - Author bios: the owner writes them (`paris-reidhead`'s "Un scurt bio" is a placeholder,
   not imported).
-- The author term `necunoscut` ("unknown") gets an author page. Keep it? Owner.
+
+Answered 2026-10-23 (owner, `decisions.md`): the zip `fragmente-lda.zip` is dropped (the
+owner downloaded it; 410 under the `/wp-content/` rule); the three quotes become posts, read
+from their pages by the importer (author from the page title, `legacyUrl` the old quote URL);
+the daily verses and the 41 images as in the proposal below; every author term gets a page,
+`necunoscut` included, those with fewer than two posts `noindex` and out of the sitemap.
 
 ## Proposal for the remaining old URLs (seo agent, 2026-10-23)
 
@@ -109,6 +107,9 @@ above and the `state.md` open question "About text". If the owner confirms, thos
 updating (developer).
 
 ### 2. `quote` and `dailyverse`
+
+Superseded for the three quotes (owner, 2026-10-23): they are posts, each old quote URL a 301
+to its post through `legacyUrl`. The rows below stand for the archives and the daily verses.
 
 Each entry is one sentence (a quote or a verse) with no other text, last changed 2021–2022.
 The two archives show the latest-posts list, the same as `/blog/`, with English titles

@@ -1,14 +1,12 @@
 # old path<TAB>new path, written by bin/import-wp.ts
-/authors/christian-chen/	/authors/
-/authors/george-muller/	/authors/
-/authors/hudson-taylor/	/authors/
-/authors/j-wilbur-chapman/	/authors/
-/authors/john-saunders/	/authors/
-/authors/victor-matthews/	/authors/
 /wp-content/uploads/2021/10/DSC_0215_edited-min-1-scaled.jpg	/partasia/
+/wp-content/uploads/2021/10/George_Muller.jpg	/authors/george-muller/
 /wp-content/uploads/2021/10/IMG_7324-scaled.jpg	/sa-intelegem-caile-domnului/
+/wp-content/uploads/2021/10/JohnWilburChapman.jpg	/authors/j-wilbur-chapman/
+/wp-content/uploads/2021/10/TaylorH.jpg	/authors/hudson-taylor/
 /wp-content/uploads/2021/10/ValeaDraganului2018-143-scaled.jpg	/domn-peste-toate-sau-deloc/
 /wp-content/uploads/2021/10/WhatsApp-Image-2021-10-18-at-20.02.30-min.jpeg	/iata-ca-vin-ca-un-hot/
+/wp-content/uploads/2021/10/chen.jpeg	/authors/christian-chen/
 /wp-content/uploads/2021/10/cropped-sparks.jpg	/authors/t-austin-sparks/
 /wp-content/uploads/2021/10/kaung.jpg	/authors/stephen-kaung/
 /wp-content/uploads/2021/10/reidhead.jpeg	/authors/paris-reidhead/
