@@ -31,7 +31,7 @@ const image = Astro.props.image ?? { src: '/og-default.png', width: 1200, height
 const canonical = absolute(path);
 const org = {
   '@type': 'Organization', '@id': `${SITE_URL}/#organization`, name: SITE_NAME, url: `${SITE_URL}/`,
-  logo: { '@type': 'ImageObject', url: absolute('/logo.png'), width: 192, height: 192 },
+  logo: { '@type': 'ImageObject', url: absolute('/logo.svg'), width: 640, height: 160 },
 };
 const crumbs = breadcrumbs && {
   '@type': 'BreadcrumbList',

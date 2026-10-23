@@ -25,7 +25,7 @@ entry that names the one it supersedes. Read before reopening a settled question
   `design/design_handoff_mesaje_crestine/` replaces the WordPress look, which had been rebuilt
   the same day. Post dates stay visible, as both the handoff and `seo.md` want.
 - **2026-10-22** Site images (owner): the WordPress "MC" monogram (192×192) stays the logo
-  in JSON-LD; the favicon set and the default social card are new, drawn from
+  in JSON-LD (replaced 2026-10-23 by the owner's `public/logo.svg`); the favicon set and the default social card are new, drawn from
   `src/brand/mark.svg` by `bin/make-brand-images.ts`, because the monogram's ring text is
   noise at favicon size. The card is the `og:image` of every page and coverless post, but
   not a post's JSON-LD `image`, which Google wants to represent the article.

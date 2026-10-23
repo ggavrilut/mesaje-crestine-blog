@@ -23,16 +23,14 @@ _Last updated 2026-10-23_
 ## Next session (2026-10-23)
 
 - **New brand images** (owner replaced the files in `public/`, 2026-10-23): the JSON-LD
-  Organization logo now points at `/logo.svg` (640×160), built and checked; uncommitted. To
+  Organization logo now points at `/logo.svg` (640×160), built and checked; committed. To
   do, asked by Gabriel, none started: (1) copy `public/mark.svg` over `src/brand/mark.svg`,
   so `bin/make-brand-images.ts` stops regenerating the old teal "MC" icons over the new ones
   (don't run the script until then); (2) convert the `<text>` in `public/logo.svg`
   (Roboto 300, letter-spacing 4.76) to outlines, so it renders the same without the font;
   (3) run the Rich Results Test and the Schema.org validator on a built page (the preview is
-  password-protected: paste the code). Pending owner answers: delete the unused
-  `public/logo.png`? Use the new logo image in the header in place of the text name?
-- **Uncommitted**: the changed and new files in `public/`, `src/layouts/Base.astro` and the
-  logo line of `decisions.md` belong to the brand images item above: their own commit.
+  password-protected: paste the code). Pending owner answer: use the new logo image in the
+  header in place of the text name?
 - **Then, in order** (`decisions.md`, 2026-10-23 next work): the analytics spec and build
   (with the consent banner and a "cookie settings" link); the privacy page draft; the PWA
   spec and build. The 73 descriptions are done (owner-reviewed); `coverAlt` and `related`
