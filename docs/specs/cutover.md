@@ -83,6 +83,15 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
   against the preview folder holding a copy of WordPress's file names (empty files), so the
   move, the `.htaccess` swap and the rollback are proven on the real server first.
 
+## Rehearsal (2026-10-23, on the preview folder)
+
+`nou/` made to look like WordPress (stand-in files, WordPress's `.htaccess` with the password
+lines), then `deploy rehearsal` (plan `381cee937a0a`, commit `7a4ea1c`): 1,094 files, 120 MB
+uploaded in 298 s; the `.htaccess` replaced, WordPress's saved; ten items moved into
+`_wordpress/`, which answers 403; the preview still 401. `deploy rehearsal --rollback` (plan
+`26609dea7eab`): 105 s, the folder exactly as before the switch. Not testable there: the HTTP
+answers behind the password; the live switch checks them itself, then `check-redirects --live`.
+
 ## Search Console on the day (owner; steps by the `seo` agent, 2026-10-23)
 
 Menu names as in Google's help; **Indexing > Pages** is the "Page indexing" report, and
