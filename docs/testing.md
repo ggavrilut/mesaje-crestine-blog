@@ -34,8 +34,6 @@ naming the post and the word (2026-10-22). Rows for a link check and an SEO lint
 HTML (one title, description, canonical, `<h1>` and valid JSON-LD per page, `seo.md`) are
 added as each one lands.
 
-Known failing: `check-redirects` exits 1 until the open questions of
-`specs/wordpress-import.md` are settled (`/despre-noi/`, `/contact/`, `quote`, `dailyverse`
-and `/wp-content/uploads/` URLs).
+`check-redirects` passes since 2026-10-23: 225 old URLs, 0 failing.
 
 Slow: the first build (about 4 minutes, AVIF encoding).

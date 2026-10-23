@@ -5,7 +5,14 @@ import { getCollection } from 'astro:content';
 import { readFile } from 'node:fs/promises';
 import { SITE_URL } from '../lib/site.ts';
 
-const exact = (from: string) => `^${from.replace(/[.+?^${}()|[\]\\]/g, '\\$&').replace(/\/$/, '')}/?$`;
+const escape = (s: string) => s.replace(/[.+?^${}()|[\]\\]/g, '\\$&');
+const exact = (from: string) => `^${escape(from).replace(/\/$/, '')}/?$`;
+/** An uploaded image also answers as WordPress's resized copies: name-scaled.jpg, name-1024x768.jpg. */
+const IMAGE = /^(\/wp-content\/uploads\/.+?)(?:-scaled)?\.(jpe?g|png|webp|gif)$/i;
+const pattern = (from: string) => {
+  const image = from.match(IMAGE);
+  return image ? `^${escape(image[1])}(?:-scaled|-[0-9]+x[0-9]+)?\\.${image[2]}$` : exact(from);
+};
 
 export async function GET() {
   // Drafts too: an imported draft's old URL must keep pointing at its future page.
@@ -17,7 +24,7 @@ export async function GET() {
     .filter((line) => line && !line.startsWith('#'))
     .map((line) => {
       const [from, to] = line.split('\t');
-      return `RedirectMatch 301 ${exact(from)} ${SITE_URL}${to}`;
+      return `RedirectMatch 301 ${pattern(from)} ${SITE_URL}${to}`;
     });
 
   const body = [

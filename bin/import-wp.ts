@@ -186,6 +186,8 @@ async function main() {
   const unassigned: string[] = [];
   const noCover: string[] = [];
   const narrowCover: string[] = [];
+  const coverUsers = new Map<number, WpPost[]>();
+  const portraitRedirects: string[] = [];
   const bricksNotes: string[] = [];
   const citations: string[] = [];
   const citationUploads: string[] = [];
@@ -257,6 +259,7 @@ async function main() {
     const m = mediaById.get(p.featured_media);
     if (m) {
       usedMedia.add(m.id);
+      coverUsers.set(m.id, [...(coverUsers.get(m.id) ?? []), p]);
       const ext = m.source_url.split('.').pop()!.toLowerCase();
       cover = `./cover.${ext}`;
       const bytes = new Uint8Array(await (await get(m.source_url)).arrayBuffer());
@@ -303,6 +306,7 @@ async function main() {
       usedMedia.add(m.id);
       const ext = m.source_url.split('.').pop()!.toLowerCase();
       await writeFile(`${ROOT}content/authors/${t.slug}.${ext}`, new Uint8Array(await (await get(m.source_url)).arrayBuffer()));
+      portraitRedirects.push(`${path(m.source_url)}\t/authors/${t.slug}/`);
       lines.push(`image: ./${t.slug}.${ext}`, `imageAlt: ${yaml(name)}`, `imagePosition: ${portrait.position ?? 'attention'}`);
     }
     await writeFile(`${ROOT}content/authors/${t.slug}.md`, `---\n${lines.join('\n')}\n---\n`);
@@ -315,6 +319,14 @@ async function main() {
   const redirects = [
     ...terms.filter((t) => !usedAuthors.has(t.slug)).map((t) => `/authors/${t.slug}/\t/authors/`),
     ...pdfRedirects,
+    ...portraitRedirects,
+    // An old cover image goes to its post (specs/wordpress-import.md, remaining old URLs): the
+    // post WordPress attached it to if that post uses it, else the first post that did.
+    ...[...coverUsers].map(([id, users]) => {
+      const m = mediaById.get(id)!;
+      const first = users.sort((a, b) => a.date_gmt.localeCompare(b.date_gmt) || a.slug.localeCompare(b.slug))[0];
+      return `${path(m.source_url)}\t/${(users.find((u) => u.id === m.post) ?? first).slug}/`;
+    }),
   ].sort();
   await mkdir(`${ROOT}import`, { recursive: true });
   await writeFile(`${ROOT}import/redirects.tsv`, '# old path<TAB>new path, written by bin/import-wp.ts\n' + redirects.join('\n') + '\n');
@@ -354,7 +366,7 @@ async function main() {
   section('Posts read from the rendered page', bricksNotes);
   note(); note(`## Citations under the article`); note(); note(`${citations.length} posts have one, stored as \`source\`.`);
   section('Citation links into the WordPress uploads (they need a home on the new site before cut-over)', citationUploads);
-  section('Author terms without posts (redirected to /authors/)', redirects.map((r) => `- \`${r.split('\t')[0]}\``));
+  section('Redirects written to import/redirects.tsv (author terms without posts, the PDF, portraits, covers)', redirects.map((r) => `- \`${r.split('\t')[0]}\` → \`${r.split('\t')[1]}\``));
   section('Author descriptions not imported (bios are owner-supplied)', bios.map((t) => `- \`${t.slug}\`: "${t.description.trim()}"`));
   section('Media not used as a cover or portrait', unused.map((m) => `- ${m.id} ${m.mime_type} ${path(m.source_url)}${m.post ? ` (attached to post ${m.post}${published.find((p) => p.id === m.post) ? `, \`${published.find((p) => p.id === m.post)!.slug}\`` : ''})` : ' (attached to nothing)'}`));
   section('Imported post folders no longer on WordPress', staleImported);

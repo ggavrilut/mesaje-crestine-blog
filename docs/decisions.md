@@ -3,6 +3,14 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Remaining old URLs (owner, on the `seo` agent's proposal,
+  `specs/wordpress-import.md`): 301 only to a page on the same subject, else 410. Old cover
+  images 301 to their post, portraits to their author page, the rest of `/wp-content/` 410.
+  `/despre-noi/` answers 410: there is no About page and it was never linked (supersedes the
+  2026-10-22 entry that built it as a page). At cut-over WordPress's files are removed but
+  its database stays on the host; a full cPanel backup is still downloaded first, since the
+  uploads are in neither the database nor git. The app (PWA) uses the header's `#f3f6f5` as
+  theme colour and no longer locks portrait.
 - **2026-10-23** Privacy page operator (owner): `/confidentialitate/` names Gabriel Gavrilut
   as the operator, reachable through the contact form. Considered and set aside: no name
   ("administratorul site-ului"), which falls short of GDPR art. 13(1)(a), and an initial.

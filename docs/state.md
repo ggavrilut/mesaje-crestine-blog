@@ -16,7 +16,7 @@ _Last updated 2026-10-23_
   deploy script. The visual design (`specs/visual-design.md`, from the owner's handoff in
   `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
   contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
-  password-protected `nou.mesaje-crestine.ro`; first upload done (commit `3ed51db`): Gabriel reviews it. Contact form
+  password-protected `nou.mesaje-crestine.ro`; latest upload 2026-10-23, commit `a7cde17` (plan `c7a0cfb89f10`, 127 files), reviewed by Gabriel: all good. Contact form
   (`specs/contact-form.md`) built and working on the preview (a real message sent and
   answered, 2026-10-23).
 
@@ -25,20 +25,24 @@ _Last updated 2026-10-23_
 - **Analytics and the privacy page**: built, tested locally and owner-approved 2026-10-23
   (`specs/analytics.md`, results). They go live with the new site at cut-over (gtag.js loads
   only on `mesaje-crestine.ro`, so the preview sends nothing); then a check in GA4 Realtime.
-- **Then** (`decisions.md`, 2026-10-23 next work): the PWA spec and build. The 73 descriptions are done (owner-reviewed); `coverAlt` and `related`
-  of the post writer's pass (`specs/wordpress-import.md`) are not.
+- **Cut-over** (owner asked 2026-10-23 "when can it go live?"). Blocking: (1) done
+  2026-10-23: every old URL has a rule (`check-redirects` 0 failing); (2) the PWA
+  (`specs/pwa.md`, drafted, colours approved): the live SuperPWA worker caches same-site
+  files forever, so the replacement ships at cut-over; (3) the cut-over procedure (spec and
+  build; the deploy script refuses the live target until then; WordPress's database stays on
+  the host, `decisions.md`); (4) merge `import-wordpress` into
+  `main`. Not blocking: `coverAlt` and `related` (the rest of the post writer's pass),
+  typos, excerpts, Bing, search.
 
 ## Open questions
 
 - **Suspected typos** in about 60 posts, found by the post writer (2026-10-23):
   `import/suspected-typos.md`. Owner decides each; agents change no word.
-- **About text** for `/despre-noi/` (`decisions.md`): Gabriel.
 - **Lists versus the text check**: `content-model.md` allows turning list-like lines into a
   Markdown list, but the list then drops the input's `-` or `1.` and the build's text check
   fails. Keep the markers as text, or teach the check about lists? Gabriel.
-- **Import questions** for the owner and the `seo` agent: `specs/wordpress-import.md`, open
-  questions (quote and dailyverse URLs, image URLs, the zip,
-  the `necunoscut` author).
+- **Import questions** for the owner: `specs/wordpress-import.md`, open questions (the zip,
+  now under the `/wp-content/` 410 unless kept; the `necunoscut` author).
 - **Excerpts**: the live lists show WordPress's excerpts, often hand-picked from mid-article;
   the new site shows the first words (40 featured, 24 in lists). Import the hand-picked ones?
   The handoff shows such passages too. Owner.

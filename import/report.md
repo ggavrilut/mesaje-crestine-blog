@@ -63,15 +63,66 @@ None.
 
 None.
 
-## Author terms without posts (redirected to /authors/)
+## Redirects written to import/redirects.tsv (author terms without posts, the PDF, portraits, covers)
 
-- `/authors/christian-chen/`
-- `/authors/george-muller/`
-- `/authors/hudson-taylor/`
-- `/authors/j-wilbur-chapman/`
-- `/authors/john-saunders/`
-- `/authors/victor-matthews/`
-- `/wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf`
+- `/authors/christian-chen/` → `/authors/`
+- `/authors/george-muller/` → `/authors/`
+- `/authors/hudson-taylor/` → `/authors/`
+- `/authors/j-wilbur-chapman/` → `/authors/`
+- `/authors/john-saunders/` → `/authors/`
+- `/authors/victor-matthews/` → `/authors/`
+- `/wp-content/uploads/2021/10/DSC_0215_edited-min-1-scaled.jpg` → `/partasia/`
+- `/wp-content/uploads/2021/10/IMG_7324-scaled.jpg` → `/sa-intelegem-caile-domnului/`
+- `/wp-content/uploads/2021/10/ValeaDraganului2018-143-scaled.jpg` → `/domn-peste-toate-sau-deloc/`
+- `/wp-content/uploads/2021/10/WhatsApp-Image-2021-10-18-at-20.02.30-min.jpeg` → `/iata-ca-vin-ca-un-hot/`
+- `/wp-content/uploads/2021/10/cropped-sparks.jpg` → `/authors/t-austin-sparks/`
+- `/wp-content/uploads/2021/10/kaung.jpg` → `/authors/stephen-kaung/`
+- `/wp-content/uploads/2021/10/reidhead.jpeg` → `/authors/paris-reidhead/`
+- `/wp-content/uploads/2021/10/watchman_nee.jpg` → `/authors/watchman-nee/`
+- `/wp-content/uploads/2021/11/DSC_0186_edited-min-1-scaled.jpg` → `/traind-prin-viata-divina/`
+- `/wp-content/uploads/2021/11/Murray.jpg` → `/authors/andrew-murray/`
+- `/wp-content/uploads/2021/11/focussed-1.jpg` → `/focalizat-o-poveste-si-o-cantare/`
+- `/wp-content/uploads/2021/11/prayer.jpg` → `/rugaciune/`
+- `/wp-content/uploads/2021/11/trotter.jpg` → `/authors/lilias-trotter/`
+- `/wp-content/uploads/2022/02/aflame.jpg` → `/in-flacari/`
+- `/wp-content/uploads/2022/03/patrick-fore-b_SHPU5M3nk-unsplash-scaled.jpg` → `/invata-ne-sa-ne-rugam/`
+- `/wp-content/uploads/2022/09/morgan-winston-pOOpWTrzgUE-unsplash-scaled.jpg` → `/masa-domnului-prefata/`
+- `/wp-content/uploads/2023/02/ANGroves1.jpg` → `/authors/a-n-groves/`
+- `/wp-content/uploads/2023/02/image-9-c-t-studd.webp` → `/intotdeauna-inainte-niciodata-inapoi/`
+- `/wp-content/uploads/2023/02/priscilla-du-preez-lIpubE3_DEQ-unsplash-scaled.jpg` → `/ziua-1-ocara-pentru-cristos/`
+- `/wp-content/uploads/2023/02/wes-hicks-lY2ayo1i4pM-unsplash-scaled.jpg` → `/rabdarea-nadejdii/`
+- `/wp-content/uploads/2023/03/aaron-burden-4uX_r8OhJ_o-unsplash-scaled.jpg` → `/domnul-este-partea-mea-29-martie/`
+- `/wp-content/uploads/2023/03/lucas-calloch-P-yzuyWFEIk-unsplash-scaled.jpg` → `/eu-am-biruit-lumea-ioan-1633/`
+- `/wp-content/uploads/2023/03/sebastian-staines-EkL1OWV0qvc-unsplash-scaled.jpg` → `/cum-ar-trebui-sa-depuna-credinciosii-marturie-inaintea-celor-pierduti/`
+- `/wp-content/uploads/2023/03/sebastien-gabriel-Fxi1FPvbPa0-unsplash-scaled.jpg` → `/o-mantuire-asa-de-mare-partea-1/`
+- `/wp-content/uploads/2023/03/simpson.jpg` → `/authors/a-b-simpson/`
+- `/wp-content/uploads/2023/04/llambert-scaled.jpg` → `/authors/lance-lambert/`
+- `/wp-content/uploads/2023/04/massimiliano-morosinotto-61oIlQD56DU-unsplash-scaled.jpg` → `/sa-tinem-tare-increderea-evrei-36/`
+- `/wp-content/uploads/2023/05/sabine-ojeil-fa8Tzht-06g-unsplash-scaled.jpg` → `/a-doua-generatie-timotei/`
+- `/wp-content/uploads/2023/06/jens-lelie-u0vgcIOQG08-unsplash-scaled.jpg` → `/acum-alege-deuteronom-3019/`
+- `/wp-content/uploads/2023/06/samuel-mcgarrigle-GVRRtaLj3LU-unsplash-scaled.jpg` → `/inapoi-la-cruce/`
+- `/wp-content/uploads/2023/07/neom-OCKa0AkSyRc-unsplash-scaled.jpg` → `/fapt-credinta-si-experienta/`
+- `/wp-content/uploads/2023/07/ronaldo-de-oliveira-83heui-oQAg-unsplash-scaled.jpg` → `/cand-va-rugati-credeti-ca-primiti-marcu-1124/`
+- `/wp-content/uploads/2023/09/The-Parable-of-the-Sower-Gospel-Images.jpg` → `/o-samanta-si-mai-multe-terenuri/`
+- `/wp-content/uploads/2023/09/alexander-maclaren.jpg` → `/authors/alexander-maclaren/`
+- `/wp-content/uploads/2024/01/2-widows-mite-video-still-dsc6405-2400x1600-1.webp` → `/banutii-vaduvei-partea-1-2/`
+- `/wp-content/uploads/2024/08/kate-remmer-RZn4_FzNUCY-unsplash-scaled.jpg` → `/asteapta-dumnezeu-colaborarea-noastra/`
+- `/wp-content/uploads/2024/08/steven-van-loy-oUhSla4L_98-unsplash-scaled.jpg` → `/cum-sa-traiesti-in-cristos/`
+- `/wp-content/uploads/2024/11/1024px-John_Martin_-_Joshua_Commanding_the_Sun_to_Stand_Still_-_Google_Art_Project.jpg` → `/oamenii-lacusta/`
+- `/wp-content/uploads/2024/11/ben-white-mO9vKbG5csg-unsplash-1.jpg` → `/ferestre-deschise-15-noiembrie/`
+- `/wp-content/uploads/2024/11/liu-jiawei-iNyHRf2WDf8-unsplash-scaled.jpg` → `/ferestre-deschise-17-noiembrie/`
+- `/wp-content/uploads/2024/11/lora-georgieva-67u2ES4LnV8-unsplash-scaled.jpg` → `/pilda-smochinului/`
+- `/wp-content/uploads/2024/11/tim-marshall-K2u71wv2eI4-unsplash-1.jpg` → `/partasia-zilnica-cu-dumnezeu/`
+- `/wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf` → `/o-mantuire-asa-de-mare/o-mantuire-asa-de-mare-paris-reidhead.pdf`
+- `/wp-content/uploads/2025/02/cdoncel-uq6x71rIFH8-unsplash-scaled.jpg` → `/o-mantuire-asa-de-mare/`
+- `/wp-content/uploads/2025/05/claudio-schwarz-cM-SE4f8d34-unsplash-scaled.jpg` → `/misiunea-semnificatia-si-mesajul-lui-isus-cristos-in-corinteni/`
+- `/wp-content/uploads/2025/07/alexey-elfimov-01huESAdPAQ-unsplash-scaled.jpg` → `/care-este-porunca-noastra/`
+- `/wp-content/uploads/2025/07/bjarne-postma-4dHJS61PUOE-unsplash-scaled.jpg` → `/se-simte-el-acasa/`
+- `/wp-content/uploads/2025/07/liane-metzler-B32qg6Ua34Y-unsplash-scaled.jpg` → `/cum-sa-inviezi-mortii/`
+- `/wp-content/uploads/2025/07/patrick-q-BpZbBa7yM-unsplash.jpg` → `/rugaciunea-pentru-revenirea-domnului/`
+- `/wp-content/uploads/2026/05/ahmed-zayan-28nzltYzCDM-unsplash-scaled.jpg` → `/sa-ne-uitam-tinta-la-cristos/`
+- `/wp-content/uploads/2026/07/todd-quackenbush-IClZBVw5W5A-unsplash-scaled.jpg` → `/un-ajutor-sau-o-piedica/`
+- `/wp-content/uploads/2026/10/kristaps-grundsteins-Grg8-u9hUaY-unsplash-scaled.jpg` → `/ceasul-hotararii/`
 
 ## Author descriptions not imported (bios are owner-supplied)
 
