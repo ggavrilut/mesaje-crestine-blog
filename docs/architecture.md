@@ -41,6 +41,11 @@ agreed design; each piece is marked as it lands.
   `mesaje-crestine.ro`. Built 2026-10-23: the `<head>` script in `src/layouts/Base.astro`,
   `src/components/ConsentBanner.astro`; privacy page `src/pages/confidentialitate.astro`;
   spec `specs/analytics.md`.
+- **App (PWA)**: the manifest and service worker at the WordPress app's URLs,
+  `/superpwa-manifest.json` (`src/pages/superpwa-manifest.json.ts`) and `/superpwa-sw.js`
+  (`public/`), so devices that installed the old app get the new site; the worker deletes
+  SuperPWA's cache, keeps the last 40 pages read for offline, shows `/offline/` otherwise.
+  Icons `public/app-*.png` from `public/mark.svg`. Built 2026-10-23; spec `specs/pwa.md`.
 - **Privacy page** (`/confidentialitate/`): describes exactly what the site processes, never
   what it might. A change that adds a cookie, a third-party request or a new use of data (a
   newsletter, say) updates it in the same commit, before going live. A new cookie purpose gets

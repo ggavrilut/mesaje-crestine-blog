@@ -5,6 +5,8 @@ export const SITE_URL = 'https://mesaje-crestine.ro';
 /** The GA4 measurement ID (docs/architecture.md, analytics): public, it ships in every page. */
 export const GA_ID = 'G-7SDPW1HTQF';
 export const PER_PAGE = 10;
+/** The app's theme colour, the header's (docs/specs/pwa.md): the phone's status bar blends in. */
+export const THEME_COLOR = '#f3f6f5';
 export const FACEBOOK_URL = 'https://www.facebook.com/Mesaje-Cre%C8%99tine-100365085780276';
 
 // The verses of the home band and the footer (docs/specs/visual-design.md): change them here.

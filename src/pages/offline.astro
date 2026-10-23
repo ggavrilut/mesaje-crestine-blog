@@ -1,0 +1,16 @@
+---
+// /offline/: what the app shows for a page it has not kept, without a connection
+// (docs/specs/pwa.md). Not indexed, not in the sitemap.
+import Base from '../layouts/Base.astro';
+import { SITE_NAME } from '../lib/site.ts';
+---
+<Base title={`Fără conexiune | ${SITE_NAME}`} path="/offline/" noindex>
+  <section class="container page">
+    <h1 class="page-title">Fără conexiune</h1>
+    <p class="page-intro">
+      Această pagină nu poate fi deschisă acum, pentru că dispozitivul nu este conectat la internet.
+      Articolele pe care le-ați citit deja pe acest dispozitiv se deschid și fără conexiune.
+    </p>
+    <p><a href="/">Înapoi la prima pagină</a></p>
+  </section>
+</Base>

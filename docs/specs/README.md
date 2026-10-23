@@ -12,4 +12,4 @@ in the same commit. Every spec has exactly one row here.
 | `deploy.md` | building | Gabriel Gavrilut |
 | `contact-form.md` | built | Gabriel Gavrilut |
 | `analytics.md` | built | Gabriel Gavrilut |
-| `pwa.md` | draft | Gabriel Gavrilut |
+| `pwa.md` | built | Gabriel Gavrilut |

@@ -26,9 +26,9 @@ _Last updated 2026-10-23_
   (`specs/analytics.md`, results). They go live with the new site at cut-over (gtag.js loads
   only on `mesaje-crestine.ro`, so the preview sends nothing); then a check in GA4 Realtime.
 - **Cut-over** (owner asked 2026-10-23 "when can it go live?"). Blocking: (1) done
-  2026-10-23: every old URL has a rule (`check-redirects` 0 failing); (2) the PWA
-  (`specs/pwa.md`, drafted, colours approved): the live SuperPWA worker caches same-site
-  files forever, so the replacement ships at cut-over; (3) the cut-over procedure (spec and
+  2026-10-23: every old URL has a rule (`check-redirects` 0 failing); (2) done 2026-10-23: the PWA
+  (`specs/pwa.md`, built, tested locally, texts approved) ships at
+  cut-over, replacing the SuperPWA worker that caches same-site files forever; (3) the cut-over procedure (spec and
   build; the deploy script refuses the live target until then; WordPress's database stays on
   the host, `decisions.md`); (4) merge `import-wordpress` into
   `main`. Not blocking: `coverAlt` and `related` (the rest of the post writer's pass),

@@ -5,7 +5,7 @@ import { Font } from 'astro:assets';
 import '../styles/global.css';
 import ContactForm from '../components/ContactForm.astro';
 import ConsentBanner from '../components/ConsentBanner.astro';
-import { FACEBOOK_URL, FOOTER_VERSE, GA_ID, SITE_NAME, SITE_URL, absolute } from '../lib/site.ts';
+import { FACEBOOK_URL, FOOTER_VERSE, GA_ID, SITE_NAME, SITE_URL, THEME_COLOR, absolute } from '../lib/site.ts';
 
 export interface Props {
   title: string;
@@ -80,6 +80,15 @@ const jsonLd = { '@context': 'https://schema.org', '@graph': [org, ...graph, ...
     <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32" />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/superpwa-manifest.json" />
+    <meta name="theme-color" content={THEME_COLOR} />
+    <meta name="apple-mobile-web-app-title" content={SITE_NAME} />
+    {import.meta.env.PROD && (
+      <script is:inline>
+        // The app's service worker (docs/specs/pwa.md); not in development, where it would cache.
+        if ('serviceWorker' in navigator) addEventListener('load', () => navigator.serviceWorker.register('/superpwa-sw.js'));
+      </script>
+    )}
     <link rel="alternate" type="application/rss+xml" title={SITE_NAME} href="/rss.xml" />
     <meta property="og:locale" content="ro_RO" />
     <meta property="og:site_name" content={SITE_NAME} />
