@@ -1,7 +1,7 @@
 ---
 title: "Învață-ne să ne rugăm"
 slug: invata-ne-sa-ne-rugam
-description: ""
+description: "Ucenicii au cerut: „Doamne, învață-ne să ne rugăm”. Stephen Kaung arată că prima lecție a rugăciunii e să recunoaștem că nu știm să ne rugăm."
 date: "2022-03-16T23:23:07+02:00"
 updated: "2022-09-25T16:24:36+03:00"
 author: ["stephen-kaung"]

@@ -1,7 +1,7 @@
 ---
 title: "O mântuire așa de mare!"
 slug: o-mantuire-asa-de-mare
-description: ""
+description: "Mântuirea nu e doar scăparea de iad: Paris Reidhead arată că include pocăința, nașterea din nou și eliberarea de lume, de carne și de diavol."
 date: "2025-02-20T12:52:20+02:00"
 author: ["paris-reidhead"]
 cover: ./cover.jpg

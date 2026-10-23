@@ -1,7 +1,7 @@
 ---
 title: "Acum, alege – Deuteronom 30:19"
 slug: acum-alege-deuteronom-3019
-description: ""
+description: "Zilnic alegem între cele spirituale și cele pământești. Din alegerea lui Solomon la Gabaon, A.B. Simpson arată că Dumnezeu privește ce dorește inima."
 date: "2023-06-30T10:22:21+03:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

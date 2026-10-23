@@ -1,7 +1,7 @@
 ---
 title: "Așteaptă Dumnezeu colaborarea noastră?"
 slug: asteapta-dumnezeu-colaborarea-noastra
-description: ""
+description: "Duhul Sfânt locuiește în noi, dar nu lucrează fără noi. Ca la untdelemnul văduvei și la pâinile frânte, harul curge când facem azi pasul credinței."
 date: "2024-08-04T16:11:53+03:00"
 author: ["radu-gavrilut"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Părtășia"
 slug: partasia
-description: ""
+description: "Paris Reidhead arată că părtășia nu începe la Cina Domnului: e cu Dumnezeu, în disciplinarea Lui și cu frații, iar pâinea frântă o mărturisește."
 date: "2021-10-15T22:33:24+03:00"
 updated: "2022-02-28T00:05:58+02:00"
 author: ["paris-reidhead"]

@@ -1,7 +1,7 @@
 ---
 title: "Cum poate fi rezidit un loc unde Dumnezeu poate locui?"
 slug: cum-poate-fi-rezidit-un-loc-unde-dumnezeu-poate-locui
-description: ""
+description: "Din zidirea zidurilor Ierusalimului sub Neemia, Kit Mays arată cum rezidim locul unde locuiește Dumnezeu: prin rugăciune, relații curate și curaj în luptă."
 date: "2022-01-22T00:31:25+02:00"
 updated: "2022-02-28T00:04:25+02:00"
 author: ["kit-mays"]

@@ -1,7 +1,7 @@
 ---
 title: "O sămânță și mai multe terenuri"
 slug: o-samanta-si-mai-multe-terenuri
-description: ""
+description: "Alexander MacLaren explică pilda semănătorului: inimi împietrite, superficiale sau sufocate de griji, și pământul bun care rodește cu răbdare."
 date: "2023-09-14T11:35:47+03:00"
 author: ["alexander-maclaren"]
 cover: ./cover.jpg

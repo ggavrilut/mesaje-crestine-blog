@@ -1,7 +1,7 @@
 ---
 title: "A doua generație – Tit"
 slug: a-doua-generatie-tit
-description: ""
+description: "Stephen Kaung arată cum l-a folosit Pavel pe Tit, un tânăr cu temperament puternic, la Ierusalim, Corint și Creta, și cheamă tinerii să se dea Domnului."
 date: "2023-05-23T13:51:06+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

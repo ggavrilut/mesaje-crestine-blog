@@ -1,7 +1,7 @@
 ---
 title: "Kenosis"
 slug: kenosis
-description: ""
+description: "De Ziua Eroilor, Paris Reidhead explică golirea lui Cristos din Filipeni 2 și cheamă la aceeași dedicare, față de Persoana Lui, nu față de o carieră."
 date: "2023-02-12T18:51:19+02:00"
 author: ["paris-reidhead"]
 related: []

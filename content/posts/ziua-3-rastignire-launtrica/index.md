@@ -1,7 +1,7 @@
 ---
 title: "Ziua 3. Răstignire lăuntrică"
 slug: ziua-3-rastignire-launtrica
-description: ""
+description: "A.N. Groves vede că e mai ușor să biruim atașamentul de lucrurile exterioare decât nestatornicia lăuntrică. Răstignirea eului aduce pace sufletului."
 date: "2023-02-23T10:31:44+02:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "CUM SĂ ÎNVIEZI MORȚII"
 slug: cum-sa-inviezi-mortii
-description: ""
+description: "Din învierea fiului sunamitei prin Elisei, Charles H. Spurgeon arată învățătorilor de copii cum se câștigă sufletele: rugăciune, compasiune și stăruință."
 date: "2025-07-17T09:01:37+03:00"
 author: ["charles-spurgeon"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Bănuții văduvei"
 slug: banutii-vaduvei-partea-1-2
-description: ""
+description: "Văduva care a dat doi bănuți, tot ce avea, a fost adeverirea lui Dumnezeu în Israel. L. Lambert arată că pentru cer nicio viață predată nu e neînsemnată."
 date: "2024-01-02T14:52:21+02:00"
 author: ["lance-lambert"]
 cover: ./cover.webp

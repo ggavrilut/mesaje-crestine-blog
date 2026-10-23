@@ -1,7 +1,7 @@
 ---
 title: "Masa Domnului – Pregătirea"
 slug: masa-domnului-pregatirea
-description: ""
+description: "Andrew Murray arată cum ne pregătim pentru Cina Domnului: o inimă plină de Cristos, lepădare de sine și timp petrecut în ascuns la picioarele Lui."
 date: "2023-01-28T17:52:16+02:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

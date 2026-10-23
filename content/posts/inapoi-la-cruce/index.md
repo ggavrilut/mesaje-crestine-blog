@@ -1,7 +1,7 @@
 ---
 title: "Înapoi la Cruce"
 slug: inapoi-la-cruce
-description: ""
+description: "Samuel Usher cheamă Biserica înapoi la Cruce, locul unde vedem păcatul, suntem împăcați cu Dumnezeu, uniți cu Cristos și biruitori asupra lui Satan."
 date: "2023-06-14T13:06:49+03:00"
 author: ["samuel-usher"]
 cover: ./cover.jpg

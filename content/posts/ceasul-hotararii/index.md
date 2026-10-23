@@ -1,7 +1,7 @@
 ---
 title: "Ceasul hotărârii"
 slug: ceasul-hotararii
-description: ""
+description: "Păcatul lovește în clipele de slăbiciune, ca la Esau, David sau Petru. Erich Sauer arată că atunci se vede cine suntem, iar circumstanțele nu sunt o scuză."
 date: "2026-10-09T10:04:20+03:00"
 author: ["erich-sauer"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Rugăciune"
 slug: rugaciune
-description: ""
+description: "Kit Mays împărtășește rugăciunea ultimilor săi ani: Domnul să nu-l lase să intre în veșnicie până nu lucrează în el tot ce a desăvârșit deja în Cristos."
 date: "2021-11-03T11:04:48+02:00"
 updated: "2021-11-09T14:21:31+02:00"
 author: ["kit-mays"]

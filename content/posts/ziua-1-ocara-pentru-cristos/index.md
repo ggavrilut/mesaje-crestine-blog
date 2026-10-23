@@ -1,7 +1,7 @@
 ---
 title: "Ziua 1. Ocară pentru Cristos"
 slug: ziua-1-ocara-pentru-cristos
-description: ""
+description: "A.N. Groves mângâie un prieten batjocorit pentru Cristos: ferice de cei ocărâți pentru Numele Lui, căci Duhul slavei Se odihnește peste ei."
 date: "2023-02-16T16:47:00+02:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

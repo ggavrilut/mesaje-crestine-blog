@@ -1,7 +1,7 @@
 ---
 title: "Ziua 7. Judecata dreaptă"
 slug: ziua-7-judecata-dreapta
-description: ""
+description: "Unitatea familiei lui Dumnezeu l-a învățat pe A.N. Groves să judece cum vede Domnul, nu după oameni, fără să condamne în bloc instituțiile religioase."
 date: "2023-04-19T11:09:54+03:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

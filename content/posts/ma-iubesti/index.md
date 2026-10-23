@@ -1,7 +1,7 @@
 ---
 title: "Mă iubești?"
 slug: ma-iubesti
-description: ""
+description: "Evanghelia lui Ioan se încheie cu întrebarea pusă lui Petru: „Mă iubești?”. Lance Lambert ne avertizează împotriva unei slujiri lipsite de dragoste."
 date: "2023-04-08T11:17:21+03:00"
 author: ["lance-lambert"]
 related: []

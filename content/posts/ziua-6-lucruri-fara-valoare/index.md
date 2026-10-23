@@ -1,7 +1,7 @@
 ---
 title: "Ziua 6. Lucruri fără valoare"
 slug: ziua-6-lucruri-fara-valoare
-description: ""
+description: "Întrebat de o tânără la ce lucruri exterioare să renunțe, A.N. Groves a răspuns: „Fiica Sionului te disprețuiește”. Totul e pierdere față de Cristos."
 date: "2023-03-29T23:10:48+03:00"
 updated: "2023-03-30T23:20:56+03:00"
 author: ["a-n-groves"]

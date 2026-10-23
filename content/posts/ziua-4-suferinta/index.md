@@ -1,7 +1,7 @@
 ---
 title: "Ziua 4. Suferința"
 slug: ziua-4-suferinta
-description: ""
+description: "Duhul lui Dumnezeu ne învață cel mai bine în școala suferinței. A.N. Groves îndeamnă să urmăm pilda lui Cristos, care a răbdat fără să răspundă cu insulte."
 date: "2023-03-05T23:49:12+02:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Mărturia lui Isus"
 slug: marturia-lui-isus
-description: ""
+description: "Stephen Kaung arată că Biserica e vasul mărturiei lui Isus, de la Ioan în Patmos și martirii veacurilor până la frații din China, și întreabă unde suntem."
 date: "2026-10-20T18:33:51+03:00"
 updated: "2026-10-22T17:04:38+03:00"
 author: ["stephen-kaung"]

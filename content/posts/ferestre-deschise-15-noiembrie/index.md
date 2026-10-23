@@ -1,7 +1,7 @@
 ---
 title: "Ferestre deschise – 15 Noiembrie"
 slug: ferestre-deschise-15-noiembrie
-description: ""
+description: "Ca mana din pustie, Dumnezeu leagă revelația lui Cristos de nevoi practice. T. Austin-Sparks: nu primim informație, ci o cunoaștere vie a Persoanei Lui."
 date: "2024-11-16T22:05:56+02:00"
 author: ["t-austin-sparks"]
 cover: ./cover.jpg

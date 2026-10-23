@@ -1,7 +1,7 @@
 ---
 title: "Focalizat – o poveste și o cântare"
 slug: focalizat-o-poveste-si-o-cantare
-description: ""
+description: "O păpădie întoarsă spre soare. Lilias Trotter arată că Dumnezeu binecuvântează viețile focalizate pe un singur țel, Cristos, renunțând la tot ce distrage."
 date: "2021-11-29T23:53:30+02:00"
 updated: "2023-07-04T15:48:38+03:00"
 author: ["lilias-trotter"]

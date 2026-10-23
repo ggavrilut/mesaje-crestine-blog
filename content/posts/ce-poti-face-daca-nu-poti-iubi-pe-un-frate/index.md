@@ -1,7 +1,7 @@
 ---
 title: "Ce poți face dacă nu poți iubi pe un frate?"
 slug: ce-poti-face-daca-nu-poti-iubi-pe-un-frate
-description: ""
+description: "Ce faci când nu poți iubi un frate? Ca omul cu mâna uscată și leproșii vindecați pe drum: ascultă acum, du-te și împacă-te, sprijinindu-te pe Domnul."
 date: "2022-03-09T17:24:50+02:00"
 author: ["radu-gavrilut"]
 related: []

@@ -1,7 +1,7 @@
 ---
 title: "Pilda smochinului"
 slug: pilda-smochinului
-description: ""
+description: "G. Campbell Morgan explică smochinul blestemat: viața e dată pentru rod, pomul neroditor e distrus, iar credința în Dumnezeu e secretul rodniciei."
 date: "2024-11-27T17:29:11+02:00"
 author: ["g-campbell-morgan"]
 cover: ./cover.jpg

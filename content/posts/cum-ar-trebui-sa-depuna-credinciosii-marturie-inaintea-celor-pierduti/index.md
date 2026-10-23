@@ -1,7 +1,7 @@
 ---
 title: "Cum ar trebui să depună credincioșii mărturie înaintea celor pierduți?"
 slug: cum-ar-trebui-sa-depuna-credinciosii-marturie-inaintea-celor-pierduti
-description: ""
+description: "Paris Reidhead arată că păcătosul trebuie întâi trezit să-și vadă pericolul, nu doar învățat cum să fie mântuit, și cheamă la povară pentru cei pierduți."
 date: "2023-03-03T23:40:37+02:00"
 author: ["paris-reidhead"]
 cover: ./cover.jpg

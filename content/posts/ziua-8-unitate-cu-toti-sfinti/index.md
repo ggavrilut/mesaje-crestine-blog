@@ -1,7 +1,7 @@
 ---
 title: "Ziua 8. Unitate cu toți sfinți"
 slug: ziua-8-unitate-cu-toti-sfinti
-description: ""
+description: "A.N. Groves respinge duhul de exclusivitate: frânge pâinea cu toți cei ce-L iubesc pe Domnul, căci Cristos locuiește în fiecare credincios."
 date: "2023-06-04T17:01:33+03:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

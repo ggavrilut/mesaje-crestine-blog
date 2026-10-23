@@ -1,7 +1,7 @@
 ---
 title: "Oamenii lăcustă"
 slug: oamenii-lacusta
-description: ""
+description: "Iscoadele s-au văzut ca niște lăcuste înaintea uriașilor. J.M. Mcl. arată că omul-lăcustă pierde din vedere tronul lui Dumnezeu și devine laș."
 date: "2024-11-23T22:49:30+02:00"
 updated: "2026-10-22T22:21:56+03:00"
 author: ["j-m-mcl"]

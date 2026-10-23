@@ -1,7 +1,7 @@
 ---
 title: "O mântuire așa de mare – Partea 1"
 slug: o-mantuire-asa-de-mare-partea-1
-description: ""
+description: "Paris Reidhead explică avertizarea din Evrei 2:3: mântuirea are patru timpuri, iar a neglija pocăința și credința, amânând „pentru altă zi”, e fatal."
 date: "2023-03-30T23:27:15+03:00"
 author: ["paris-reidhead"]
 cover: ./cover.jpg

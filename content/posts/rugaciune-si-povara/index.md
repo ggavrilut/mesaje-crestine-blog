@@ -1,7 +1,7 @@
 ---
 title: "Rugăciune și povară"
 slug: rugaciune-si-povara
-description: ""
+description: "De ce ne lipsește povara în rugăciune? Stephen Kaung arată, din Matei 9, cum vedem nevoia ca Domnul și cum luăm activ povara Lui în rugăciunea comună."
 date: "2022-09-25T16:27:17+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

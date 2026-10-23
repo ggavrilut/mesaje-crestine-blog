@@ -1,7 +1,7 @@
 ---
 title: "Domn peste toate sau deloc"
 slug: domn-peste-toate-sau-deloc
-description: ""
+description: "Domnul nu Se mulțumește să fie Domn doar în unele domenii ale vieții noastre. Cu vorbele lui F.B. Meyer: El este Domn peste toate sau nu este Domn deloc."
 date: "2021-10-08T12:53:56+03:00"
 updated: "2021-11-30T10:17:33+02:00"
 author: ["radu-gavrilut"]

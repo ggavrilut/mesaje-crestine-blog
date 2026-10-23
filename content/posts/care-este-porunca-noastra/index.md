@@ -1,7 +1,7 @@
 ---
 title: "Care este porunca noastră?"
 slug: care-este-porunca-noastra
-description: ""
+description: "Pornind de la porunca dată lui Timotei, Stephen Kaung privește înapoi la cei 40 de ani ai adunării din Richmond și cheamă la o viziune: mărturia lui Isus."
 date: "2025-07-19T21:47:48+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

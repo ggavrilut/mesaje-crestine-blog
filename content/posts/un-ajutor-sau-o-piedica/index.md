@@ -1,7 +1,7 @@
 ---
 title: "Un ajutor sau o piedică?"
 slug: un-ajutor-sau-o-piedica
-description: ""
+description: "Privind la Isus, vedem nevoile fraților. Din Evrei 12, Erich Sauer arată că fiecare credincios e fie un ajutor pentru alții, fie o rădăcină de amărăciune."
 date: "2026-07-07T20:41:20+03:00"
 author: ["erich-sauer"]
 cover: ./cover.jpg

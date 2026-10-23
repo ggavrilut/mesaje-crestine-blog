@@ -1,7 +1,7 @@
 ---
 title: "Întemeiați în Cristos"
 slug: intemeiati-in-cristos
-description: ""
+description: "Din 2 Corinteni 1:21-22, Poul Madsen arată patru lucrări ale lui Dumnezeu: ne-a întemeiat în Cristos, ne-a uns, ne-a pecetluit și ne-a dat Duhul."
 date: "2023-02-27T10:54:32+02:00"
 author: ["poul-madsen"]
 related: []

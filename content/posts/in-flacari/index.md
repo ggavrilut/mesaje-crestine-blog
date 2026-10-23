@@ -1,7 +1,7 @@
 ---
 title: "În flăcări"
 slug: in-flacari
-description: ""
+description: "Un copac elvețian ardea mocnit, fără flacără, deci focul nu se putea răspândi. Lilias Trotter cheamă la o viață dată în întregime lui Cristos, pentru lume."
 date: "2022-02-27T23:54:22+02:00"
 author: ["lilias-trotter"]
 cover: ./cover.jpg

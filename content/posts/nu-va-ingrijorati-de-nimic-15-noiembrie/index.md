@@ -1,7 +1,7 @@
 ---
 title: "Nu vă îngrijorați de nimic – 15 Noiembrie"
 slug: nu-va-ingrijorati-de-nimic-15-noiembrie
-description: ""
+description: "O mamă credea că a nu te îngrijora pentru copii e un păcat. Watchman Nee arată că Biblia afirmă categoric: „Nu vă îngrijorați de nimic”, fără excepții."
 date: "2024-11-16T00:32:22+02:00"
 author: ["watchman-nee"]
 cover: ./cover.jpg

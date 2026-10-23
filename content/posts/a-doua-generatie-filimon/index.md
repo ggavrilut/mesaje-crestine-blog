@@ -1,7 +1,7 @@
 ---
 title: "A doua generație – Filimon"
 slug: a-doua-generatie-filimon
-description: ""
+description: "Stephen Kaung vorbește despre Epafras, care s-a luptat în rugăciune pentru Colose și despre tinerețea lui alături de Watchman Nee."
 date: "2023-05-24T20:15:03+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Cele văzute sunt trecătoare – 2 Corinteni 4:18"
 slug: cele-vazute-sunt-trecatoare-2-corinteni-418
-description: ""
+description: "Avraam a trebuit să-și privească trupul ca mort ca să depindă de Dumnezeu. A.B. Simpson arată că Dumnezeu ne învață să ne încredem în El fără semne văzute."
 date: "2024-11-15T00:58:12+02:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

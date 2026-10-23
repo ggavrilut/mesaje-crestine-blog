@@ -1,7 +1,7 @@
 ---
 title: "Domnul este partea mea – 29 Martie"
 slug: domnul-este-partea-mea-29-martie
-description: ""
+description: "Puterea lui Samson stătea în părul de nazireu. Watchman Nee arată că orice putere spirituală vine din măsura în care suntem consacrați Domnului."
 date: "2023-04-10T12:52:27+03:00"
 author: ["watchman-nee"]
 cover: ./cover.jpg

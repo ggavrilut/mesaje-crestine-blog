@@ -1,7 +1,7 @@
 ---
 title: "Luni dimineața – Pregătirea : Rugăciunea mea pentru astăzi"
 slug: luni-dimineata-pregatirea-rugaciunea-mea-pentru-astazi
-description: ""
+description: "O rugăciune de Andrew Murray înaintea Cinei Domnului: izbăvire de superficialitate, o inimă frântă și o adevărată pregătire pentru masa Lui."
 date: "2022-04-01T10:12:23+03:00"
 author: ["andrew-murray"]
 related: []

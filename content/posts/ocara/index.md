@@ -1,7 +1,7 @@
 ---
 title: "Ocara"
 slug: ocara
-description: ""
+description: "Loialitatea față de Cristos atrage ocară din partea lumii și chiar a creștinilor. Biserica are nevoie de oameni gata să rămână singuri și să fie diferiți."
 date: "2023-07-18T11:03:07+03:00"
 updated: "2026-10-22T22:23:14+03:00"
 author: ["necunoscut"]

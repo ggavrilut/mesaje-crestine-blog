@@ -1,7 +1,7 @@
 ---
 title: "Părtășia zilnică cu Dumnezeu"
 slug: partasia-zilnica-cu-dumnezeu
-description: ""
+description: "Andrew Murray arată, în zece pași, cum începem fiecare zi în părtășie cu Dumnezeu: liniște, smerenie, poziția în Cristos, Duhul Sfânt și credință."
 date: "2024-11-30T16:03:52+02:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

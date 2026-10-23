@@ -1,7 +1,7 @@
 ---
 title: "Crucea și creșterea spirituală"
 slug: crucea-si-cresterea-spirituala
-description: ""
+description: "Din mustrarea lui Petru la Antiohia, Harry Foster arată că creștem în cunoașterea lui Cristos numai crescând în har, prin lucrarea crucii în noi."
 date: "2024-05-23T21:31:36+03:00"
 author: ["harry-foster"]
 related: []

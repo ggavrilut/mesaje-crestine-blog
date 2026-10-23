@@ -1,7 +1,7 @@
 ---
 title: "Ziua 5. Consistență"
 slug: consistenta
-description: ""
+description: "A.N. Groves deplânge lipsa de consistență: împlinim poruncile care ni se potrivesc și ne împotrivim celorlalte. Se roagă pentru un caracter creștin întreg."
 date: "2023-03-10T14:58:30+02:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

@@ -1,7 +1,7 @@
 ---
 title: "Trăind prin viața divină"
 slug: traind-prin-viata-divina
-description: ""
+description: "Ca o sămânță, purtăm viața lui Cristos. Radu Gavrilut și Zoli Szabo arată că trebuie să fim călăuziți de această viață, nu de o listă cu binele și răul."
 date: "2021-11-09T10:21:56+02:00"
 updated: "2022-02-28T00:05:05+02:00"
 author: ["radu-gavrilut","zoli-szabo"]

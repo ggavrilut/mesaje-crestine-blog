@@ -1,7 +1,7 @@
 ---
 title: "Eu am biruit lumea – Ioan 16:33"
 slug: eu-am-biruit-lumea-ioan-1633
-description: ""
+description: "Cristos a biruit pentru noi păcatul, boala, suferința și pe Satan. A.B. Simpson ne cheamă să ne însușim biruința prin sângele Mielului și mărturia noastră."
 date: "2023-03-06T09:13:16+02:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

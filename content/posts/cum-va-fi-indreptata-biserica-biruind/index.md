@@ -1,7 +1,7 @@
 ---
 title: "Cum va fi îndreptată Biserica? Biruind."
 slug: cum-va-fi-indreptata-biserica-biruind
-description: ""
+description: "Cum va ajunge Biserica fără pată? Stephen Kaung arată, din Apocalipsa, strategia lui Dumnezeu prin biruitori și secretul lor: sângele Mielului și mărturia."
 date: "2026-10-22T17:03:08+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

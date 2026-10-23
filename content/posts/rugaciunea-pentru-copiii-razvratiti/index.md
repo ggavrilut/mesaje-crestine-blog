@@ -1,7 +1,7 @@
 ---
 title: "Rugăciunea pentru copiii răzvrătiți"
 slug: rugaciunea-pentru-copiii-razvratiti
-description: ""
+description: "Paul E. Billheimer: părinții copiilor răzvrătiți nu sunt neajutorați. Pe temeiul promisiunilor din Isaia, rugăciunea stăruitoare îi aduce la Dumnezeu."
 date: "2021-10-25T20:47:56+03:00"
 updated: "2022-02-28T00:05:23+02:00"
 author: ["paul-e-billheimer"]

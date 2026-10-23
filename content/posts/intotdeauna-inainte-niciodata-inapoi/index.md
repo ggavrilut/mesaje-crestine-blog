@@ -1,7 +1,7 @@
 ---
 title: "Întotdeauna înainte, niciodată înapoi!"
 slug: intotdeauna-inainte-niciodata-inapoi
-description: ""
+description: "Viața lui C.T. Studd: jucător de cricket, apoi misionar în China, India și Africa, care și-a dat averea și viața lui Cristos, fără să privească înapoi."
 date: "2023-02-13T01:24:25+02:00"
 updated: "2026-10-22T22:24:29+03:00"
 author: ["stephen-ross"]

@@ -1,7 +1,7 @@
 ---
 title: "Să ținem tare încrederea – Evrei 3:6"
 slug: sa-tinem-tare-increderea-evrei-36
-description: ""
+description: "Satan vrea să ne nimicească încrederea în Dumnezeu prin auto-acuzare și condamnare. A.B. Simpson ne îndeamnă să ținem tare încrederea până la sfârșit."
 date: "2023-04-10T12:20:35+03:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

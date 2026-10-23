@@ -1,7 +1,7 @@
 ---
 title: "Masa Domnului – Gazda"
 slug: masa-domnului-gazda
-description: ""
+description: "Isus a dorit mult să mănânce Paștele cu ucenicii și bate la ușa inimii. Andrew Murray arată că cea mai bună pregătire pentru Cină e să privim la inima Lui."
 date: "2023-01-31T10:18:09+02:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

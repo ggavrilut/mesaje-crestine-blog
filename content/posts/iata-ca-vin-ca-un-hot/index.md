@@ -1,7 +1,7 @@
 ---
 title: "Iată că vin ca un hoț"
 slug: iata-ca-vin-ca-un-hot
-description: ""
+description: "Dumnezeu Își pregătește un popor cu care să domnească, lucrând prin peceți, trâmbițe și potire. Ca fii ai luminii, să veghem și să înțelegem vremurile."
 date: "2021-10-17T22:25:54+03:00"
 updated: "2022-02-28T00:05:38+02:00"
 author: ["radu-gavrilut"]

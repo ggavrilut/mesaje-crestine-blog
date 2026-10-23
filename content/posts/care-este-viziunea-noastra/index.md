@@ -1,7 +1,7 @@
 ---
 title: "Care este viziunea noastră?"
 slug: care-este-viziunea-noastra
-description: ""
+description: "Fără viziune poporul piere. Stephen Kaung arată că viziunea care unește poporul lui Dumnezeu e Cristos și povestește cum i-a deschis Domnul ochii."
 date: "2026-10-18T23:08:53+03:00"
 author: ["stephen-kaung"]
 cover: ./cover.jpg

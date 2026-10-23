@@ -1,7 +1,7 @@
 ---
 title: "Masa Domnului – Prefață"
 slug: masa-domnului-prefata
-description: ""
+description: "În prefața cărții despre Masa Domnului, Andrew Murray îndeamnă la meditație în tăcere și la întoarcerea la Scriptură, nu la învățătura luată de-a gata."
 date: "2022-09-28T19:09:55+03:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

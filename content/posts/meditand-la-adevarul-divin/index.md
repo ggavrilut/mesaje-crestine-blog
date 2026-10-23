@@ -1,7 +1,7 @@
 ---
 title: "Meditând la adevărul divin"
 slug: meditand-la-adevarul-divin
-description: ""
+description: "De ce nu cresc unii în har? Nu își fac timp cu Domnul în ascuns. Adevărul citit devine viață doar când e înrădăcinat în noi prin meditație în tăcere."
 date: "2021-11-29T10:45:14+02:00"
 updated: "2022-09-28T19:08:22+03:00"
 author: ["andrew-murray"]

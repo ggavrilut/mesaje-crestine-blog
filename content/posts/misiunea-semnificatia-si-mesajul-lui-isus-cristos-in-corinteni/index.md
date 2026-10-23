@@ -1,7 +1,7 @@
 ---
 title: "Misiunea, semnificația și mesajul lui Isus Cristos in Corinteni"
 slug: misiunea-semnificatia-si-mesajul-lui-isus-cristos-in-corinteni
-description: ""
+description: "T. Austin-Sparks arată că din criza bisericii din Corint s-au născut revelații sublime, iar Cristos spune „Nu” omului natural și „Da” omului spiritual."
 date: "2025-05-31T13:12:07+03:00"
 author: ["t-austin-sparks"]
 cover: ./cover.jpg

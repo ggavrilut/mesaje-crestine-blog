@@ -1,7 +1,7 @@
 ---
 title: "Răbdarea nădejdii"
 slug: rabdarea-nadejdii
-description: ""
+description: "Radu Gavrilut deosebește ziua lui Cristos, care vine ca un hoț, de ziua Domnului: sfințirea Duhului ne schimbă, iar nădejdea vie ne ține în alergare."
 date: "2023-02-05T23:36:38+02:00"
 updated: "2023-02-12T19:16:05+02:00"
 author: ["radu-gavrilut"]

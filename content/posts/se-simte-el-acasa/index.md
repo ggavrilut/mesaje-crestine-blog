@@ -1,7 +1,7 @@
 ---
 title: "Se simte El acasă?"
 slug: se-simte-el-acasa
-description: ""
+description: "Pavel se roagă ca Cristos să locuiască în inimile noastre. Kenneth S. Wuest explică termenul grecesc: El vrea să Se simtă pe deplin acasă în noi."
 date: "2025-07-02T10:09:31+03:00"
 updated: "2025-07-04T10:58:39+03:00"
 author: ["kenneth-s-wuest"]

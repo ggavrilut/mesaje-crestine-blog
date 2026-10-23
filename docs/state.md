@@ -33,18 +33,21 @@ _Last updated 2026-10-23_
   `public/logo.png`? Use the new logo image in the header in place of the text name?
 - **Uncommitted**: the changed and new files in `public/`, `src/layouts/Base.astro` and the
   logo line of `decisions.md` belong to the brand images item above: their own commit.
-- **Then, in order** (`decisions.md`, 2026-10-23 next work): the post-writer pass for the
-  73 descriptions; the analytics spec and build (with the consent banner and a "cookie
-  settings" link); the privacy page draft; the PWA spec and build.
+- **Then, in order** (`decisions.md`, 2026-10-23 next work): the analytics spec and build
+  (with the consent banner and a "cookie settings" link); the privacy page draft; the PWA
+  spec and build. The 73 descriptions are done (owner-reviewed); `coverAlt` and `related`
+  of the post writer's pass (`specs/wordpress-import.md`) are not.
 
 ## Open questions
 
+- **Suspected typos** in about 60 posts, found by the post writer (2026-10-23):
+  `import/suspected-typos.md`. Owner decides each; agents change no word.
 - **About text** for `/despre-noi/` (`decisions.md`): Gabriel.
 - **Lists versus the text check**: `content-model.md` allows turning list-like lines into a
   Markdown list, but the list then drops the input's `-` or `1.` and the build's text check
   fails. Keep the markers as text, or teach the check about lists? Gabriel.
 - **Import questions** for the owner and the `seo` agent: `specs/wordpress-import.md`, open
-  questions (quote and dailyverse URLs, image URLs, the zip and the PDF,
+  questions (quote and dailyverse URLs, image URLs, the zip,
   the `necunoscut` author).
 - **Excerpts**: the live lists show WordPress's excerpts, often hand-picked from mid-article;
   the new site shows the first words (40 featured, 24 in lists). Import the hand-picked ones?

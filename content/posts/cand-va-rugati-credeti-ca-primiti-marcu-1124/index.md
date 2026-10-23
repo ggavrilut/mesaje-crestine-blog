@@ -1,7 +1,7 @@
 ---
 title: "Când vă rugați, credeți că primiți – Marcu 11:24"
 slug: cand-va-rugati-credeti-ca-primiti-marcu-1124
-description: ""
+description: "A.B. Simpson: intrăm în consacrare printr-un act de credință, primim sfințirea ca dar, o mărturisim și socotim viața veche ca nemaifiind a noastră."
 date: "2023-07-12T20:11:20+03:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

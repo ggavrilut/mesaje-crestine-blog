@@ -1,7 +1,7 @@
 ---
 title: "Să ne uităm țintă la Cristos!"
 slug: sa-ne-uitam-tinta-la-cristos
-description: ""
+description: "Dumnezeu ne dă nemăsurat mai mult, dar rămânem cerșetori care nu întind mâna. Erich Sauer ne îndeamnă să ne uităm țintă la Cristos, izvorul plinătății."
 date: "2026-05-09T17:40:28+03:00"
 author: ["erich-sauer"]
 cover: ./cover.jpg

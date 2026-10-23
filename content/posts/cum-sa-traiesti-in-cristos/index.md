@@ -1,7 +1,7 @@
 ---
 title: "Cum să trăiești în Cristos"
 slug: cum-sa-traiesti-in-cristos
-description: ""
+description: "Pornind de la viața lui Ann Thane Peck, Harriet Beecher Stowe arată cum trăiești în Cristos: din dragoste, nu din datorie, predându-te Lui clipă de clipă."
 date: "2024-08-17T20:46:10+03:00"
 author: ["harriet-beecher-stowe"]
 cover: ./cover.jpg

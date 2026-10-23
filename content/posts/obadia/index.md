@@ -1,7 +1,7 @@
 ---
 title: "Obadia"
 slug: obadia
-description: ""
+description: "Obadia se temea de Domnul, dar și de Ahab. Stephen Kaung arată pericolul inimii împărțite și cum Dumnezeu folosește totuși și vasele slabe."
 date: "2022-02-06T23:38:03+02:00"
 updated: "2022-02-28T00:03:47+02:00"
 author: ["stephen-kaung"]

@@ -1,7 +1,7 @@
 ---
 title: "Ziua 2. Răstignire exterioară"
 slug: ziua-2-rastignire-exterioara
-description: ""
+description: "Prin cruce, lumea e răstignită față de noi, iar vrăjmașul atinge doar ce nu mai prețuim. A.N. Groves îndeamnă să folosim sfințit și micile întâmplări."
 date: "2023-02-19T18:53:56+02:00"
 author: ["a-n-groves"]
 cover: ./cover.jpg

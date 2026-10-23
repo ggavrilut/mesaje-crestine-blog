@@ -1,7 +1,7 @@
 ---
 title: "Să înțelegem căile Domnului"
 slug: sa-intelegem-caile-domnului
-description: ""
+description: "Duhul Sfânt face real în noi ce este adevărat în Cristos. Din pustie și cucerirea Canaanului, Radu Gavrilut arată cum intrăm în stăpânirea moștenirii."
 date: "2021-10-15T12:28:19+03:00"
 updated: "2021-11-03T11:23:29+02:00"
 author: ["radu-gavrilut"]

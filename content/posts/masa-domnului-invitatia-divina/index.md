@@ -1,7 +1,7 @@
 ---
 title: "Masa Domnului – Invitația divină"
 slug: masa-domnului-invitatia-divina
-description: ""
+description: "Împăratul a gătit ospățul și ne cheamă la nunta Fiului. Andrew Murray meditează la invitația la Cina Domnului, la prețul ei și la binecuvântările ei."
 date: "2023-01-23T10:45:54+02:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

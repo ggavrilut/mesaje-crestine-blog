@@ -1,7 +1,7 @@
 ---
 title: "A doua generație – Timotei"
 slug: a-doua-generatie-timotei
-description: ""
+description: "Stephen Kaung arată cum Timotei, un tânăr timid crescut de mama și bunica lui, a învățat de la Pavel și a slujit credincios, și cheamă a doua generație."
 date: "2023-05-22T09:39:14+03:00"
 updated: "2023-05-23T13:52:54+03:00"
 author: ["stephen-kaung"]

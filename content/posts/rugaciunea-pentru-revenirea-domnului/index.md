@@ -1,7 +1,7 @@
 ---
 title: "Rugăciunea pentru revenirea Domnului"
 slug: rugaciunea-pentru-revenirea-domnului
-description: ""
+description: "D.M. Panton arată că „Vino, Doamne Isuse” e rugăciunea Duhului, a Domnului, a apostolilor și a creației, și ne cheamă să o rostim zilnic."
 date: "2025-07-13T16:26:55+03:00"
 updated: "2025-07-17T09:29:47+03:00"
 author: ["d-m-panton"]

@@ -1,7 +1,7 @@
 ---
 title: "Masa Domnului – Cercetarea de sine"
 slug: masa-domnului-cercetarea-de-sine
-description: ""
+description: "Înainte de Cina Domnului, Andrew Murray cheamă la cercetare de sine: ori Cristos este în tine, ori ești lepădat. Cu rugăciuni pentru siguranța mântuirii."
 date: "2023-02-03T11:31:59+02:00"
 author: ["andrew-murray"]
 cover: ./cover.jpg

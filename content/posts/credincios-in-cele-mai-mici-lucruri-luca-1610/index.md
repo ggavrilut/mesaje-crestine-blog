@@ -1,7 +1,7 @@
 ---
 title: "Credincios în cele mai mici lucruri – Luca 16:10"
 slug: credincios-in-cele-mai-mici-lucruri-luca-1610
-description: ""
+description: "Robul condamnat avea un singur talant. A.B. Simpson arată că Dumnezeu prețuiește și cele mai mici daruri; micimea noastră nu ne scuză în ziua socotelii."
 date: "2026-02-07T15:36:58+02:00"
 author: ["a-b-simpson"]
 cover: ./cover.jpg

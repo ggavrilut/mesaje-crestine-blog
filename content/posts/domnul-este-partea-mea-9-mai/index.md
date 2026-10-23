@@ -1,7 +1,7 @@
 ---
 title: "Domnul este partea mea – 9 Mai"
 slug: domnul-este-partea-mea-9-mai
-description: ""
+description: "Mulți creștini se străduiesc degeaba să devină buni. Watchman Nee arată că Cristos a împlinit totul: am murit, am înviat și ne-am înălțat împreună cu El."
 date: "2023-05-09T11:18:04+03:00"
 author: ["watchman-nee"]
 cover: ./cover.jpg

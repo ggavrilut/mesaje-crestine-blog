@@ -1,7 +1,7 @@
 ---
 title: "Ferestre deschise – 17 Noiembrie"
 slug: ferestre-deschise-17-noiembrie
-description: ""
+description: "Nu fugi de locul unde te-a așezat Domnul. T. Austin-Sparks arată că Dumnezeu folosește încercările de acum ca să formeze în tine chipul Fiului Său."
 date: "2024-11-18T00:01:14+02:00"
 author: ["t-austin-sparks"]
 cover: ./cover.jpg

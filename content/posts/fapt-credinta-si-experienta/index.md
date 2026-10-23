@@ -1,7 +1,7 @@
 ---
 title: "Fapt, credință și experiență"
 slug: fapt-credinta-si-experienta
-description: ""
+description: "Watchman Nee explică, prin imaginea unui cec, relația dintre fapt, credință și experiență: ce a făcut Dumnezeu în Cristos devine al nostru prin credință."
 date: "2023-07-25T12:42:20+03:00"
 author: ["watchman-nee"]
 cover: ./cover.jpg
