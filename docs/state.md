@@ -12,10 +12,13 @@ _Last updated 2026-10-23_
   `main` (commit `a8311ae`); every old URL answers as planned (`check-redirects --live`, 228,
   0 not as expected). WordPress's files are closed in `public_html/_wordpress/`; its database
   stays on the host. The preview `nou/` and its subdomain are gone.
-- **Owner's checks after the switch**, not yet reported: a contact-form message arrives; GA4
-  Realtime shows a visit after Accept; the installed app shows the new site; Search Console
-  done from the steps in `specs/cutover.md` (sitemap submitted, old sitemaps removed, five old
-  URLs inspected), then the weekly check for four weeks.
+- **Owner's checks after the switch** (2026-10-23): the contact form and GA4 Realtime work.
+  Search Console: the Domain property `mesaje-crestine.ro` (verified by the existing DNS TXT
+  record, in the owner's account) has `/sitemap-index.xml` submitted (Success) and the old
+  `/sitemap.xml` removed; the five old URLs' live tests follow their 301s to indexable pages;
+  indexing requested for `/`, `/blog/` and three posts. Next: the weekly check, Mondays, until
+  2026-11-20 (`specs/cutover.md`); the baseline export once Performance has processed. Not yet
+  reported: the installed app shows the new site.
 - **Delete `_wordpress/` on or after 2026-11-06** if nothing is open: its own plan and yes.
   Until then `npm run deploy -- live --rollback` puts WordPress back.
 - **`/publish` and the publisher agent** still say the deploy script is not built: connect

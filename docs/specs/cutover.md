@@ -59,10 +59,10 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
 **After**
 - [x] `npm run check-redirects -- --live` requests every old URL from the live site: one
   301 to a 200, a 200, or a 410; 0 failing.
-- [ ] Owner checks: a message through the contact form arrives; GA4 Realtime shows a visit
-  after Accept; the installed app on his phone shows the new site; the privacy page and the
+- [ ] Owner checks: a message through the contact form arrives (done); GA4 Realtime shows a
+  visit after Accept (done); the installed app on his phone shows the new site; the privacy page and the
   banner are there.
-- [ ] Search Console (owner, or the `seo` agent with his yes): `/sitemap-index.xml`
+- [x] Search Console (owner, 2026-10-23): `/sitemap-index.xml`
   submitted; five old URLs inspected (a post, an image, a quote, a category, `/feed/`).
 - [x] The preview goes: `nou/` deleted over FTP (its own yes); the owner removes the
   subdomain and its Directory Privacy in cPanel.
