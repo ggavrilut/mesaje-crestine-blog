@@ -7,6 +7,7 @@ author: ["watchman-nee"]
 cover: ./cover.jpg
 coverAlt: "Fapt, Credință, Experiență"
 related: []
+source: "Articol scris de Watchman Nee : FACT, FAITH, AND EXPERIENCE\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/)"
 legacyUrl: https://mesaje-crestine.ro/2023/07/fapt-credinta-si-experienta/
 ---
 În această epocă a harului, totul este „prin har” (Efeseni 2:8), iar aceasta înseamnă că totul este făcut de Dumnezeu. Omul nu trebuie să facă nimic pentru a fi mântuit pentru că „celui ce lucrează, plata cuvenită lui i se socoteşte nu ca un har, ci ca ceva datorat” (Romani 4:4). Întrucât Dumnezeu se ocupă de om potrivit harului, există anumite fapte.

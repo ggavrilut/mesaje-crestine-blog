@@ -8,6 +8,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea „Teach us to pray”, scrisă de Stephen Kaung"
 legacyUrl: https://mesaje-crestine.ro/2022/03/invata-ne-sa-ne-rugam/
 ---
 *Luca 11:1 – Într-o zi, Isus Se ruga într-un loc anumit. Când a isprăvit rugăciunea, unul din ucenicii Lui I-a zis: «Doamne, învaţă-ne să ne rugăm, cum a învăţat şi Ioan pe ucenicii lui.»*

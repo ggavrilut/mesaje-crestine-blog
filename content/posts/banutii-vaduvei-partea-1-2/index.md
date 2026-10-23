@@ -7,6 +7,7 @@ author: ["lance-lambert"]
 cover: ./cover.webp
 coverAlt: ""
 related: []
+source: "Articol tradus după un podcast al fratelui Lance Lambert disponibil în format [audio](https://lancelambert.org/the-widows-mite/) si [text](https://lancelambert.org/the-widows-mite-podcast/).\nPentru alte cărți de acest autor traduse în limba română, vizitați site-ul editurii [Lampadarul de Aur](https://www.lampadaruldeaur.ro/author_taxonomy/lambert-lance/)."
 legacyUrl: https://mesaje-crestine.ro/2024/01/banutii-vaduvei-partea-1-2/
 ---
 Am pe inimă un gând simplu și scurt din Marcu 12.

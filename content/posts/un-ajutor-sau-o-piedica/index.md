@@ -7,6 +7,7 @@ author: ["erich-sauer"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Articol extras din cartea „În arena credinței”"
 legacyUrl: https://mesaje-crestine.ro/2026/07/un-ajutor-sau-o-piedica/
 ---
 Privind la Isus, primim noi însărcinări. Ochii noștri încep să vadă nevoile și necazurile din jurul nostru. Recunoaştem responsabilitatea pe care o avem în a acționa, ajutându-i pe cei din jurul nostru atunci când au devenit slabi, obosiți, paralizați. Începem să vedem necesitatea disciplinei și purtării frățești de grijă, unii asupra altora, precum și modul în care acest lucru se poate realiza. Privind la cea mai mare dovadă de dragoste care a fost vreodată dată în istoria întregului univers, ochii noştri se deschid ca să vedem necesitatea, privilegiul şi multele oportunități pe care le avem de a da dovadă practică de iubire veghetoare şi de slujire lipsită de egoism, în grija spirituală şi trupească reciprocă. Când privim la Isus, căpătăm o perspectivă nouă asupra lumii. Ochii ne sunt deschiși în acest fel. „Vegheați cu sârguință!” „Ridicați mâinile care atârnă și genunchii slăbiți!”

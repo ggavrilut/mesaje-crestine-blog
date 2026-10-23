@@ -7,6 +7,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Mesaj](https://christiantestimonyministry.com/item/what-is-our-vision-) rostit în data de 30 martie 2014, în Richmond Virginia. Continuarea mesajului „[Care este porunca noastră?”](/care-este-porunca-noastra/)."
 legacyUrl: https://mesaje-crestine.ro/2026/10/care-este-viziunea-noastra/
 ---
 <em> „Când nu este nicio viziune, poporul este fără frâu; dar binecuvântat este cel ce păzește legea” – Proverbe 29:18</em>

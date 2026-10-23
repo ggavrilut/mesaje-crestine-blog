@@ -7,6 +7,7 @@ author: ["erich-sauer"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Articol extras din cartea „În arena credinței”"
 legacyUrl: https://mesaje-crestine.ro/2026/10/ceasul-hotararii/
 ---
 Putem vedea câteva din tacticile folosite de păcat în experiența amară a lui Esau. Păcatul folosește „momentele de slăbiciune” din viața omului pentru a-l face să cadă. Când a luată acea hotărâre greșită ce i-a fost fatală, Esau era „obosit” (Geneza 25:29). „Dă-mi, te rog, să mănânc din ciorba aceasta roşiatică, fiindcă sunt rupt de oboseală” (versetul 30).

@@ -7,6 +7,7 @@ author: ["andrew-murray"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea “The Lord’s Table – A Help to the Right Observance of the Holy Supper”\n(Masa Domnului – Un ajutor pentru o participare corectă la Masa Domnului)"
 legacyUrl: https://mesaje-crestine.ro/2023/02/masa-domnului-cercetarea-de-sine/
 ---
 *„Fiecare să se cerceteze dar pe sine însuşi şi aşa să mănânce din pâinea aceasta şi să bea din paharul acesta.” – 1 Corinteni 11:28*

@@ -145,7 +145,7 @@ img { max-width: 100%; }
 .prose blockquote p { margin: 0; }
 .prose strong { font-weight: 500; }
 .prose ul, .prose ol { padding-left: 1.5em; }
-.source-note { color: var(--muted); font: 300 14px/1.6 var(--sans); }
+.source-note { display: grid; gap: 8px; color: var(--muted); font: 300 14px/1.6 var(--sans); }
 .author-box { display: flex; flex-wrap: wrap; align-items: center; gap: 20px; padding-block: 28px; border-block: 1px solid var(--line); }
 /* Size set by AuthorPortrait; the stripes show behind a missing portrait. */
 .avatar { display: block; flex: none; border-radius: 50%; object-fit: cover; background: repeating-linear-gradient(135deg, #e6ece9 0 6px, #eef2f0 6px 12px); }

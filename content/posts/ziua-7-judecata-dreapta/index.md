@@ -7,6 +7,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang."
 legacyUrl: https://mesaje-crestine.ro/2023/04/ziua-7-judecata-dreapta/
 ---
 *Nu judecați după înfățișare, ci judecați cu o judecată dreaptă! – Ioan 7:24*

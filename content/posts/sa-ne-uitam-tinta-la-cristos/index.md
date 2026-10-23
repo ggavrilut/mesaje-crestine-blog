@@ -7,6 +7,7 @@ author: ["erich-sauer"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea „În arena credinței” – Erich Sauer"
 legacyUrl: https://mesaje-crestine.ro/2026/05/sa-ne-uitam-tinta-la-cristos/
 ---
 În binecuvântarea rostită în acea de-a doua rugăciune din Epistola către efeseni, apostolul combină aceste două cuvinte preferate ale sale: „abundență” (gr. perisseuein) și „super” (gr. hyper), formând astfel un nou cuvânt, pe care apoi îl întărește prin adăugarea unui alt cuvânt (gr. ek): „Iar a Celui ce poate să facă abundent mai mult, dincolo de orice măsură (gr. Hyper-ek perissou) decât cerem sau gândim noi … a Lui să fie slava în Biserică și în Cristos Isus, din neam în neam, în vecii vecilor! Amin.” (Efeseni 3.20). Probabil că ne putea apropia de înțelesul uluitor de bogat și profund al cuvântului grecesc traducându-l astfel: „Abundând mai mult, nemăsurat”, „Cu mult dincolo de orice măsură”, „Mai mult decât dând pe deasupra”, „Cum mult mai mult decât orice am avea nevoie, nemăsurat mai mult decât atât”

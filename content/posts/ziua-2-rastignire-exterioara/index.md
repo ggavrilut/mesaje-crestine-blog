@@ -7,6 +7,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang"
 legacyUrl: https://mesaje-crestine.ro/2023/02/ziua-2-rastignire-exterioara/
 ---
 *Atunci, Isus a zis ucenicilor Săi: „Dacă voiește cineva să vină după Mine, să se lepede de sine, să-și ia crucea și să Mă urmeze. Pentru că oricine va vrea să-și scape viața o va pierde, dar oricine își va pierde viața pentru Mine o va câștiga. Și ce ar folosi unui om să câștige toată lumea, dacă și-ar pierde sufletul? Sau ce ar da un om în schimb pentru sufletul său? Căci Fiul omului are să vină în slava Tatălui Său, cu îngerii Săi, și atunci va răsplăti fiecăruia după faptele lui. – Matei 16:24-27*

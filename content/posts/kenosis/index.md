@@ -5,6 +5,7 @@ description: ""
 date: "2023-02-12T18:51:19+02:00"
 author: ["paris-reidhead"]
 related: []
+source: "Mesaj rostit de Paris Reidhead în 27.05.1962, în New York"
 legacyUrl: https://mesaje-crestine.ro/2023/02/kenosis/
 ---
 Vom citi un pasaj de la Filipeni, capitolul 2, începând cu versetul 5, intitulat pasajul Kenosis, pasajul golirii:

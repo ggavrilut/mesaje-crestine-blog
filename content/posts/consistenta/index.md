@@ -7,6 +7,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang."
 legacyUrl: https://mesaje-crestine.ro/2023/03/consistenta/
 ---
 *Atunci nu mă voi rușina când voi lua seama la toate poruncile tale. – Psalmul 119:6*

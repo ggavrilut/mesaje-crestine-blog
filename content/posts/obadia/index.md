@@ -6,6 +6,7 @@ date: "2022-02-06T23:38:03+02:00"
 updated: "2022-02-28T00:03:47+02:00"
 author: ["stephen-kaung"]
 related: []
+source: "Fragment din cartea “Elijah and Elisha” scrisă de Stephen Kaung și publicată de [Christian Fellowship Publishers, Inc](https://www.c-f-p.com/)."
 legacyUrl: https://mesaje-crestine.ro/2022/02/obadia/
 ---
 *Pe când era Obadia pe drum, iată că l-a întâlnit Ilie. 1 Împărați 18:7*

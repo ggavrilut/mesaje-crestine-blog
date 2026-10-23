@@ -7,6 +7,7 @@ author: ["g-campbell-morgan"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea „The Four Gospels”"
 legacyUrl: https://mesaje-crestine.ro/2024/11/pilda-smochinului/
 ---
 *Și a doua zi când au ieșit din Betania, a flămânzit. Și văzând de departe un smochin având frunze, s‐a apropiat să vadă dacă poate va găsi ceva în el. Și când a venit la el, n‐a găsit nimic decât frunze, căci nu era vremea smochinelor. Și a răspuns și i‐a zis: De‐acum înainte nimeni să nu mănânce rod din tine în veac. Și ucenicii lui au auzit aceasta. – Marcu 11:12-14*

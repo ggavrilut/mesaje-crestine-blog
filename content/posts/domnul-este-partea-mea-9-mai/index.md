@@ -7,6 +7,7 @@ author: ["watchman-nee"]
 cover: ./cover.jpg
 coverAlt: "Mesaje Crestine"
 related: []
+source: "„The Lord My Portion” – Watchman Nee – 9 Mai\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/)"
 legacyUrl: https://mesaje-crestine.ro/2023/05/domnul-este-partea-mea-9-mai/
 ---
 *Și voi sunteți împliniți în El, care este Capul oricărei stăpâniri și autorități. – Coloseni 2:10*

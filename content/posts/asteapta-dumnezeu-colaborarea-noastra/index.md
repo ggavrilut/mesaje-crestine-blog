@@ -7,6 +7,7 @@ author: ["radu-gavrilut"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Mesaj rostit în 04.08.2024, la Oradea. Acest mesaj și altele sunt disponibile pe [ekklesiaoradea.ro](https://www.ekklesiaoradea.ro/)."
 legacyUrl: https://mesaje-crestine.ro/2024/08/asteapta-dumnezeu-colaborarea-noastra/
 ---
 Când te întorci la Domnul se întâmplă ceva. În afară de faptul că păcatele îți sunt iertate, povara ți s-a luat de pe umeri și ai pace și bucurie în inima ta, se întâmplă și alte lucruri. Unul dintre acestea este că Duhul Sfânt vine să locuiască în inima ta. El este acolo, dar foarte mulți oameni nu înțeleg cu funcționează acest lucru. Foarte mulți au venit la Domnul și se gândesc că, într-o zi, ceva miraculos se va întâmpla cu ei și din acea zi vor deveni oameni spirituali. Nu este așa! A-i da loc Duhului Sfânt să lucreze este responsabilitatea noastră. Vă voi da niște exemple din Biblie în acest sens.

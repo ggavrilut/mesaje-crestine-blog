@@ -8,6 +8,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: "Second generation"
 related: []
+source: "Traducerea unui [mesaj](https://www.christiantapeministry.com/#/item/3422) rostit la Richmond, SUA in data de 13 septembrie 2015.\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur.](https://www.lampadaruldeaur.ro/author_taxonomy/kaung-stephen/)"
 legacyUrl: https://mesaje-crestine.ro/2023/05/a-doua-generatie-timotei/
 ---
 Să citim primele 5 versete din capitolul 16 al cărții Faptele Apostolilor:

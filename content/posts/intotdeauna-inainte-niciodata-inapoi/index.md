@@ -8,6 +8,7 @@ author: ["stephen-ross"]
 cover: ./cover.webp
 coverAlt: "C.T. Studd"
 related: []
+source: "Toate citatele sunt luate din cartea „C.T. Studd: jucător de cricket și pionier” scrisă de Norman Grubb. Articol scris de Stephen Ross."
 legacyUrl: https://mesaje-crestine.ro/2023/02/intotdeauna-inainte-niciodata-inapoi/
 ---
 „Unii doresc să trăiască în umbra bisericii sau în apropierea sunetului de clopot al unei capele; eu vreau să țin deschis un punct de prim ajutor în curtea iadului” – C.T. Studd

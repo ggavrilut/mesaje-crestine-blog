@@ -7,6 +7,7 @@ author: ["andrew-murray"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea “The Lord’s Table – A Help to the Right Observance of the Holy Supper”\n(Masa Domnului – Un ajutor pentru o participare corectă la Masa Domnului)"
 legacyUrl: https://mesaje-crestine.ro/2023/01/masa-domnului-invitatia-divina/
 ---
 *„Iată că am gătit ospăţul meu; juncii şi vitele mele cele îngrăşate au fost tăiate; toate sunt gata, veniţi la nuntă.” – Matei 22:4*

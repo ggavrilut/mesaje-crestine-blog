@@ -8,6 +8,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Mesaj](https://christiantestimonyministry.com/item/the-testimony-of-jesus-3) rostit în data de 6 aprilie 2014, în Richmond Virginia. Continuarea mesajului „[Care este viziunea noastră?”](/care-este-viziunea-noastra/)."
 legacyUrl: https://mesaje-crestine.ro/2026/10/marturia-lui-isus/
 ---
 *„Descoperirea lui Isus Cristos, pe care I-a dat-o Dumnezeu, ca să arate robilor Săi lucrurile care trebuie să se întâmple în curând. Și El le-a adus-o la cunoștință trimițând-o prin îngerul Său la robul Său Ioan, care a mărturisit despre Cuvântul lui Dumnezeu și despre mărturia lui Isus Cristos, și a spus tot ce a văzut.” – Apocalipsa 1:1, 2*

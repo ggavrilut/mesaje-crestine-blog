@@ -76,7 +76,7 @@ content/
 | `cover` | yes | input | `./cover.jpg`, at least 1200 px wide (`seo.md`); narrower → the post writer asks for a larger one. Optimised at build, never by hand. Optional for imported posts (with `legacyUrl`), as are `coverAlt`, `description` and `related` until the post writer's pass |
 | `coverAlt` | yes | post writer | describes the image, in Romanian |
 | `video` | no | input | YouTube URL, shown after the text. A video placed inside the text is a line holding only `https://www.youtube.com/watch?v=<id>`: it renders as the video, and the text check skips it |
-| `source` | no | input | citation shown under the article |
+| `source` | no | input | citation shown under the article, the author's or translator's words, never edited: plain text, Markdown links (link text in square brackets, then the address in parentheses), line breaks, a blank line between paragraphs (`src/lib/citation.ts`). Imported from the page for imported posts |
 | `sourceDoc` | no | post writer | the Google Doc link, when the input came from one |
 | `related` | yes | post writer | 2–4 slugs: same author first, then same topic (no categories, `decisions.md`) |
 | `legacyUrl` | imported posts | importer | the WordPress URL; generates its 301 |

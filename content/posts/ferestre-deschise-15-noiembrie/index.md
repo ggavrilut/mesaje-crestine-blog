@@ -7,6 +7,7 @@ author: ["t-austin-sparks"]
 cover: ./cover.jpg
 coverAlt: "Revelație in situații practice"
 related: []
+source: "„Daily Open Windows” – T. Austin-Sparks – [15 Noiembrie](https://www.austin-sparks.net/english/openwindows/003445.html)\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/author_taxonomy/austin-sparks-t/)"
 legacyUrl: https://mesaje-crestine.ro/2024/11/ferestre-deschise-15-noiembrie/
 ---
 *Celui ce va birui îi voi da să mănânce din mana ascunsă. – Apocalipsa 2:17*

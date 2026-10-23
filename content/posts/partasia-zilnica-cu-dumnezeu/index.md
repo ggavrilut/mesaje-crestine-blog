@@ -7,6 +7,7 @@ author: ["andrew-murray"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Traducere a acestui articol de pe [Aguas Vivas](https://www.aguasvivas.cl/english/magazine/22/11.htm)."
 legacyUrl: https://mesaje-crestine.ro/2024/11/partasia-zilnica-cu-dumnezeu/
 ---
 Ce a lucrat Dumnezeu în Avraam pentru a-l putea numi mai târziu „Avraam, prietenul meu”?

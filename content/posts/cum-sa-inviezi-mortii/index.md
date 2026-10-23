@@ -7,6 +7,7 @@ author: ["charles-spurgeon"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Câștigarea sufletelor](https://www.magnagratia.org/carti/063-castigarea-sufletelor-spurgeon/). Capitolul 7."
 legacyUrl: https://mesaje-crestine.ro/2025/07/cum-sa-inviezi-mortii/
 ---
 Dragi colegi lucrători în via Domnului, aș vrea să vă îndrept atenția către o minune foarte instructivă săvârșită prin profetul Elisei, așa cum este relatată în capitolul 4 din doua carte a Împăraților. Ospitalitatea femeii sunamite fusese răsplătită prin darul unui fiu, dar, vai, toate îndurările pământești sunt de o natură nesigură și, după o anumită perioadă, copilul s-a îmbolnăvit și a murit. Mama lui necăjită, dar credincioasă, a alergat dintr-o dată la omul lui Dumnezeu. Prin el, Dumnezeu îi trimisese făgăduința care îi împlinise dorința inimii, astfel că ea s-a hotărât să își aducă situația înaintea lui, pentru ca profetul să o pună în fața Stăpânului său divin și să obțină pentru ea un răspuns aducător de pace. Acțiunea lui Elisei este prezentată în versetele următoare:

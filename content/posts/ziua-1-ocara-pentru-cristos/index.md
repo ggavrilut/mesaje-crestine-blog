@@ -7,6 +7,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang"
 legacyUrl: https://mesaje-crestine.ro/2023/02/ziua-1-ocara-pentru-cristos/
 ---
 <em>Ferice va fi de voi când, din pricina Mea, oamenii vă vor ocărî, vă vor prigoni și vor spune tot felul de lucruri rele și neadevărate împotriva voastră! Bucurați-vă și veseliți-vă, pentru că răsplata voastră este mare în ceruri; căci tot așa au prigonit pe prorocii care au fost înainte de voi. – Matei 5:11-12\

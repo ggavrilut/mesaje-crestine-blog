@@ -7,6 +7,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Mesaj](https://christiantestimonyministry.com/item/what-is-our-charge-) rostit în data de 23 martie 2014, în Richmond Virginia"
 legacyUrl: https://mesaje-crestine.ro/2025/07/care-este-porunca-noastra/
 ---
 *Îţi încredinţez această poruncă, copilul meu Timotei, după profeţiile făcute mai înainte despre tine, ca prin ele să te lupţi lupta cea bună. 1 Timotei 1:18 GBV*

@@ -7,6 +7,7 @@ author: ["samuel-usher"]
 cover: ./cover.jpg
 coverAlt: "Back to the Cross"
 related: []
+source: "Articolul este un fragment din cartea lui Charles Usher, intitulată Echipamentul Spiritual pentru Zilele din Urmă.\nCartea a fost publicată prima dată de Marshall Brothers, LTD., Londra, Anglia, în iulie 1920"
 legacyUrl: https://mesaje-crestine.ro/2023/06/inapoi-la-cruce/
 ---
 Suntem în cele din urmă ceasuri ale acestei dispensațiuni. Acele ceasornicului se apropie de ora douăsprezece. Este ceasul întunecat al miezului nopții, dar cea mai întunecată oră este chiar înainte de zori.

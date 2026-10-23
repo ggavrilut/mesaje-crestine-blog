@@ -7,6 +7,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea „Teach us to pray”, scrisă de Stephen Kaung"
 legacyUrl: https://mesaje-crestine.ro/2022/09/rugaciune-si-povara/
 ---
 *Matei 9:35-38 – “Isus străbătea toate cetăţile şi satele, învăţând pe norod în sinagogi, propovăduind Evanghelia Împărăţiei şi vindecând orice fel de boală şi orice fel de neputinţă care era în norod. Când a văzut gloatele, I s-a făcut milă de ele, pentru că erau necăjite şi risipite, ca nişte oi care n-au păstor. Atunci a zis ucenicilor Săi: «Mare este secerişul, dar puţini sunt lucrătorii! Rugaţi dar pe Domnul secerişului să scoată lucrători la secerişul Lui.»”*

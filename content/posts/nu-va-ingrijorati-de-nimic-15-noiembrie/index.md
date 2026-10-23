@@ -7,6 +7,7 @@ author: ["watchman-nee"]
 cover: ./cover.jpg
 coverAlt: "Mesaje Crestine"
 related: []
+source: "„The Lord My Portion” – Watchman Nee – 15 Noiembrie\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/)"
 legacyUrl: https://mesaje-crestine.ro/2024/11/nu-va-ingrijorati-de-nimic-15-noiembrie/
 ---
 *Nu vă îngrijorați de nimic, ci, în orice lucru, aduceți cererile voastre la cunoștința lui Dumnezeu prin rugăciuni și cereri, cu mulțumiri! – Filipeni 4:16*

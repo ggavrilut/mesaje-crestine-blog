@@ -8,6 +8,7 @@ author: ["radu-gavrilut"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Mesajul poate fi ascultat accesand site-ul [ekklesiaoradea.ro](https://www.ekklesiaoradea.ro/)\nÎnregistrarea audio poate fi obținută dând [click aici](https://www.ekklesiaoradea.ro/uploads/20230205-RaduGavrilut3.mp3)."
 legacyUrl: https://mesaje-crestine.ro/2023/02/rabdarea-nadejdii/
 ---
 *„Cât despre vremuri şi soroace, n-aveţi trebuinţă să vi se scrie, fraţilor. Pentru că voi înşivă ştiţi foarte bine că ziua Domnului va veni ca un hoţ noaptea. Când vor zice: „Pace şi linişte!”, atunci o prăpădenie neaşteptată va veni peste ei, ca durerile naşterii peste femeia însărcinată, şi nu va fi chip de scăpare. Dar voi, fraţilor, nu sunteţi în întuneric, pentru ca ziua aceea să vă prindă ca un hoţ. Voi toţi sunteţi fii ai luminii şi fii ai zilei. Noi nu suntem ai nopţii, nici ai întunericului. De aceea să nu dormim ca ceilalţi, ci să veghem şi să fim treji. Căci cei ce dorm, dorm noaptea şi cei ce se îmbată, se îmbată noaptea. Dar noi, care suntem fii ai zilei, să fim treji, să ne îmbrăcăm cu platoşa credinţei şi a dragostei şi să avem drept coif nădejdea mântuirii. Fiindcă Dumnezeu nu ne-a rânduit la mânie, ci ca să căpătăm mântuirea prin Domnul nostru Isus Cristos, care a murit pentru noi, pentru ca, fie că veghem, fie că dormim, să trăim împreună cu El. De aceea, mângâiaţi-vă şi întăriţi-vă unii pe alţii, cum şi faceţi în adevăr.” – 1 Tesaloniceni 5:1-11*

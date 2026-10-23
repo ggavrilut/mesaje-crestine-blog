@@ -5,6 +5,7 @@ description: ""
 date: "2023-04-08T11:17:21+03:00"
 author: ["lance-lambert"]
 related: []
+source: "Fragment din cartea „The supremacy of Jesus Christ” de Lance Lambert.\nAlte cărți de acest autor în limba română sunt disponibile la editura [Lampadarul de Aur](https://www.lampadaruldeaur.ro/author_taxonomy/lambert-lance/)."
 legacyUrl: https://mesaje-crestine.ro/2023/04/ma-iubesti/
 ---
 Cel de-al doilea lucru este remarcabil. Această evanghelie incredibilă a lui Ioan începe cu un prolog: „La început era Cuvântul și Cuvântul era cu Dumnezeu și Cuvântul era Dumnezeu. Și Cuvântul a devenit trup și a locuit printre noi”. Și se încheie cu un epilog.

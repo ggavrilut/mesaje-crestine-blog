@@ -5,6 +5,7 @@ description: ""
 date: "2022-03-09T17:24:50+02:00"
 author: ["radu-gavrilut"]
 related: []
+source: "Sursa : [Mesaje Creștine Oradea](https://www.ekklesiaoradea.ro/)"
 legacyUrl: https://mesaje-crestine.ro/2022/03/ce-poti-face-daca-nu-poti-iubi-pe-un-frate/
 ---
 Un frate m-a întrebat ce poate să facă dacă nu iubește pe un alt frate? El nu poate să iubească. Ne întrebăm ce poate să însemne că Duhul lui Dumnezeu ne conduce în tot adevărul. Pe când mă gândeam la lucrul acesta, m-am gândit la omul cu mâna uscată. Avea mâna uscată, a ajuns la Domnul și Domnul i-a zis: „Întinde-ți mâna!” Întinde-ți mâna! Omul ar fi putut zice: „Cum adică să-mi întind mâna? Eu sunt cu mâna uscată; să vină să-mi atingă mâna, să vină să mi-o ridice, să zică niște cuvinte magice și atunci mâna mea se va îndrepta”. Dar El a zis: „Întinde-ți mâna!”, iar omul și-a întins mâna.

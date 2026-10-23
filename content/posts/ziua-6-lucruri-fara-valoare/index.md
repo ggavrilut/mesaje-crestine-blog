@@ -8,6 +8,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang."
 legacyUrl: https://mesaje-crestine.ro/2023/03/ziua-6-lucruri-fara-valoare/
 ---
 *Deci, fie că mâncați, fie că beți, fie că faceți altceva, faceți toate lucrurile spre gloria lui Dumnezeu. Urmați exemplul meu, tot așa cum și eu Îl urmez pe Cristos. – 1 Corinteni 10:31; 11:1*

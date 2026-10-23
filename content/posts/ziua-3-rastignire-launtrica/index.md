@@ -7,6 +7,7 @@ author: ["a-n-groves"]
 cover: ./cover.jpg
 coverAlt: "Heavenly wisdom"
 related: []
+source: "Fragment din capitolul 16 al cărții „Anthony Norris Groves : Saint and Pioneer” de G.H. Lang"
 legacyUrl: https://mesaje-crestine.ro/2023/02/ziua-3-rastignire-launtrica/
 ---
 *Căci eu prin lege am murit față de lege ca să trăiesc față de Dumnezeu. Am fost răstignit cu Cristos și trăiesc… dar nu mai trăiesc eu, ci Cristos trăiește în mine; iar ceea ce trăiesc acum în carne, trăiesc în credință, credința care este în Fiul lui Dumnezeu, care m‐a iubit și s‐a dat pe sine însuși pentru mine. – Galateni 2:19-20*

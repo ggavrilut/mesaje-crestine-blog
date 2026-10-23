@@ -7,6 +7,7 @@ author: ["andrew-murray"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea “The Lord’s Table – A Help to the Right Observance of the Holy Supper”\n(Masa Domnului – Un ajutor pentru o participare corectă la Masa Domnului)"
 legacyUrl: https://mesaje-crestine.ro/2023/01/masa-domnului-pregatirea/
 ---
 *„Unde voieşti să ne ducem să-Ţi pregătim ca să mănânci Paştele? … Şi are să vă arate o odaie mare de sus, aşternută gata; acolo să pregătiţi pentru noi.” – Marcu 14:12, 15*

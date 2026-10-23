@@ -5,6 +5,7 @@ description: ""
 date: "2023-02-27T10:54:32+02:00"
 author: ["poul-madsen"]
 related: []
+source: "Fragment din revista „Toward the Mark”, Vol.10, Nr.1"
 legacyUrl: https://mesaje-crestine.ro/2023/02/intemeiati-in-cristos/
 ---
 *Și cel ce ne întemeiază împreună cu voi în Cristos și ne-a uns este Dumnezeu; Care ne-a și sigilat și a dat arvuna Duhului în inimile noastre. – 2 Corinteni 1:21-22*

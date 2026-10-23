@@ -13,7 +13,7 @@ How to test, the fast check, and the known-broken tests. Read before claiming an
 | Types | `npm run check` | before every commit touching `src/` or `bin/*.ts` |
 | Build and text integrity | `npm run build`: fails when a post's rendered text differs from its `source.txt` (`content-model.md`, the check) | before every commit and deploy |
 | Redirects | `npm run check-redirects` after a build: every old URL is one 301 to a 200, a 200, or a deliberate 410 | after touching redirects, slugs or the import; before cut-over |
-| Importer | `npm run import` twice, hashing `content/` and `import/` after each run: identical; the report says `problems 0, text differences 0` | after changing `bin/import-wp.ts` or `bin/lib/wp-markdown.ts` |
+| Importer | `npm run import` twice, hashing `content/` and `import/` after each run: identical; the report says `problems 0, text differences 0` (each citation word for word against its elements, and in one piece in the page's text) | after changing `bin/import-wp.ts` or `bin/lib/` |
 
 The article-text checks were tested 2026-10-23 on `acum-alege-deuteronom-3019`: one word
 changed identically in `index.md` and `source.txt` passed the build but failed `bin/check`
@@ -21,6 +21,12 @@ and `verify-text` (naming the word); a line-break-only change failed `bin/check`
 `verify-text` matched it to the live page; a deleted `source.txt` failed `bin/check` and the
 build. `verify-text` on all 73 imported posts: 73 ok, 13 s. Not yet run against a real Google
 Doc (none in the repo); its error path was (unreachable doc: reported, exit 1).
+
+A check must not share its input with the code it checks (2026-10-23): the citation import
+passed "word for word against the page" with six citations repeated up to five times
+(`consistenta`), because the check read the same nested elements the importer had picked.
+The second, independent check (the citation in one piece in the page's text) failed on the
+repeated text and passes on all 61 after the fix.
 
 The text check was tested by changing one diacritic in a `source.txt`: the build failed,
 naming the post and the word (2026-10-22). Rows for a link check and an SEO lint of the built

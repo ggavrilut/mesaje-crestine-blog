@@ -7,6 +7,7 @@ author: ["alexander-maclaren"]
 cover: ./cover.jpg
 coverAlt: "Pilda semanatorului"
 related: []
+source: "Articol tradus din cartea „Expositions of Holy Scriptures” scrisă de Alexander MacLaren.\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur.](https://www.lampadaruldeaur.ro/product/pregatit-de-drum/)"
 legacyUrl: https://mesaje-crestine.ro/2023/09/o-samanta-si-mai-multe-terenuri/
 ---
 *Când s-a adunat o mare mulțime de oameni și au venit la El de prin fiecare cetate, Isus le-a vorbit printr-o pildă: „Semănătorul a ieșit să-și semene sămânța. În timp ce semăna el, o parte din sămânță a căzut lângă drum, unde a fost călcată în picioare și au mâncat-o păsările cerului. Alta a căzut pe stâncă și, cum a încolțit, s-a uscat, pentru că nu avea umezeală. Alta a căzut în mijlocul spinilor, iar spinii au crescut împreună cu ea și au sufocat-o. Alta însă a căzut într-un pământ bun, a încolțit și a făcut rod însutit“.\

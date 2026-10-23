@@ -7,6 +7,7 @@ author: ["paris-reidhead"]
 cover: ./cover.jpg
 coverAlt: "Gospel"
 related: []
+source: "Fragment din mesajul „[So Great a Salvation](http://www.parisreidheadbibleteachingministries.org/pdf/So_Great_Salvation_Teaching_Series_Part_1-Awakening.pdf)”  de Paris Reidhead"
 legacyUrl: https://mesaje-crestine.ro/2023/03/cum-ar-trebui-sa-depuna-credinciosii-marturie-inaintea-celor-pierduti/
 ---
 În urmă cu ceva timp am discutat cu un chirurg care a spus că cea mai importantă persoană în sala de operație, după chirurg, este asistenta medicală. Rolul ei este să știe ce urmează să se facă și să fie pregătită cu instrumentul necesar. Asistenta pune, în mod hotărât, instrumentul în mâinile chirurgului. Într-un anumit sens, noi suntem o asistentă a lui Dumnezeu Duhul Sfânt. Atunci când întâlnești un păcătos care nu este trezit la realitate, știi tu care dintre bisturiele adevărului este necesar și eficient pentru trezirea lui? Martorul trebuie să fie eficient.

@@ -6,6 +6,7 @@ import AuthorPortrait from '../components/AuthorPortrait.astro';
 import { SITE_URL, absolute, authorPath, authorsOf, getAuthors, getPosts, neighbours, pageTitle, postPath, relatedPosts, type Post } from '../lib/site.ts';
 import { displayDate, isoBucharest } from '../lib/dates.ts';
 import { facadeHtml, youtubeId } from '../lib/youtube.ts';
+import { citationHtml } from '../lib/citation.ts';
 
 export async function getStaticPaths() {
   const posts = await getPosts();
@@ -89,7 +90,7 @@ const graph = [
         <Content />
       </div>
       {videoId && <Fragment set:html={facadeHtml(videoId)} />}
-      {data.source && <p class="source-note">{data.source}</p>}
+      {data.source && <div class="source-note" set:html={citationHtml(data.source)} />}
       {authors.map((a) => (
         <aside class="author-box" aria-label="Autor">
           <AuthorPortrait author={a} size={56} />

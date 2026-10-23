@@ -7,6 +7,7 @@ author: ["stephen-kaung"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Mesaj](https://christiantestimonyministry.com/item/how-will-the-church-be-made-right-by-overcoming-) rostit în data de 13 aprilie 2014, în Richmond Virginia. Continuarea mesajului „[Mărturia lui Isus”](/marturia-lui-isus/)."
 legacyUrl: https://mesaje-crestine.ro/2026/10/cum-va-fi-indreptata-biserica-biruind/
 ---
 „Cine are urechi să asculte ceea ce Duhul zice bisericilor: Celui care va birui îi voi da să mănânce din pomul vieții, care este în raiul lui Dumnezeu.” – Apocalipsa 2:7

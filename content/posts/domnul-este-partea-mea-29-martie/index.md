@@ -7,6 +7,7 @@ author: ["watchman-nee"]
 cover: ./cover.jpg
 coverAlt: "Mesaje Crestine"
 related: []
+source: "„The Lord My Portion” – Watchman Nee – 29 Martie\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/)"
 legacyUrl: https://mesaje-crestine.ro/2023/04/domnul-este-partea-mea-29-martie/
 ---
 *Pentru că sunt nazireu al lui Dumnezeu din pântecele mamei mele; dacă voi fi ras, atunci puterea mea se va depărta de la mine, şi voi slăbi şi mă voi face ca un alt om. – Judecatori 16:17*

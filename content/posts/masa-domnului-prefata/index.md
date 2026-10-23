@@ -7,6 +7,7 @@ author: ["andrew-murray"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Fragment din cartea “The Lord’s Table – A Help to the Right Observance of the Holy Supper”\n(Masa Domnului – Un ajutor pentru o participare corectă la Masa Domnului)."
 legacyUrl: https://mesaje-crestine.ro/2022/09/masa-domnului-prefata/
 ---
 Cu privire la folosirea acestui scurt volum m-aș bucura să spun două lucruri care sunt pe inima mea.

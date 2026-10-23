@@ -8,6 +8,7 @@ author: ["d-m-panton"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "D.M. Panton – PRAYER FOR THE LORD’S RETURN.\nAlte cărți de acet autor disponibile pe site-ul [Lampadarul de Aur](https://www.lampadaruldeaur.ro/?s=panton&post_type=product&type_aws=true)."
 legacyUrl: https://mesaje-crestine.ro/2025/07/rugaciunea-pentru-revenirea-domnului/
 ---
 ## Duhul Sfânt

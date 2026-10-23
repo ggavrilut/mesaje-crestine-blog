@@ -5,6 +5,7 @@ description: ""
 date: "2022-04-01T10:12:23+03:00"
 author: ["andrew-murray"]
 related: []
+source: "Fragment din cartea “The Lord’s Table – A Help to the Right Observance of the Holy Supper”."
 legacyUrl: https://mesaje-crestine.ro/2022/04/luni-dimineata-pregatirea-rugaciunea-mea-pentru-astazi/
 ---
 Izbăvește-mă Doamne de orice superficialitate și neseriozitate în ce privește apropierea de masa Ta. De prea multe ori am privit participarea la masa Ta ca pe un lucru de la sine înțeles. Am trecut cu vederea cât de necesar este să îndepărtez pietrele din cale atunci când Domnul Însuși vine să-Și pregătească calea și să-Și netezească cărările. Am socotit primirea binecuvântării ca pe ceva neînsemnat. Iartă-mi această greșeală, Doamne. Fă ca sufletul meu să înțeleagă ce înseamnă că omul păcătos se va întâlni cu Dumnezeu lui. Lucrează Tu Însuți în mine adevărata conștiență și disponibilitate de a părăsi și de a pune deoparte orice păcat și de a mă încredința pe deplin Ție într-o predare reală a întregului meu suflet cu toate puterile lui.

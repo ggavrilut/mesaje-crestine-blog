@@ -2,15 +2,17 @@
 // Reads public endpoints only, never writes to WordPress. Run: node bin/import-wp.ts
 // Writes content/posts/<slug>/{index.md,source.txt,cover.*}, content/authors/<slug>.{md,*},
 // import/report.md, import/legacy-urls.txt and import/redirects.tsv. Running it again gives
-// the same files, but overwrites what the post writer added to an imported post's front
-// matter: run the description pass after the last import.
+// the same files, and keeps what the post writer added to an imported post's front matter
+// (description, related, seoTitle).
 import * as cheerio from 'cheerio';
 import type { AnyNode } from 'domhandler';
 import { mkdir, readdir, readFile, writeFile } from 'node:fs/promises';
 import { existsSync } from 'node:fs';
 import { blocksToMarkdown, UnknownTagError } from './lib/wp-markdown.ts';
 import { isBricksPage, liveText } from './lib/live-text.ts';
-import { blockText, firstDifference, words } from '../src/lib/text.ts';
+import { citationElements, citationLiveText, citationMarkdown, citationOnPage } from './lib/citation.ts';
+import { blockText, firstDifference, normaliseBlocks, words } from '../src/lib/text.ts';
+import { citationText } from '../src/lib/citation.ts';
 import { isoBucharest } from '../src/lib/dates.ts';
 
 const SITE = 'https://mesaje-crestine.ro';
@@ -165,6 +167,8 @@ async function main() {
   const noCover: string[] = [];
   const narrowCover: string[] = [];
   const bricksNotes: string[] = [];
+  const citations: string[] = [];
+  const citationUploads: string[] = [];
 
   await pool(published.map((p, i) => [p, i] as const), 4, async ([p, i]) => {
     const dir = `${ROOT}content/posts/${p.slug}`;
@@ -193,6 +197,24 @@ async function main() {
     const diff = firstDifference(liveText(page, bricks), source);
     if (diff) diffs.push(`- \`${p.slug}\`, word ${diff.index}: live "${diff.expected}" / imported "${diff.actual}"`);
 
+    // The citation under the article: stored as `source`, checked word for word against the page.
+    const citationEls = bricks ? [] : citationElements(page);
+    const citation = citationEls.length ? citationMarkdown(page, citationEls, link) : '';
+    if (citation) {
+      citations.push(p.slug);
+      const citationDiff = firstDifference(citationLiveText(page, citationEls), normaliseBlocks(citationText(citation)));
+      if (citationDiff) diffs.push(`- \`${p.slug}\` citation, word ${citationDiff.index}: live "${citationDiff.expected}" / imported "${citationDiff.actual}"`);
+      if (!citationOnPage(page, citationText(citation))) diffs.push(`- \`${p.slug}\` citation: not found in one piece on the page`);
+      for (const m of citation.matchAll(/\]\((https?:\/\/(?:www\.)?mesaje-crestine\.ro\/wp-content\/[^)]+)\)/g)) citationUploads.push(`- \`${p.slug}\`: ${path(m[1])}`);
+    }
+
+    // What the post writer added since the last import survives a new import.
+    const kept = existsSync(`${dir}/index.md`) ? await readFile(`${dir}/index.md`, 'utf8') : '';
+    const keep = (key: string, empty: string) => {
+      const line = kept.match(new RegExp(`^${key}: .*$`, 'm'))?.[0];
+      return line && line !== `${key}: ${empty}` ? line : undefined;
+    };
+
     const authors = p.author_taxonomy.map((id) => termById.get(id)!).filter(Boolean);
     authors.forEach((t) => usedAuthors.set(t.slug, t));
     if (!authors.length) unassigned.push(`- \`${p.slug}\` (${p.link})`);
@@ -217,12 +239,14 @@ async function main() {
       '---',
       `title: ${yaml(decode(p.title.rendered))}`,
       `slug: ${p.slug}`,
-      `description: ""`,
+      ...[keep('seoTitle', '""')].filter((l): l is string => !!l),
+      keep('description', '""') ?? `description: ""`,
       `date: ${yaml(date)}`,
       ...(updated ? [`updated: ${yaml(updated)}`] : []),
       `author: ${yaml(authors.map((t) => t.slug))}`,
       ...(cover ? [`cover: ${cover}`, `coverAlt: ${yaml(m!.alt_text.trim())}`] : []),
-      `related: []`,
+      keep('related', '[]') ?? `related: []`,
+      ...(citation ? [`source: ${yaml(citation)}`] : []),
       `legacyUrl: ${p.link}`,
       ...(authors.length ? [] : ['draft: true']),
       '---',
@@ -293,6 +317,8 @@ async function main() {
   section('Posts without a cover', noCover);
   section('Covers narrower than 1200 px', narrowCover);
   section('Posts read from the rendered page', bricksNotes);
+  note(); note(`## Citations under the article`); note(); note(`${citations.length} posts have one, stored as \`source\`.`);
+  section('Citation links into the WordPress uploads (they need a home on the new site before cut-over)', citationUploads);
   section('Author terms without posts (redirected to /authors/)', redirects.map((r) => `- \`${r.split('\t')[0]}\``));
   section('Author descriptions not imported (bios are owner-supplied)', bios.map((t) => `- \`${t.slug}\`: "${t.description.trim()}"`));
   section('Media not used as a cover or portrait', unused.map((m) => `- ${m.id} ${m.mime_type} ${path(m.source_url)}${m.post ? ` (attached to post ${m.post}${published.find((p) => p.id === m.post) ? `, \`${published.find((p) => p.id === m.post)!.slug}\`` : ''})` : ' (attached to nothing)'}`));

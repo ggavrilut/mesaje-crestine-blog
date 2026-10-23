@@ -8,6 +8,7 @@ author: ["j-m-mcl"]
 cover: ./cover.jpg
 coverAlt: "John Martin - Joshua Commanding the Sun to Stand Still"
 related: []
+source: "Articolul, scris de J.M. Mcl., a fost publicat în revista „Un martor și o mărturie” în noiembrie 1963. [Articol original](https://unveiling.org/1963/11/06/grasshopper-men/)."
 legacyUrl: https://mesaje-crestine.ro/2024/11/oamenii-lacusta/
 ---
 *Și noi eram în ochii noștri ca niște lăcuste și tot așa eram și în ochii lor. – Numeri 13:33*

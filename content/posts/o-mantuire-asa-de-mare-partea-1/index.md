@@ -7,6 +7,7 @@ author: ["paris-reidhead"]
 cover: ./cover.jpg
 coverAlt: "O mântuire așa de mare"
 related: []
+source: "Prima parte din mesajul „O mântuire așa de mare” de Paris Reidhead. [Sursa](http://www.parisreidheadbibleteachingministries.org/pdf/great_salvation.pdf)"
 legacyUrl: https://mesaje-crestine.ro/2023/03/o-mantuire-asa-de-mare-partea-1/
 ---
 Vom citi primele două versete din primul capitol al epistolei către Evrei și apoi, fără nicio pauză, primele versete din capitolul al doilea. Vă voi explica de ce. Începând cu cel de-al treilea verset, tot capitolul Îl înalță pe Domnul Isus deasupra îngerilor; Îl prezintă ca fiind mai presus de îngeri în ce privește caracterul și poziția Lui. Recunoaștem și primim acest lucru, dar am vrea să știm de ce este așa. Prin cartea și scriitorul cărții Evrei, Dumnezeu a accentuat această realitate: Cristos este mai presus îngerilor, iar răspunsul îl primim în cel de-al doilea capitol.

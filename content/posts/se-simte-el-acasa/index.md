@@ -8,6 +8,7 @@ author: ["kenneth-s-wuest"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "Articol tradus din cartea „Golden Nuggets from the Greek New Testament” – Kenneth S. Wuest"
 legacyUrl: https://mesaje-crestine.ro/2025/07/se-simte-el-acasa/
 ---
 PAVEL SE ROAGĂ (Efeseni 3:17) ca Cristos să locuiască în inimile sfinților. Cuvântul „locuiască” provine dintr-un termen grecesc compus din două cuvinte, unul însemnând „a trăi într-o casă”, iar celălalt însemnând „jos”. Pavel se roagă ca Domnul nostru să trăiască în inimile noastre ca în casa Lui. El este deja în noi, cu siguranță că Pavel se referă la faptul că El trebuie să se simtă acasă în inimile noastre. Timpul verbului exprimă finalitatea, iar cuvântul „jos” vorbește despre permanență. Traducerea completă ar fi: „Astfel încât Cristos să stabilească, în sfârșit și să se simtă pe deplin acasă în inimile voastre”.

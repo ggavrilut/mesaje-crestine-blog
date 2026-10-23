@@ -7,6 +7,7 @@ author: ["harriet-beecher-stowe"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "[Sursa articolului](https://www.path2prayer.com/famous-christians-their-lives-and-writings-including-free-books/j-hudson-taylor-pioneer-missionary-to-china/harriet-beecher-stowe-how-to-live-on-christ)"
 legacyUrl: https://mesaje-crestine.ro/2024/08/cum-sa-traiesti-in-cristos/
 ---
 Următoarele paragrafe scrise de Harriet Beecher Stowe au format, prima dată, introducerea unei cărți scrise de Christopher Dean și publicate în 1847, intitulate „Religia, așa cum ar trebui să fie: experiența remarcabilă și moartea triumfătoare a lui Ann Thane Peck”. Ann Thane Peck a fost o tânără cu o purtare foarte plăcută, remarcată pentru devotamentul ei față de cauza lui Cristos, pentru pietatea ei personală și pentru experiența remarcabilă prin care a trecut pe patul morții. Ea a murit la vârsta de optsprezece ani, în noiembrie 1842.

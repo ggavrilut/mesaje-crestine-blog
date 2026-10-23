@@ -3,6 +3,14 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** Next work (owner): citations under the articles are imported with their
+  links (`source`); Google Analytics uses Consent Mode v2 "advanced" (gtag loads for everyone,
+  cookieless pings until consent); the agent drafts the privacy page `/confidentialitate/`
+  and the owner reviews it before it goes live; the PWA is refreshed (short name "Mesaje
+  Creștine", the new mark as icon, standalone display) but keeps the old manifest URL
+  `/superpwa-manifest.json`, its identity (`start_url` `/`) and the service-worker URL
+  `/superpwa-sw.js`, so installed users get the update instead of losing the app; the
+  post-writer agent writes the 73 meta descriptions and the owner reviews them as one diff.
 - **2026-10-23** Contact form (owner): the secrets live in `mesaje-crestine-contact.php`,
   which the owner creates in the cPanel home folder, above `public_html`, so they never pass
   through git, FTP or the web folder; the deploy account cannot reach it, by design. SMTP

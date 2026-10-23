@@ -4,7 +4,7 @@ Working memory across sessions. Every agent reads this first, every session. Kee
 resolved item moves to `decisions.md` (the why) or the owning doc (the how) and is deleted
 here, so the file never becomes a history.
 
-_Last updated 2026-10-22_
+_Last updated 2026-10-23_
 
 ## In flight
 
@@ -20,6 +20,27 @@ _Last updated 2026-10-22_
   (`specs/contact-form.md`) built and working on the preview (a real message sent and
   answered, 2026-10-23).
 
+## Next session (2026-10-23)
+
+- **New brand images** (owner replaced the files in `public/`, 2026-10-23): the JSON-LD
+  Organization logo now points at `/logo.svg` (640×160), built and checked; uncommitted. To
+  do, asked by Gabriel, none started: (1) copy `public/mark.svg` over `src/brand/mark.svg`,
+  so `bin/make-brand-images.ts` stops regenerating the old teal "MC" icons over the new ones
+  (don't run the script until then); (2) convert the `<text>` in `public/logo.svg`
+  (Roboto 300, letter-spacing 4.76) to outlines, so it renders the same without the font;
+  (3) run the Rich Results Test and the Schema.org validator on a built page (the preview is
+  password-protected: paste the code). Pending owner answers: delete the unused
+  `public/logo.png`? Use the new logo image in the header in place of the text name?
+- **The PDF of `o-mantuire-asa-de-mare`**: the live post shows "Descarcă articolul în format
+  PDF" (`/wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf`, 300 KB) in
+  its header, above the article, not in the citation; the only post with such a link (all 73
+  live pages scanned, 2026-10-23). Keep it, and where? Owner (`specs/wordpress-import.md`).
+- **Uncommitted**: the changed and new files in `public/`, `src/layouts/Base.astro` and the
+  logo line of `decisions.md` belong to the brand images item above: their own commit.
+- **Then, in order** (`decisions.md`, 2026-10-23 next work): the post-writer pass for the
+  73 descriptions; the analytics spec and build (with the consent banner and a "cookie
+  settings" link); the privacy page draft; the PWA spec and build.
+
 ## Open questions
 
 - **About text** for `/despre-noi/` (`decisions.md`): Gabriel.
@@ -29,10 +50,6 @@ _Last updated 2026-10-22_
 - **Import questions** for the owner and the `seo` agent: `specs/wordpress-import.md`, open
   questions (quote and dailyverse URLs, image URLs, the zip and the PDF,
   the `necunoscut` author).
-- **Citation lines not imported**: live posts show a line such as "Meditație de A.B. Simpson
-  – 30 Iunie 2023" under the text, from a Bricks field outside the post content; the import
-  has none of them (`source` is empty everywhere). Import it into `source`? Owner, then the
-  importer.
 - **Excerpts**: the live lists show WordPress's excerpts, often hand-picked from mid-article;
   the new site shows the first words (40 featured, 24 in lists). Import the hand-picked ones?
   The handoff shows such passages too. Owner.

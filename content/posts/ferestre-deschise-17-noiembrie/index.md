@@ -7,6 +7,7 @@ author: ["t-austin-sparks"]
 cover: ./cover.jpg
 coverAlt: ""
 related: []
+source: "„Daily Open Windows” – T. Austin-Sparks – [17 Noiembrie](https://www.austin-sparks.net/english/openwindows/003447.html)\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur](https://www.lampadaruldeaur.ro/author_taxonomy/austin-sparks-t/)"
 legacyUrl: https://mesaje-crestine.ro/2024/11/ferestre-deschise-17-noiembrie/
 ---
 *Știm că pentru cei care-L iubesc pe Dumnezeu, adică, pentru cei care sunt chemați conform planului Său, toate lucrurile lucrează împreună pentru bine. (Romani 8:28)*

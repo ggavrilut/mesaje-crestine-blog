@@ -55,6 +55,14 @@ None.
 - `sa-intelegem-caile-domnului`: REST content empty; kept the credit line "Editat de Dorina Cheloiu" as text; dropped the template label "Publicat de"
 - `traind-prin-viata-divina`: REST content empty; 2 video(s): LsEsPyP1Fz0, ClCKgXmY4m0
 
+## Citations under the article
+
+61 posts have one, stored as `source`.
+
+## Citation links into the WordPress uploads (they need a home on the new site before cut-over)
+
+None.
+
 ## Author terms without posts (redirected to /authors/)
 
 - `/authors/christian-chen/`

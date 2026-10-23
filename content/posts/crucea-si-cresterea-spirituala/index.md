@@ -5,6 +5,7 @@ description: ""
 date: "2024-05-23T21:31:36+03:00"
 author: ["harry-foster"]
 related: []
+source: "Articolul în limba engleză disponibil [aici](https://www.austin-sparks.net/mags/ttm09-3.html#41).\nPentru alte cărți de acest autor, vizitați [Lampadarul de Aur.](https://www.lampadaruldeaur.ro/author_taxonomy/foster-harry/)"
 legacyUrl: https://mesaje-crestine.ro/2024/05/crucea-si-cresterea-spirituala/
 ---
 *„Creșteți în harul și cunoașterea Domnului și Mântuitorului nostru, Isus Cristos.” 2 Petru 3:18*
