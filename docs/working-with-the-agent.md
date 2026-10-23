@@ -58,7 +58,7 @@ lines and everything else lives one link away in `docs/`.
 
 | Agent | Where | Call it with | It writes |
 |---|---|---|---|
-| developer | `AGENTS.md`, the main session | just talk to it | code, docs, specs; deploys only on your yes |
+| developer | `AGENTS.md`, the main session | just talk to it; it routes SEO, article and deploy work to the agents below and names who it handed it to | code, docs, specs; deploys only on your yes |
 | `seo` | `.claude/agents/seo.md` | "Use the seo agent to audit …" | `docs/seo.md`, specs, `docs/state.md` |
 | `post-writer` | `.claude/agents/post-writer.md` | through `/publish`, or "Use the post-writer agent: …" | `content/posts/`, `content/authors/` |
 | `seo-reviewer` | `.claude/agents/seo-reviewer.md` | through `/publish` | nothing (read-only) |
@@ -70,7 +70,8 @@ typos (fix them in the doc, or say continue), an SEO finding, and always before 
 where it shows the SEO verdict, what changes on the host and the exact command. `/publish`
 with no link deploys code changes only. Then "commit".
 
-The developer may also hand a task to a subagent itself. `/agents` lists them. The input
+You never have to pick an agent: the developer hands each task to the right one, and asks
+when a request could go either way. Calling one by name still works. `/agents` lists them. The input
 format for a post is in `docs/content-model.md`: the text, then `---`, then `Titlu:`,
 `Autor:`, `Imagine:`, `Video:`, `Data:`, `Sursa:`. The post writer never changes your text;
 it reports suspected typos for you to fix in the input.

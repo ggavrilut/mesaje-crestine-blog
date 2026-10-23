@@ -3,6 +3,13 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** The owner talks to one agent: the developer (main session) routes SEO,
+  article and deploy work to `seo`, `post-writer` and `/publish`, naming the agent each time.
+  A separate manager agent, with the developer as a subagent, was rejected (owner): code work
+  would pay a cold start per task, the owner would see summaries instead of the work, and
+  `AGENTS.md` is also the main role in harnesses without these subagents. Supersedes
+  "human-routed" in the 2026-10-22 three-agents entry (`agent/design.md` §4).
+
 - **2026-10-23** Cut-over now, without a last import (nothing new on WordPress) and without a
   full cPanel backup (owner: what matters is already kept, the database stays on the host).
   Supersedes the backup step of `workflow.md` for this cut-over: WordPress's files are moved

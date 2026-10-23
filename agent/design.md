@@ -71,7 +71,8 @@ roles keep each instruction set short and testable in isolation.
 - **Pattern:** two shapes. Publishing is **sequential**: the `/publish` skill runs fixed
   phases (script → `post-writer` → `publisher` prepare → `seo-reviewer` → owner's yes →
   `publisher` upload), one specialist per phase (owner, 2026-10-22). Everything else is
-  handoff, human-routed: the owner calls an agent, the developer may delegate. Subagents
+  handoff, routed by the developer: the owner talks only to it, and it hands SEO, article and
+  deploy work to the owning agent, naming it (owner, 2026-10-23; evals S11–S14). Subagents
   cannot launch subagents or stop to ask, so the main session runs every phase and every
   stop.
 - **Deterministic first:** fetching the doc is a script, not an agent, because it guards the
