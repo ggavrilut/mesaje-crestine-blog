@@ -86,7 +86,11 @@ A rule enters here with its source. Advice without one is a candidate in `state.
 - Post with a video: `VideoObject` with `name`, `description`, `thumbnailUrl`, `uploadDate`,
   `embedUrl`. (G-video)
 - Every template is validated with the Rich Results Test and the Schema.org validator before
-  its first deploy. (G-article)
+  its first deploy. (G-article) Last run 2026-10-23, after the logo became `logo.svg`: post,
+  author and home pages valid, no errors. Expected: a coverless post's "Missing field
+  image (optional)", since the default card stays out of its JSON-LD (`decisions.md`, site
+  images); and on home the Rich Results Test reports "No items detected", because it does not
+  report `Organization` or `WebSite` (the Schema.org validator reads them).
 
 ### Social cards
 - `og:title`, `og:description`, `og:url` (= canonical), `og:image` 1200×630 with
