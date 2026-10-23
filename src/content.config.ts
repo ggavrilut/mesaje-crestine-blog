@@ -28,6 +28,7 @@ const posts = defineCollection({
         coverAlt: z.string().default(''),
         video: z.url().refine((u) => youtubeId(u), 'a YouTube link').optional(),
         source: z.string().optional(),
+        pdf: z.string().regex(/^\.\/[a-z0-9]+(-[a-z0-9]+)*\.pdf$/, './<lowercase-name>.pdf, in the post folder').optional(),
         sourceDoc: z.url().optional(),
         related: z.array(reference('posts')).max(4).default([]),
         legacyUrl: z.url().optional(),

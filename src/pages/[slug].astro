@@ -3,7 +3,7 @@ import { getImage, Picture } from 'astro:assets';
 import { render } from 'astro:content';
 import Base from '../layouts/Base.astro';
 import AuthorPortrait from '../components/AuthorPortrait.astro';
-import { SITE_URL, absolute, authorPath, authorsOf, getAuthors, getPosts, neighbours, pageTitle, postPath, relatedPosts, type Post } from '../lib/site.ts';
+import { SITE_URL, absolute, authorPath, authorsOf, getAuthors, getPosts, neighbours, pageTitle, pdfPath, postPath, relatedPosts, type Post } from '../lib/site.ts';
 import { displayDate, isoBucharest } from '../lib/dates.ts';
 import { facadeHtml, youtubeId } from '../lib/youtube.ts';
 import { citationHtml } from '../lib/citation.ts';
@@ -20,6 +20,7 @@ const { Content } = await render(post);
 const published = isoBucharest(data.date);
 const modified = isoBucharest(data.updated ?? data.date);
 const path = postPath(post);
+const pdf = pdfPath(post);
 const related = relatedPosts(post, all);
 const { older } = neighbours(post, all);
 const shareUrl = encodeURIComponent(absolute(path));
@@ -71,6 +72,7 @@ const graph = [
         <a href={`https://api.whatsapp.com/send?text=${shareUrl}`} rel="noopener">WhatsApp</a>
         <button type="button" data-copy-link={absolute(path)} hidden>Copiază link</button>
       </p>
+      {pdf && <p class="download"><a href={pdf} type="application/pdf">Descarcă articolul în format PDF</a></p>}
     </header>
     {data.cover && (
       <figure class="hero-image">

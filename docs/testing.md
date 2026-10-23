@@ -12,7 +12,7 @@ How to test, the fast check, and the known-broken tests. Read before claiming an
 | Article text against its origin | `npm run verify-text` (all posts) or `npm run verify-text -- <slug>`: each `source.txt` against its Google Doc (byte for byte) or, until cut-over, its live WordPress page (word for word); `0 differ, 0 could not be checked` | before every deploy; after an import or a post update from its doc |
 | Types | `npm run check` | before every commit touching `src/` or `bin/*.ts` |
 | Build and text integrity | `npm run build`: fails when a post's rendered text differs from its `source.txt` (`content-model.md`, the check) | before every commit and deploy |
-| Redirects | `npm run check-redirects` after a build: every old URL is one 301 to a 200, a 200, or a deliberate 410 | after touching redirects, slugs or the import; before cut-over |
+| Redirects | `npm run check-redirects` after a build: every old URL (the sitemap's, and each redirect in `import/redirects.tsv`) is one 301 to a 200, a 200, or a deliberate 410 | after touching redirects, slugs or the import; before cut-over |
 | Importer | `npm run import` twice, hashing `content/` and `import/` after each run: identical; the report says `problems 0, text differences 0` (each citation word for word against its elements, and in one piece in the page's text) | after changing `bin/import-wp.ts` or `bin/lib/` |
 
 The article-text checks were tested 2026-10-23 on `acum-alege-deuteronom-3019`: one word

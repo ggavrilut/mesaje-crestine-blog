@@ -59,6 +59,7 @@ content/
   posts/<slug>/meta.txt     the metadata block (from a Google Doc)
   posts/<slug>/source.md    the doc's Markdown export: formatting reference only
   posts/<slug>/cover.jpg    the cover image (any web format)
+  posts/<slug>/<name>.pdf   optional: the article as a PDF (`pdf`)
   authors/<slug>.md         one per author: front matter + optional bio
 ```
 
@@ -77,6 +78,7 @@ content/
 | `coverAlt` | yes | post writer | describes the image, in Romanian |
 | `video` | no | input | YouTube URL, shown after the text. A video placed inside the text is a line holding only `https://www.youtube.com/watch?v=<id>`: it renders as the video, and the text check skips it |
 | `source` | no | input | citation shown under the article, the author's or translator's words, never edited: plain text, Markdown links (link text in square brackets, then the address in parentheses), line breaks, a blank line between paragraphs (`src/lib/citation.ts`). Imported from the page for imported posts |
+| `pdf` | no | input | `./<name>.pdf`, lowercase ASCII with hyphens, in the post folder: the article as a PDF, linked under the title ("Descarcă articolul în format PDF") and served at `/<slug>/<name>.pdf` (`src/pages/[slug]/[pdf].ts`). Imported from the link above the article; its old URL gets a 301 in `import/redirects.tsv` |
 | `sourceDoc` | no | post writer | the Google Doc link, when the input came from one |
 | `related` | yes | post writer | 2–4 slugs: same author first, then same topic (no categories, `decisions.md`) |
 | `legacyUrl` | imported posts | importer | the WordPress URL; generates its 301 |

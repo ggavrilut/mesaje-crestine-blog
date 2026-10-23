@@ -139,6 +139,26 @@ function bricksBody(page: cheerio.CheerioAPI): Body {
   return { $, nodes: $.root().contents().toArray(), notes, videos };
 }
 
+/**
+ * The text elements above the article (between the post meta and the post content). Only one
+ * kind is known: a link to the article as a PDF (o-mantuire-asa-de-mare), returned as its URL;
+ * anything else is returned as text, for the report.
+ */
+function aboveArticle(page: cheerio.CheerioAPI): { pdf?: string; unknown: string[] } {
+  const out: { pdf?: string; unknown: string[] } = { unknown: [] };
+  let before = true;
+  page('main .bricks-element-post-content, main .bricks-element-text').each((_, el) => {
+    const $el = page(el);
+    if ($el.hasClass('bricks-element-post-content')) { before = false; return; }
+    if (!before || !$el.text().trim()) return;
+    const links = $el.find('a[href]');
+    const href = links.attr('href') ?? '';
+    if (links.length === 1 && /\/wp-content\/uploads\/.+\.pdf$/i.test(href) && links.text().trim() === $el.text().trim()) out.pdf = href;
+    else out.unknown.push($el.text().trim().replace(/\s+/g, ' ').slice(0, 80));
+  });
+  return out;
+}
+
 async function main() {
   const [posts, media, terms, pages] = await Promise.all([
     all<WpPost>('posts'), all<WpMedia>('media'), all<WpTerm>('author_taxonomy'), all<WpPost>('pages'),
@@ -169,6 +189,7 @@ async function main() {
   const bricksNotes: string[] = [];
   const citations: string[] = [];
   const citationUploads: string[] = [];
+  const pdfRedirects: string[] = [];
 
   await pool(published.map((p, i) => [p, i] as const), 4, async ([p, i]) => {
     const dir = `${ROOT}content/posts/${p.slug}`;
@@ -206,6 +227,19 @@ async function main() {
       if (citationDiff) diffs.push(`- \`${p.slug}\` citation, word ${citationDiff.index}: live "${citationDiff.expected}" / imported "${citationDiff.actual}"`);
       if (!citationOnPage(page, citationText(citation))) diffs.push(`- \`${p.slug}\` citation: not found in one piece on the page`);
       for (const m of citation.matchAll(/\]\((https?:\/\/(?:www\.)?mesaje-crestine\.ro\/wp-content\/[^)]+)\)/g)) citationUploads.push(`- \`${p.slug}\`: ${path(m[1])}`);
+    }
+
+    // A PDF of the article linked above it: kept in the post folder as `pdf`, its old URL redirected.
+    const above = bricks ? { unknown: [] } : aboveArticle(page);
+    for (const text of above.unknown) problems.push(`- \`${p.slug}\`: unknown element above the article, not imported: "${text}"`);
+    let pdf = '';
+    if (above.pdf) {
+      const name = path(above.pdf).split('/').pop()!.toLowerCase();
+      pdf = `./${name}`;
+      await writeFile(`${dir}/${name}`, new Uint8Array(await (await get(above.pdf)).arrayBuffer()));
+      pdfRedirects.push(`${path(above.pdf)}\t/${p.slug}/${name}`);
+      const m = media.find((x) => x.source_url === above.pdf);
+      if (m) usedMedia.add(m.id);
     }
 
     // What the post writer added since the last import survives a new import.
@@ -247,6 +281,7 @@ async function main() {
       ...(cover ? [`cover: ${cover}`, `coverAlt: ${yaml(m!.alt_text.trim())}`] : []),
       keep('related', '[]') ?? `related: []`,
       ...(citation ? [`source: ${yaml(citation)}`] : []),
+      ...(pdf ? [`pdf: ${pdf}`] : []),
       `legacyUrl: ${p.link}`,
       ...(authors.length ? [] : ['draft: true']),
       '---',
@@ -277,10 +312,10 @@ async function main() {
   }
 
   // Redirects that are not posts (those come from each post's legacyUrl at build).
-  const redirects = terms
-    .filter((t) => !usedAuthors.has(t.slug))
-    .map((t) => `/authors/${t.slug}/\t/authors/`)
-    .sort();
+  const redirects = [
+    ...terms.filter((t) => !usedAuthors.has(t.slug)).map((t) => `/authors/${t.slug}/\t/authors/`),
+    ...pdfRedirects,
+  ].sort();
   await mkdir(`${ROOT}import`, { recursive: true });
   await writeFile(`${ROOT}import/redirects.tsv`, '# old path<TAB>new path, written by bin/import-wp.ts\n' + redirects.join('\n') + '\n');
   await writeFile(`${ROOT}import/legacy-urls.txt`, legacy.join('\n') + '\n');

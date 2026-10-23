@@ -70,8 +70,8 @@ author terms without posts). Post redirects come from each post's `legacyUrl` at
 ## Open questions
 
 - The zip `fragmente-lda.zip` is attached to `cum-sa-traiesti-in-cristos`, but no imported
-  text links it; the PDF `O-mantuire-asa-de-mare-Paris-Reidhead.pdf` is attached to nothing.
-  Keep, link or drop? Owner.
+  text links it. Keep, link or drop? Owner. (The PDF of `o-mantuire-asa-de-mare` is kept as
+  its `pdf`, `decisions.md` 2026-10-23.)
 - The `quote` (3) and `dailyverse` (5) posts and their archives are in the old sitemap but
   not in the REST API. A page, a 301 to a related post, or a 410? `seo` agent, then owner.
 - The 41 image URLs under `/wp-content/uploads/` in the old sitemap: 301 to the post that

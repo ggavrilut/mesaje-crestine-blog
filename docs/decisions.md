@@ -3,6 +3,9 @@
 Why a question was settled the way it was. Newest first, append only; a reversal is a new
 entry that names the one it supersedes. Read before reopening a settled question.
 
+- **2026-10-23** The PDF of `o-mantuire-asa-de-mare` (owner): kept, linked under the title as
+  on WordPress, where it sat above the article. It lives in the post folder as the post's
+  `pdf`, so any post can have one, and its old `/wp-content/uploads/` URL gets a 301.
 - **2026-10-23** Next work (owner): citations under the articles are imported with their
   links (`source`); Google Analytics uses Consent Mode v2 "advanced" (gtag loads for everyone,
   cookieless pings until consent); the agent drafts the privacy page `/confidentialitate/`

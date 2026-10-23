@@ -21,6 +21,8 @@ export type Author = CollectionEntry<'authors'>;
 
 export const absolute = (path: string) => new URL(path, SITE_URL).href;
 export const postPath = (post: Post) => `/${post.id}/`;
+/** The post's PDF, served next to its page by src/pages/[slug]/[pdf].ts. */
+export const pdfPath = (post: Post) => post.data.pdf && `/${post.id}/${post.data.pdf.slice(2)}`;
 export const authorPath = (author: Author) => `/authors/${author.id}/`;
 
 /** `{title} | Mesaje Creștine`, or without the brand (or the `seoTitle`) past about 60 characters (docs/seo.md). */

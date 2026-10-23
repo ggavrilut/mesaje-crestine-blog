@@ -8,6 +8,7 @@ cover: ./cover.jpg
 coverAlt: ""
 related: []
 source: "Sursa [articolului](https://www.youtube.com/watch?v=7lKFOoge3AM)"
+pdf: ./o-mantuire-asa-de-mare-paris-reidhead.pdf
 legacyUrl: https://mesaje-crestine.ro/2025/02/o-mantuire-asa-de-mare/
 ---
 <em>După ce în vechime le‑a vorbit părinților noștri prin profeți în multe rânduri și în multe feluri, la </em>

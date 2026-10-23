@@ -31,10 +31,6 @@ _Last updated 2026-10-23_
   (3) run the Rich Results Test and the Schema.org validator on a built page (the preview is
   password-protected: paste the code). Pending owner answers: delete the unused
   `public/logo.png`? Use the new logo image in the header in place of the text name?
-- **The PDF of `o-mantuire-asa-de-mare`**: the live post shows "Descarcă articolul în format
-  PDF" (`/wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf`, 300 KB) in
-  its header, above the article, not in the citation; the only post with such a link (all 73
-  live pages scanned, 2026-10-23). Keep it, and where? Owner (`specs/wordpress-import.md`).
 - **Uncommitted**: the changed and new files in `public/`, `src/layouts/Base.astro` and the
   logo line of `decisions.md` belong to the brand images item above: their own commit.
 - **Then, in order** (`decisions.md`, 2026-10-23 next work): the post-writer pass for the

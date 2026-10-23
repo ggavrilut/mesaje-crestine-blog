@@ -21,7 +21,7 @@ agreed design; each piece is marked as it lands.
 - **Redirects**: `.htaccess` generated at build from each post's `legacyUrl`, the importer's
   `import/redirects.tsv` and the hand-written `src/redirects/static.htaccess` (`seo.md`, the
   move). Apache on the host executes it. Built: `src/pages/htaccess.txt.ts`, checked by
-  `bin/check-redirects.ts`.
+  `bin/check-redirects.ts` (the sitemap's old URLs and every importer redirect).
 - **Contact form**: the one piece of server code, a small PHP handler on the cPanel host. It
   verifies the Turnstile token server-side, then sends through SMTP from
   `contact@mesaje-crestine.ro` to the owner's Gmail, with `Reply-To` set to the visitor, so

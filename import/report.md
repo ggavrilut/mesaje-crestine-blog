@@ -71,6 +71,7 @@ None.
 - `/authors/j-wilbur-chapman/`
 - `/authors/john-saunders/`
 - `/authors/victor-matthews/`
+- `/wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf`
 
 ## Author descriptions not imported (bios are owner-supplied)
 
@@ -78,7 +79,6 @@ None.
 
 ## Media not used as a cover or portrait
 
-- 1010 application/pdf /wp-content/uploads/2025/02/O-mantuire-asa-de-mare-Paris-Reidhead.pdf (attached to nothing)
 - 108 image/jpeg /wp-content/uploads/2021/10/JohnWilburChapman.jpg (attached to nothing)
 - 109 image/jpeg /wp-content/uploads/2021/10/TaylorH.jpg (attached to nothing)
 - 110 image/jpeg /wp-content/uploads/2021/10/George_Muller.jpg (attached to nothing)

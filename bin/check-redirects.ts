@@ -62,15 +62,19 @@ function check(path: string): [Outcome, string] {
 }
 
 const legacy = readFileSync(`${ROOT}import/legacy-urls.txt`, 'utf8').split('\n').filter(Boolean);
-const paths = [...new Set([...legacy.map((u) => new URL(u).pathname), ...PATTERNS])];
+// The importer's redirects cover old URLs outside the sitemap too (the PDF of o-mantuire-asa-de-mare).
+const imported = readFileSync(`${ROOT}import/redirects.tsv`, 'utf8').split('\n').filter((l) => l && !l.startsWith('#')).map((l) => l.split('\t')[0]);
+const paths = [...new Set([...legacy.map((u) => new URL(u).pathname), ...PATTERNS, ...imported])];
 const results = { ok: [] as string[], gone: [] as string[], fail: [] as string[] };
 for (const path of paths) {
   const [outcome, detail] = check(path);
   results[outcome].push(`${path}  ${detail}`);
 }
 
-const media = results.fail.filter((l) => l.startsWith('/wp-content/'));
-const other = results.fail.filter((l) => !l.startsWith('/wp-content/'));
+// The sitemap's image URLs wait for a rule (specs/wordpress-import.md): counted, not listed.
+const isImage = (l: string) => l.startsWith('/wp-content/') && !imported.includes(l.split('  ')[0]);
+const media = results.fail.filter(isImage);
+const other = results.fail.filter((l) => !isImage(l));
 console.log(`${paths.length} old URLs: ${results.ok.length} ok, ${results.gone.length} gone (410), ${results.fail.length} failing`);
 if (process.argv.includes('--verbose')) [...results.ok, ...results.gone].forEach((l) => console.log(`ok    ${l}`));
 other.forEach((l) => console.log(`FAIL  ${l}`));

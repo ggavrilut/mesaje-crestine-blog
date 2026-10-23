@@ -130,6 +130,7 @@ img { max-width: 100%; }
 .share a, .share button { color: var(--slate); }
 .share a:hover, .share button:hover { color: var(--teal-hover); }
 .share button { padding: 0; border: 0; background: none; font: inherit; cursor: pointer; }
+.download { font-size: 14px; font-weight: 400; }
 .hero-image { margin: 0; }
 .hero-image img { display: block; width: 100%; height: auto; aspect-ratio: 21 / 8; object-fit: cover; }
 
