@@ -83,6 +83,56 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
   against the preview folder holding a copy of WordPress's file names (empty files), so the
   move, the `.htaccess` swap and the rollback are proven on the real server first.
 
+## Search Console on the day (owner; steps by the `seo` agent, 2026-10-23)
+
+Menu names as in Google's help; **Indexing > Pages** is the "Page indexing" report, and
+**Crawl stats** may sit under **Settings**. Sources: Google's site-move, Sitemaps, URL
+Inspection, recrawl, Page indexing and Crawl stats help pages.
+
+**Before the switch (2 min).** **Performance > Search results**, last 3 months, **Export**
+(the baseline); note the 5 pages with most clicks (**Pages** tab).
+
+**1. Property and sitemaps** (after `check-redirects --live` shows 0 failing)
+1. Property type: `mesaje-crestine.ro` (Domain) or `https://mesaje-crestine.ro/` (URL prefix).
+   **Settings > Ownership verification** must show the DNS method (**Domain name provider**);
+   methods that relied on WordPress (an HTML tag, a file) stop working, harmless while DNS
+   stays. Never delete the TXT record.
+2. **Indexing > Sitemaps**: add `https://mesaje-crestine.ro/sitemap-index.xml` (URL-prefix
+   property: `sitemap-index.xml`), **Submit**; expect Success, Sitemap index, about 100 pages.
+3. Remove every old entry (`/sitemap.xml`, `*-sitemap.xml`, `/sitemap.rss`, …): row, **⋮**,
+   **Remove sitemap**. They now redirect and submitted sitemaps do not follow redirects;
+   removing does not make Google forget the URLs.
+
+**2. URL Inspection** (search bar at the top; then **Test live URL**, which follows the 301)
+
+| Old URL | Must 301 to |
+|---|---|
+| `/2021/10/partasia/` | `/partasia/` |
+| `/wp-content/uploads/2021/10/IMG_7324.jpg` | `/sa-intelegem-caile-domnului/` |
+| `/quote/105/` | `/un-slujitor-al-lui-dumnezeu-are-un-singur-stapan/` |
+| `/category/uncategorized/` | `/blog/` |
+| `/feed/` | `/rss.xml` (a feed: "not indexable" is expected) |
+
+The indexed copy still shows the old page on day one: normal. **Request indexing** only on new
+URLs: `/`, `/blog/`, `/partasia/`, the quote above, `/sa-intelegem-caile-domnului/`, then the
+new URLs of the top 5 pages; stop at the daily limit (Google gives no number). Never on old
+URLs or the feed. A 404, redirect or server error: stop, tell the developer
+(`npm run deploy -- live --rollback`).
+
+**3. Four weeks, Mondays (5 min)**
+- **Sitemaps**: still Success. **Pages**, filtered to the sitemap: Indexed rising towards
+  about 100. Normal: "Page with redirect" growing; 404/410 for `/wp-content/…`, `/template/`,
+  `/sample-page/`, `/despre-noi/`; "Excluded by noindex" for the authors under two posts and
+  `/offline/`. A problem: a new-sitemap URL with a redirect, 5xx, soft 404 or noindex error, or
+  an old post URL as 404.
+- **Crawl stats**: a rise in 301s is normal; a host-status warning or lasting 5xx is not.
+- **Performance**, the 28 days after against the 28 before, by page: a dip in weeks 1–2 is
+  normal ("may fluctuate temporarily"); clicks down by more than about a third at week 4, or a
+  top page whose new URL never appears, is a problem (judgement, not Google's figure).
+
+**Do not**: use Change of address (only for a new domain); use Removals on old URLs or `nou.`;
+create a new property; remove the 301s; click Validate Fix on expected 404s.
+
 ## Open questions
 
 Answered 2026-10-23 (owner): now; the owner runs Search Console himself, from steps the `seo`

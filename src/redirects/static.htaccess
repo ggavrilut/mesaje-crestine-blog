@@ -17,6 +17,7 @@ RedirectMatch 301 ^/.+/feed/?$ https://mesaje-crestine.ro/rss.xml
 RedirectMatch 301 ^/sitemap\.rss$ https://mesaje-crestine.ro/rss.xml
 RedirectMatch 301 ^/sitemap\.xml$ https://mesaje-crestine.ro/sitemap-index.xml
 RedirectMatch 301 ^/[a-z_-]+-sitemap\.xml$ https://mesaje-crestine.ro/sitemap-index.xml
+RedirectMatch 301 ^/(?:sitemap_index|wp-sitemap)\.xml$ https://mesaje-crestine.ro/sitemap-index.xml
 
 # Placeholders with no equivalent: gone (docs/seo.md, content quality signals)
 RedirectMatch 410 ^/sample-page/?$

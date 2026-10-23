@@ -14,6 +14,7 @@ const PATTERNS = [
   '/feed/', '/2021/10/partasia/feed/', '/sitemap.xml', '/post-sitemap.xml', '/sitemap.rss',
   '/2021/', '/2021/10/', '/2021/10/page/2/', '/page/2/', '/blog/page/2/', '/acasa-2/',
   '/category/uncategorized/', '/tag/rugaciune/', '/author/coroiu-liviu/', '/authors/paris-reidhead/page/2/',
+  '/sitemap_index.xml', '/wp-sitemap.xml',
   '/2021/10/partasia',
 ];
 
