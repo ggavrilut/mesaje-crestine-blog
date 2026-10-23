@@ -1,6 +1,6 @@
 # Deploy
 
-Status: building · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
+Status: built · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
 
 ## Goal
 
@@ -43,6 +43,11 @@ cut-over procedure.
 - Dependency: `basic-ftp` (dev), FTPS with TLS (owner, 2026-10-23).
 
 ## Results
+
+2026-10-23: the preview did its job and was removed at the cut-over with `nou/` and its
+subdomain; the script now deploys `live` (`specs/cutover.md`), and `preview` would fail its 401
+check. The live deploys after the switch are normal plans, as the preview's were.
+
 
 2026-10-23, first preview deploy: the dry run gave plan `6e6f11617ea5` (commit `3ed51db`,
 1,046 files, 118.5 MB, nothing to delete); a wrong plan ID was refused before any upload; the

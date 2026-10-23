@@ -4,9 +4,8 @@ How work flows from request to the live site. Read before any deploy.
 
 **Irreversible steps, before the steps:** every FTP upload to the host (it replaces the live
 site), the cut-over from WordPress, and anything submitted to Search Console or Bing. Each
-needs a yes in the session that runs it. **The cut-over deletes WordPress: a full cPanel
-backup (files and database) is downloaded and opened on the owner's machine before anything
-is deleted.**
+needs a yes in the session that runs it. The cut-over was done on 2026-10-23
+(`specs/cutover.md`); deleting `_wordpress/` is its last step, with its own yes.
 
 | Step | How | Who approves |
 |---|---|---|
@@ -16,7 +15,7 @@ is deleted.**
 | New post | `/publish <Google Doc link>`: the phases below | Gabriel, at the stops |
 | Verify | `bin/check`, then the checks in `testing.md` | |
 | Commit | `conventions.md` | when asked |
-| Preview | `npm run deploy -- preview`: plan, then upload with the plan ID (`specs/deploy.md`); WordPress stays live | Gabriel, for each plan |
+| Live deploy | `npm run deploy -- live`: plan, then upload with the plan ID, from `main` (`specs/deploy.md`); the preview was removed at the cut-over | Gabriel, for each plan |
 | Deploy | `/publish` (no link for a code-only deploy: phases 3–7) | Gabriel, every time |
 
 ## Publishing: one specialist per phase

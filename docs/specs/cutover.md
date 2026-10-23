@@ -1,6 +1,6 @@
 # Cut-over
 
-Status: draft · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
+Status: built · Owner: Gabriel Gavrilut · Last updated: 2026-10-23
 
 ## Goal
 
@@ -30,20 +30,20 @@ and the host's block denying `xmlrpc.php` (added 2026-10-08); nothing else.
 Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
 
 **Before, nothing on the server changes**
-- [ ] No last import: nothing new on WordPress (owner, 2026-10-23). From here the owner edits
+- [x] No last import: nothing new on WordPress (owner, 2026-10-23). From here the owner edits
   nothing in WordPress.
-- [ ] `import-wordpress` is merged into `main`; the build, `bin/check`, `verify-text` (all
+- [x] `import-wordpress` is merged into `main`; the build, `bin/check`, `verify-text` (all
   posts) and `check-redirects` pass on `main`.
-- [ ] No full backup (owner, 2026-10-23: what matters is already kept; the database stays on
+- [x] No full backup (owner, 2026-10-23: what matters is already kept; the database stays on
   the host). WordPress's files are moved, not deleted, so the rollback stays possible until
   `_wordpress/` is deleted.
 
 **The switch: `npm run deploy -- live`**
-- [ ] Without `--yes` it prints the plan and changes nothing: the files to upload; the
+- [x] Without `--yes` it prints the plan and changes nothing: the files to upload; the
   composed `.htaccess` (the generated rules); the WordPress items it will move, listed from
   the server by name (everything except `.well-known/`, `.ftpquota`, `error_log`, `nou/`);
   the commit and a plan ID. It refuses unless the tree is clean and on `main`.
-- [ ] With `--yes <plan ID>`, in this order, so readers never meet a gap:
+- [x] With `--yes <plan ID>`, in this order, so readers never meet a gap:
   1. uploads every file except `.htaccess`, next to WordPress (no name collides; WordPress
      still answers its own URLs);
   2. saves the live `.htaccess` as `_wordpress/htaccess.wordpress`, then uploads the new
@@ -52,19 +52,19 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
      denying all web access; nothing is deleted;
   4. writes `.deploy-manifest.json` (as the preview does) and fetches `/`, a post, an old
      post URL and `/superpwa-sw.js`, failing loudly on any surprise.
-- [ ] `npm run deploy -- live --rollback` (its own plan and yes) undoes the switch: moves
+- [x] `npm run deploy -- live --rollback` (its own plan and yes) undoes the switch: moves
   WordPress back from `_wordpress/`, restores its `.htaccess`, deletes only the files the
   manifest lists.
 
 **After**
-- [ ] `npm run check-redirects -- --live` requests every old URL from the live site: one
+- [x] `npm run check-redirects -- --live` requests every old URL from the live site: one
   301 to a 200, a 200, or a 410; 0 failing.
 - [ ] Owner checks: a message through the contact form arrives; GA4 Realtime shows a visit
   after Accept; the installed app on his phone shows the new site; the privacy page and the
   banner are there.
 - [ ] Search Console (owner, or the `seo` agent with his yes): `/sitemap-index.xml`
   submitted; five old URLs inspected (a post, an image, a quote, a category, `/feed/`).
-- [ ] The preview goes: `nou/` deleted over FTP (its own yes); the owner removes the
+- [x] The preview goes: `nou/` deleted over FTP (its own yes); the owner removes the
   subdomain and its Directory Privacy in cPanel.
 - [ ] Two weeks later, with no open problem: `_wordpress/` deleted (its own yes). The
   database and the downloaded backup stay.
@@ -82,6 +82,14 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
 - **Test before the real switch**: the whole sequence, plan, `--yes` and `--rollback`, run
   against the preview folder holding a copy of WordPress's file names (empty files), so the
   move, the `.htaccess` swap and the rollback are proven on the real server first.
+
+## Results
+
+2026-10-23, the switch (plan `cce8d5ea9789`, commit `89093c5`): 1,094 files in 265 s, the
+script's own checks passed; `check-redirects --live`: 228 old URLs, 228 as expected.
+`_wordpress/` holds the 21 WordPress items and answers 403. Found after: `/.deploy-manifest.json`
+answered 200, now denied (`a8311ae`, plan `cc5971d85227`). `nou/` deleted over FTP; the owner
+removed the subdomain. `main` pushed.
 
 ## Rehearsal (2026-10-23, on the preview folder)
 
@@ -152,7 +160,8 @@ agent prepares.
 
 ## Done when
 
-- [ ] every Behaviour line passes, the rehearsal on the preview included
+- [ ] every Behaviour line passes, the rehearsal on the preview included (left: the owner's
+  checks, Search Console, deleting `_wordpress/`)
 - [ ] `docs/` updated (`workflow.md` cut-over row, `architecture.md` host, `deploy.md`,
   `state.md` cleared of the cut-over)
 - [ ] Status set to built

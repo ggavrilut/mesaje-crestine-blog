@@ -8,31 +8,22 @@ _Last updated 2026-10-23_
 
 ## In flight
 
-- Branch `import-wordpress` (2026-10-22): Astro scaffolded, importer built and run (73 posts,
-  26 authors, zero text differences), redirects generated and checked. Not committed yet.
-  Remaining for `specs/wordpress-import.md`: its open questions, the `despre-noi` and
-  `contact` pages, the post writer's pass (descriptions, cover alt text, related) after the
-  last import. Not yet built: search, the
-  deploy script. The visual design (`specs/visual-design.md`, from the owner's handoff in
-  `design/`) is built for home and article pages, checked at 1440 and 390 px; the footer's
-  contact form waits for its spec. Preview deploy (`specs/deploy.md`) built 2026-10-23, to
-  password-protected `nou.mesaje-crestine.ro`; latest upload 2026-10-23, commit `a7cde17` (plan `c7a0cfb89f10`, 127 files), reviewed by Gabriel: all good. Contact form
-  (`specs/contact-form.md`) built and working on the preview (a real message sent and
-  answered, 2026-10-23).
-
-## Next session (2026-10-23)
-
-- **Analytics and the privacy page**: built, tested locally and owner-approved 2026-10-23
-  (`specs/analytics.md`, results). They go live with the new site at cut-over (gtag.js loads
-  only on `mesaje-crestine.ro`, so the preview sends nothing); then a check in GA4 Realtime.
-- **Cut-over** (owner asked 2026-10-23 "when can it go live?"). Blocking: (1) done
-  2026-10-23: every old URL has a rule (`check-redirects` 0 failing); (2) done 2026-10-23: the PWA
-  (`specs/pwa.md`, built, tested locally, texts approved) ships at
-  cut-over, replacing the SuperPWA worker that caches same-site files forever; (3) the cut-over procedure
-  (`specs/cutover.md`, drafted 2026-10-23, for the owner's review; then the build and a
-  rehearsal on the preview); (4) merge `import-wordpress` into
-  `main`. Not blocking: `coverAlt` and `related` (the rest of the post writer's pass),
-  typos, excerpts, Bing, search.
+- **Live since 2026-10-23** (`specs/cutover.md`): mesaje-crestine.ro serves the new site from
+  `main` (commit `a8311ae`); every old URL answers as planned (`check-redirects --live`, 228,
+  0 not as expected). WordPress's files are closed in `public_html/_wordpress/`; its database
+  stays on the host. The preview `nou/` and its subdomain are gone.
+- **Owner's checks after the switch**, not yet reported: a contact-form message arrives; GA4
+  Realtime shows a visit after Accept; the installed app shows the new site; Search Console
+  done from the steps in `specs/cutover.md` (sitemap submitted, old sitemaps removed, five old
+  URLs inspected), then the weekly check for four weeks.
+- **Delete `_wordpress/` on or after 2026-11-06** if nothing is open: its own plan and yes.
+  Until then `npm run deploy -- live --rollback` puts WordPress back.
+- **`/publish` and the publisher agent** still say the deploy script is not built: connect
+  them to `npm run deploy -- live` (`specs/publish-pipeline.md`; an agent change, so
+  `agent/design.md` and the evals first).
+- Not blocking, from before: the post writer's `coverAlt` and `related` for the imported
+  posts and the three quotes' descriptions; search; Bing Webmaster Tools (the `seo` agent
+  proposes it now).
 
 ## Open questions
 

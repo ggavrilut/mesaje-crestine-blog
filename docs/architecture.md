@@ -54,8 +54,10 @@ agreed design; each piece is marked as it lands.
   named on the page, and an unsubscribe link in every email.
 - **WordPress importer**: a one-off script reading the live site's public REST API and pages,
   writing `content/` and `import/`. Built: `bin/import-wp.ts`. Spec: `specs/wordpress-import.md`.
-- **Host**: cPanel shared hosting, Apache, reached by FTPS. Receives `dist/`. WordPress lives
-  in the same account until cut-over, when it is backed up and removed (`workflow.md`).
+- **Host**: cPanel shared hosting, Apache, reached by FTPS. `public_html` receives `dist/`
+  (`npm run deploy -- live`). Since the cut-over (2026-10-23) WordPress's files sit closed in
+  `public_html/_wordpress/` until deleted; its database stays on the host
+  (`specs/cutover.md`). HTTP and `www` are redirected by the host, not by `.htaccess`.
 
 ## Main flows
 
