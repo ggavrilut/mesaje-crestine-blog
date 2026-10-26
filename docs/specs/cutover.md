@@ -59,11 +59,15 @@ Each step needs the owner's yes in the session that runs it (`hard-rules.md`).
 **After**
 - [x] `npm run check-redirects -- --live` requests every old URL from the live site: one
   301 to a 200, a 200, or a 410; 0 failing.
-- [ ] Owner checks: a message through the contact form arrives (done); GA4 Realtime shows a
-  visit after Accept (done); the installed app on his phone shows the new site; the privacy page and the
-  banner are there.
+- [x] Owner checks: a message through the contact form arrives (done); GA4 Realtime shows a
+  visit after Accept (done); the privacy page and the banner are there (developer, 2026-10-26:
+  `/confidentialitate/` 200, banner on a first visit, no `_ga` cookie before a choice). The
+  installed app: not tested, the owner has no installed device; the live `/superpwa-sw.js` is
+  the new worker and `/superpwa-manifest.json` answers 200, so installed apps update on their
+  next two opens.
 - [x] Search Console (owner, 2026-10-23): `/sitemap-index.xml`
-  submitted; five old URLs inspected (a post, an image, a quote, a category, `/feed/`).
+  submitted; five old URLs inspected (a post, an image, a quote, a category, `/feed/`);
+  2026-10-26 baseline exported and the top 5 pages' new URLs sent for indexing.
 - [x] The preview goes: `nou/` deleted over FTP (its own yes); the owner removes the
   subdomain and its Directory Privacy in cPanel.
 - [ ] Two weeks later, with no open problem: `_wordpress/` deleted (its own yes). The
@@ -145,7 +149,9 @@ URLs or the feed. A 404, redirect or server error: stop, tell the developer
 - **Crawl stats**: a rise in 301s is normal; a host-status warning or lasting 5xx is not.
 - **Performance**, the 28 days after against the 28 before, by page: a dip in weeks 1–2 is
   normal ("may fluctuate temporarily"); clicks down by more than about a third at week 4, or a
-  top page whose new URL never appears, is a problem (judgement, not Google's figure).
+  top page whose new URL never appears, is a problem (judgement, not Google's figure). The
+  baseline (2026-10-26) is 1 click in 3 months, too small for the clicks test: watch Indexed
+  rising and the new URLs appearing in Performance instead.
 
 **Do not**: use Change of address (only for a new domain); use Removals on old URLs or `nou.`;
 create a new property; remove the 301s; click Validate Fix on expected 404s.

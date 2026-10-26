@@ -4,7 +4,7 @@ Working memory across sessions. Every agent reads this first, every session. Kee
 resolved item moves to `decisions.md` (the why) or the owning doc (the how) and is deleted
 here, so the file never becomes a history.
 
-_Last updated 2026-10-23_
+_Last updated 2026-10-26_
 
 ## In flight
 
@@ -16,9 +16,15 @@ _Last updated 2026-10-23_
   Search Console: the Domain property `mesaje-crestine.ro` (verified by the existing DNS TXT
   record, in the owner's account) has `/sitemap-index.xml` submitted (Success) and the old
   `/sitemap.xml` removed; the five old URLs' live tests follow their 301s to indexable pages;
-  indexing requested for `/`, `/blog/` and three posts. Next: the weekly check, Mondays, until
-  2026-11-20 (`specs/cutover.md`); the baseline export once Performance has processed. Not yet
-  reported: the installed app shows the new site.
+  indexing requested for `/`, `/blog/` and three posts. 2026-10-26: baseline exported (owner
+  keeps the file; 3 months, 1 click, about 10 impressions); indexing requested for the top
+  pages' new URLs (`/cum-sa-inviezi-mortii/`, `/intotdeauna-inainte-niciodata-inapoi/`,
+  `/masa-domnului-cercetarea-de-sine/`, `/a-doua-generatie-timotei/`,
+  `/o-mantuire-asa-de-mare/`), all five already indexed. First Monday check: sitemap Success
+  (read 10-25, 100 pages); Pages last updated 10-23, still WordPress's state (126 indexed),
+  the new sitemap not yet a filter; Crawl stats no data yet. Next Monday check 2026-11-02, until
+  2026-11-20. Privacy page and banner checked live; the installed app not testable (no device),
+  its worker and manifest checked live instead.
 - **Delete `_wordpress/` on or after 2026-11-06** if nothing is open: its own plan and yes.
   Until then `npm run deploy -- live --rollback` puts WordPress back.
 - **`/publish` and the publisher agent** still say the deploy script is not built: connect
